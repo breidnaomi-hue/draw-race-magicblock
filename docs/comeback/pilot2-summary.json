@@ -1,0 +1,315 @@
+{
+  "phase": "pilot2",
+  "total": 300,
+  "seconds": 33.576,
+  "checkpoints": [
+    {
+      "second": 30,
+      "allLeaders": {
+        "wins": 173,
+        "count": 300,
+        "rate": 0.5766666666666667
+      },
+      "leader15to20": {
+        "wins": 0,
+        "count": 0,
+        "rate": null
+      },
+      "trailing10to20": {
+        "wins": 2,
+        "count": 69,
+        "rate": 0.028985507246376812
+      },
+      "alreadyFinished": 0
+    },
+    {
+      "second": 45,
+      "allLeaders": {
+        "wins": 196,
+        "count": 300,
+        "rate": 0.6533333333333333
+      },
+      "leader15to20": {
+        "wins": 0,
+        "count": 0,
+        "rate": null
+      },
+      "trailing10to20": {
+        "wins": 3,
+        "count": 168,
+        "rate": 0.017857142857142856
+      },
+      "alreadyFinished": 0
+    },
+    {
+      "second": 65,
+      "allLeaders": {
+        "wins": 241,
+        "count": 300,
+        "rate": 0.8033333333333333
+      },
+      "leader15to20": {
+        "wins": 2,
+        "count": 2,
+        "rate": 1
+      },
+      "trailing10to20": {
+        "wins": 3,
+        "count": 251,
+        "rate": 0.01195219123505976
+      },
+      "alreadyFinished": 0
+    }
+  ],
+  "racesWithLeadChange": 250,
+  "meanLeadChanges": 3.57,
+  "comeback10": 17,
+  "comeback15": 1,
+  "events": {
+    "JUMP": 3670,
+    "PERFECT LANDING": 16652,
+    "OBSTACLE CRASH": 8571,
+    "CRASH": 3401,
+    "BAD LANDING": 4377,
+    "GET UP": 8112,
+    "ADRENALINE RUSH": 1052,
+    "SLIP": 4794,
+    "PERFECT RHYTHM": 1167,
+    "RAGE MODE": 510,
+    "SECOND WIND": 960,
+    "LUCKY RECOVERY": 577,
+    "STUMBLE": 68,
+    "BOOST STRIP": 1409,
+    "FINAL PUSH": 300,
+    "COMEBACK SURGE": 237,
+    "OVERHEAT": 491,
+    "LUCKY JUMP": 848,
+    "EXHAUSTION": 264,
+    "SLIPPERY TURN": 23
+  },
+  "falls": 3401,
+  "recoveries": 3360,
+  "forms": [
+    {
+      "shape": 0,
+      "wins": 55,
+      "count": 192,
+      "rate": 0.2864583333333333
+    },
+    {
+      "shape": 1,
+      "wins": 61,
+      "count": 192,
+      "rate": 0.3177083333333333
+    },
+    {
+      "shape": 2,
+      "wins": 22,
+      "count": 192,
+      "rate": 0.11458333333333333
+    },
+    {
+      "shape": 3,
+      "wins": 6,
+      "count": 192,
+      "rate": 0.03125
+    },
+    {
+      "shape": 4,
+      "wins": 96,
+      "count": 192,
+      "rate": 0.5
+    }
+  ],
+  "equalSeatWins": [
+    15,
+    14,
+    17,
+    14
+  ],
+  "examples": {
+    "held": [
+      0,
+      15,
+      20,
+      29,
+      34,
+      36,
+      41,
+      46,
+      49,
+      50
+    ],
+    "comeback": [
+      {
+        "id": 235,
+        "deficit": 15.765,
+        "at": 20000
+      },
+      {
+        "id": 118,
+        "deficit": 14.000000000000002,
+        "at": 55000
+      },
+      {
+        "id": 174,
+        "deficit": 13.600000000000001,
+        "at": 79000
+      },
+      {
+        "id": 155,
+        "deficit": 13.555,
+        "at": 65000
+      },
+      {
+        "id": 211,
+        "deficit": 13.3,
+        "at": 53000
+      },
+      {
+        "id": 226,
+        "deficit": 12.725,
+        "at": 28000
+      },
+      {
+        "id": 197,
+        "deficit": 12.72,
+        "at": 64000
+      },
+      {
+        "id": 93,
+        "deficit": 12.17,
+        "at": 56000
+      },
+      {
+        "id": 130,
+        "deficit": 11.97,
+        "at": 57000
+      },
+      {
+        "id": 237,
+        "deficit": 11.95,
+        "at": 46000
+      },
+      {
+        "id": 99,
+        "deficit": 11.035,
+        "at": 26000
+      },
+      {
+        "id": 148,
+        "deficit": 10.985,
+        "at": 55000
+      },
+      {
+        "id": 239,
+        "deficit": 10.475,
+        "at": 72000
+      },
+      {
+        "id": 18,
+        "deficit": 10.245,
+        "at": 67000
+      },
+      {
+        "id": 152,
+        "deficit": 10.225,
+        "at": 40000
+      },
+      {
+        "id": 185,
+        "deficit": 10.145,
+        "at": 64000
+      },
+      {
+        "id": 265,
+        "deficit": 10.12,
+        "at": 45000
+      }
+    ],
+    "changes": [
+      0,
+      1,
+      2,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      13,
+      15,
+      16,
+      21,
+      24,
+      26,
+      27,
+      28,
+      31,
+      35,
+      37
+    ],
+    "obstacle": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      47,
+      48,
+      51,
+      52,
+      53,
+      54,
+      56,
+      57,
+      58,
+      60,
+      62,
+      63,
+      66,
+      69,
+      70,
+      72,
+      73,
+      75
+    ]
+  }
+}

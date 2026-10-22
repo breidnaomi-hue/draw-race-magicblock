@@ -1,0 +1,6522 @@
+{
+  "total": 500,
+  "changedByTraits": 190,
+  "changedByComeback": 175,
+  "sampleWins": [
+    135,
+    129,
+    53,
+    11,
+    172
+  ],
+  "traitWeightZeroWins": [
+    131,
+    124,
+    59,
+    21,
+    165
+  ],
+  "interpretation": "Matched seeds and new courses; removing the .30 stat contribution retains physical shape geometry. Comeback-off disables soft-band and scheduled comeback opportunities; ordinary surfaces and recovery physics remain.",
+  "rows": [
+    {
+      "id": 0,
+      "seed": "19796bccefa40dc1688b49799e4b1df986c551ea20170f91ffec5062fafd9859",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 2,
+      "noComeback": 0
+    },
+    {
+      "id": 1,
+      "seed": "d84c7c378922b725c40562a944bafd35422ff7e1d51d3862b4de2e33ab759aa6",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 3
+    },
+    {
+      "id": 2,
+      "seed": "ebe47dc2914338c7cd403f5d730caaa89e0983cc0ddf5f6ab60d141989870271",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 0,
+      "noTraits": 3,
+      "noComeback": 0
+    },
+    {
+      "id": 3,
+      "seed": "a32e45800156f841c8987ad2ba1572971464b0b34c56600c3d68fd13b448c3f3",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 4,
+      "seed": "f5766e8f57b0b2c6166b3a2bb338150cf8bc6996e6060cf456b13ca74c094588",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 5,
+      "seed": "e13bfcdd2d8efe820a85cb9393797a0f356f6d1a73d55306c0debedf11e8646c",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 6,
+      "seed": "62a8189202f9fc62df2a1f0d4d559eab2766ac24d94881f82af09e902678a7e8",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 2,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 7,
+      "seed": "eb00b8a4c7ac691ba4ec4c9cc310472c393f504aeec366ce37a617a32cc0357e",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 0
+    },
+    {
+      "id": 8,
+      "seed": "f4da6156fdeb69fe3d0dfa56c6e164a76137a2daa4e95c8b58e6522261f9d4a3",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 9,
+      "seed": "2a872a7c1acd419336261a2b50631c08566e5e5244f349800276ad5489d527da",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 10,
+      "seed": "733fec29b3dc6a00aee7bada9e89db34a05d2ea16b0c70a90a314ba7b1a44eef",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 0
+    },
+    {
+      "id": 11,
+      "seed": "3ac98fcc3003c99371c6de54a8f6b77bc368709fee64dbafc6f52df672cb3964",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 12,
+      "seed": "e1655b9c81ffaded0cf7f508dafeaaeae6c2f520b083cecca52cc3c0c4635fa7",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 13,
+      "seed": "0e65ccfa5a4405beb725d16e202ec2c36b27d2d7583e9bb2e8586aa9ccb9db3c",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 3
+    },
+    {
+      "id": 14,
+      "seed": "19eaf344f8559e9f00b6fca680724307a05c20f4eac4561fe8fcff0aa94a97d6",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 15,
+      "seed": "3c318f92d0bae064c9d99f934951f31f7aac0aa9beeaeda7d10563bb54365e63",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 16,
+      "seed": "c54dff15161bb30f2563b268741656e43dceb7e26506a9ebeb3ffd961633c74b",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 17,
+      "seed": "6d9ac5fab4f2b869b496f0ecf1fe2bf1720a0003e26e5f338504415c5df11b20",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 18,
+      "seed": "96ba01b495ef934035b33141ccf4c82ba7eda3c574362e83c289514ad9d925a0",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 19,
+      "seed": "22cc85bc269d22d298fcf56226e0753d34371abf82dddef5ee3247dc653c36ac",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 0,
+      "noComeback": 2
+    },
+    {
+      "id": 20,
+      "seed": "4e561deed61997b31e7edacca8b7d4d2d13f9264805473303dd3736c07c296ad",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 21,
+      "seed": "47aa1c25e76948c4e767bcce1b01fcc2b267563edcefd346aeffac23e6742436",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 3,
+      "noTraits": 1,
+      "noComeback": 0
+    },
+    {
+      "id": 22,
+      "seed": "29eee8cd956169bf8fdca391bb277e6b3ccaada439176df922efae38c5c4120d",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 23,
+      "seed": "4de2ae805c79fd8991786bad992cb4a7b6e7f164a74b25680fc0860533cb1962",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 3,
+      "noComeback": 1
+    },
+    {
+      "id": 24,
+      "seed": "7b4d7ca890833b1d4efd77732f8caa658c89cb73054f1e5571072059479d29ad",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 25,
+      "seed": "6ccf810c966a33050daa32964fc1a56d176d14815bc5bba2d4a2d3da8f8275d6",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 26,
+      "seed": "164ac556657ec3b3aa15b5c0407f176a677cf5c7a84bee2f6940228e620c8d43",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 1
+    },
+    {
+      "id": 27,
+      "seed": "d9051a97ce9af92960e28e34fb633dc5bf2ed049d0663ae35eee4265067e8eac",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 0,
+      "noComeback": 1
+    },
+    {
+      "id": 28,
+      "seed": "fae674f97cb2d2e588944c4478ae03c1328dcda2ac138892f131994aeceadabe",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 0,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 29,
+      "seed": "46e3fdfcdc51eebe25a7707b9032ce0edb2ee284a3c8bd39391f8f47a0a48a99",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 30,
+      "seed": "e14a3f07b19e2445c2b3e591ca1edde224a1025a915f0fc309e28deb89856790",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 1,
+      "noComeback": 0
+    },
+    {
+      "id": 31,
+      "seed": "22a1c9df11a89f2f2fcd79e25a57f8a587959ab6345282bb2fb0596acfe9addf",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 1
+    },
+    {
+      "id": 32,
+      "seed": "6e7853c20d7adcd2bf5a1bb227ee5593681a74f5d3dba9a6e8b1c627c6631b4a",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 33,
+      "seed": "0f771c2e7bffac29fb674f745f628237770d6588749a0d84d767b4c1bca67fc6",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 1,
+      "noComeback": 2
+    },
+    {
+      "id": 34,
+      "seed": "fd0ad3295c5ac4da5ff6614cc76a56f829d2fb4f538a02894bb67b7b5ef21dc0",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 0,
+      "noComeback": 2
+    },
+    {
+      "id": 35,
+      "seed": "a1a8dac16865e2dbd135798e0e1f5323a2af5b464dcce2919cb662a5b0aa6cba",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 36,
+      "seed": "56ee1a279e227d6e93962cb437ebd5891df1ad4c2a0bae3dd2582f4a5c7659d6",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 1
+    },
+    {
+      "id": 37,
+      "seed": "24049247db01f6e03669391bdcc4f1897513eb354fa1b0225564dd2a65bc5ba7",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 38,
+      "seed": "2a8b3fb1028ac08a05b278f8183e0a0891373d883afa37e8c7c58f2f59ff0d33",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 2
+    },
+    {
+      "id": 39,
+      "seed": "d5998df2c41cde1237fd17e1240ef8b74313d7a3412dffac628c7b2d1d1bd5cc",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 2
+    },
+    {
+      "id": 40,
+      "seed": "09ed6925e1de156a83a7d6eee44227591e65f710fdc59946e028c633e26af9d4",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 41,
+      "seed": "80c4b57ac5ab10939aa4cfb71c49aeae8c5931366cf210756971045dc84c5f35",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 42,
+      "seed": "6bfe49b2e49170d9ca3a70e166576ab2004309138969c30f4dba4cc246d8c1a3",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 43,
+      "seed": "adcc267ce83f80832ce12617f1f729c57a11099dae2fa7e00be40b745c07235c",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 44,
+      "seed": "d8994d2abca4c3d59380014b793203a435aae7fef849c85b14735e15b57f126f",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 45,
+      "seed": "d6b3380dd3ca7a4146e377289cc5700eb108be0b159fe113a3ac246b0b91c1c3",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 46,
+      "seed": "1810da8110911533da4540b19f43b87575c0af05e4c54d8a186aee5ed5774f3a",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 1
+    },
+    {
+      "id": 47,
+      "seed": "c15340ea01ec91f25bca6625842cb845d5f49d842ed6f1a10e52018dca1e1424",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 48,
+      "seed": "c49eb4f98f523e29d6f00183f7a785834d2174b4fdadf8f13640ad80bc61d5a3",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 3,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 49,
+      "seed": "23c895abfbc6c81de5daf639db8657dbf1d7adabba5271e4aca5453a76e24abe",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 50,
+      "seed": "14b27aa6c5e5f354e5090ba365c2dd496dca2dd10dcda09d01d23e659f1a47d0",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 3,
+      "noComeback": 0
+    },
+    {
+      "id": 51,
+      "seed": "13775fbc44aa832a74a963715e8974837389cc8db1b5200f3dee6b914fe6ecd7",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 2
+    },
+    {
+      "id": 52,
+      "seed": "bd028d27d21bb5517312118e81185b7c2564adbb338b03553a30727e3bfc5a1a",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 3
+    },
+    {
+      "id": 53,
+      "seed": "b04a777e64646e172ff2a46509e5c914001aad9924d00b83c33f9f6de14d09e3",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 54,
+      "seed": "08a4b5f8dc754901d0ca3ba91be583bbbd7a01ef94c8e98b4a1c62c051dce780",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 55,
+      "seed": "c432aaf620f42d4604b90920940659d67cba0841f1b4f867659c9c996ffd3031",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 56,
+      "seed": "8f3af9c82e20ec87396e6d7813118513644877707fcb0df75b464621817490c8",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 3
+    },
+    {
+      "id": 57,
+      "seed": "9afdb8ebcc19244a76a6e433a4b64510b769b35977e2cde41b6fd1b86d6bd897",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 0,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 58,
+      "seed": "0d571819216aeb6f57deca4005cda32aebf3708ad4712a0523e6e75612e50a03",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 59,
+      "seed": "9b6e7b3d478c53699a1628984c639a6b3006c17e4385021de6d0ab1e05931b0e",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 60,
+      "seed": "8ade62cc51e8a906c598c3d537b10375c23b6cca431ac91c0f39613710c09e2a",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 61,
+      "seed": "2f665f2bf9d8e935c75847a4807c70e3f54e982a54d4778f19c487b5c0a8e70c",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 62,
+      "seed": "2acc453b62d730978ed4aff3244ce2ef9115fbf457ac3305c9828ba555e79430",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 63,
+      "seed": "708f61670a79d781a3099aaa446ff9c24811e2d16577f400a4a8fcb3ddcbe569",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 64,
+      "seed": "dc9a8c10619f2ed1eebbb2617b40cf8d7d34ebf0b36d63b6ded3ca9d7a181a39",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 2,
+      "noComeback": 0
+    },
+    {
+      "id": 65,
+      "seed": "c98298236737001a2c7f70568c1f50437a490c59b400e096f7072630a0888a00",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 2
+    },
+    {
+      "id": 66,
+      "seed": "7c754769f0096ee820591b973f34d522b2adf1f39996a6d7fc1c1da48be2f611",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 3,
+      "noComeback": 1
+    },
+    {
+      "id": 67,
+      "seed": "6fc31488043ca73705953c3136efd151ae68c313ead686d57f0c7c0b8c108374",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 68,
+      "seed": "f732a4a45aab9e2435b1faf7f311643fb408b55d51547eed2265114db43d91a0",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 2
+    },
+    {
+      "id": 69,
+      "seed": "b6db552b5aacbde2f403862fe2992463a237553efa760fc08253552ae73de1ec",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 70,
+      "seed": "c703348abfe5f1a87444ff86d8a28169536e094873a0cbec5beb98fd5bc9ca0e",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 2
+    },
+    {
+      "id": 71,
+      "seed": "5236d54d1da21a77668ab74555941a030befc396acc75faa42b324813e8f818e",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 72,
+      "seed": "978a8281dc00b934fb456afa22ba201afb7b97bb3140fb3f48229247b0a36447",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 0,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 73,
+      "seed": "82317ae385609a5df47967266af305693feadf7e57a120aa93afeafa36eb70dc",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 74,
+      "seed": "71ffa3d0a5069596bc91dfc599f194e57208583eac3a1b0ea0052dab522ab1d0",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 75,
+      "seed": "2ff4fdcb9b6e05ed96ca9bd850cd0b27e449707bf263eb908e563cf308062cfe",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 3
+    },
+    {
+      "id": 76,
+      "seed": "e197c7837188731d57b27016d85325e4085b15c5314dc9d3c791d4520810255b",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 3,
+      "noTraits": 2,
+      "noComeback": 3
+    },
+    {
+      "id": 77,
+      "seed": "d71a805eaf8097c6173e66834766a8817b757ad7251890fb7c10400e2fd7f7a0",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 78,
+      "seed": "4abc7d335e50678653945587d6c7eb24a52ae08ece1497b2d5b02f1a877948c8",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 1
+    },
+    {
+      "id": 79,
+      "seed": "403f681f13f8aad96020e4bc8dafa12fa659b7d9a1e524a8ef661173588db1db",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 3,
+      "noComeback": 2
+    },
+    {
+      "id": 80,
+      "seed": "aff3b913cf2280bb9f8806483e504d8a682add80d9f272f02d72fefb9e6245b4",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 2,
+      "noComeback": 3
+    },
+    {
+      "id": 81,
+      "seed": "d59748068b5c2625dd58bce5a9dab85eaf1e9f324e8b4e645b3fe4d88660b600",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 82,
+      "seed": "b3b7f5c6be8affe19e835347e27c06bc6fb1accf41cfac0f088d9aa4516faf94",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 0
+    },
+    {
+      "id": 83,
+      "seed": "f9036792793a03e32d2a8c50132c2151689c336315c6285fe31a814f40842ad7",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 84,
+      "seed": "cd06db9475d45c23c9551eeddaf53fd8eb7b29e027bcd79235a40ede75cae957",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 0,
+      "noComeback": 2
+    },
+    {
+      "id": 85,
+      "seed": "05aff2b123dbbb9d855ae6e5c8fa35fb43c7500a66c1a77454f4e05aa2a93516",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 86,
+      "seed": "cbbe876b668b5098fd9291168373ad0fb4eff6dc2f29496ad3dfa3f1a5cfaac4",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 1
+    },
+    {
+      "id": 87,
+      "seed": "abde2cb24d723b0a6b0a417ad2b2de961e3a7017f896888e8443dbb2bb98b861",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 88,
+      "seed": "abae519eb8303ac04eaafa35bd0093bb0adbe6aa9c8d614af3d03942556fd44a",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 89,
+      "seed": "813d89c8b69cb58afc7a6bdfa979335d8b8cc479b5c806630ee7ebe972ac0bc9",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 2,
+      "noComeback": 0
+    },
+    {
+      "id": 90,
+      "seed": "1739227985eacb3dcd1bed8c80477d4fa3703910413479ca8faa4bd3258796f0",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 91,
+      "seed": "00ba0060d29531f230db0dc708801ddbd2aff21b7e12283c38836c76a5263c46",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 92,
+      "seed": "8d15a07670b101b00339fefd8e377a30fc108868fc465122b46be80b8d68bcd5",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 93,
+      "seed": "ea992d70e187ad5201f65173e6b026218b9e0cc347bfd1a84be3f914f94a8f27",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 94,
+      "seed": "a9e7e8ab757f5aaca006a273961d1713d3b989dbf3635b9deb7c0d3e251fdc8a",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 95,
+      "seed": "60ceb2206017a16a96817509377e6945a6b99d448a46121b779016c7f79813c0",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 96,
+      "seed": "b6b3478050d7ebe03238ec30672ad16d8b40cea2436a8d1c7a0d6e8c1496271a",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 97,
+      "seed": "a3b9f18d2fce3588140affc0b494c62c97ee31e99291b5481cadc5c5adca0972",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 98,
+      "seed": "2296c4a45cbcae227103c9d2a7c9ac2e5e3de81fb750e65c6e2f2900f51dfbe8",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 99,
+      "seed": "9276a578df453194c8ec46725fa6fa2b34b03ae718aa82285a2819d3d851c2f5",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 0
+    },
+    {
+      "id": 100,
+      "seed": "13b2e183de38712a83f2c9857ce110e92fb8f56fb94668da015cc10040417333",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 1,
+      "noComeback": 2
+    },
+    {
+      "id": 101,
+      "seed": "462a5e5030e42f546c89bfbe114b558407d1a256bf3d34602ffc84fbf1fa3ded",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 102,
+      "seed": "315c9b04d6957309fb1746b905bec5063e956f1d20a4fa0928d44cb5a75a118e",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 103,
+      "seed": "aa82fa4b6670b8bafb9d840309dae7029ae29d7c9ce59671602bcc7a58746ed3",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 104,
+      "seed": "ac005f7cdb408eff5fcd9e74d8529bbe385668d0c62d7048a9c4fe33c896125a",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 1,
+      "noComeback": 0
+    },
+    {
+      "id": 105,
+      "seed": "51037c24d07bf6739c75cd5bd34c3d8678e443ba0fe612e27f4cc9114bbc8580",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 2,
+      "noComeback": 3
+    },
+    {
+      "id": 106,
+      "seed": "2ed25fd489bd807e0055fe17595030dc0034f5837735a51dae5e553c659168e0",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 107,
+      "seed": "2e419e4e4dcb5305bf1a683b822a9e7b121347ddc5037fb58945501dd30d3564",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 108,
+      "seed": "b63f7a0f2c23cf118f60ef2abf2fb5a68fdb6449aa4a44a3f1a8a974ad71a0dc",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 109,
+      "seed": "78788a16d6fad1535bd27de4cfc60e93c7348619dada91633fff3e1be88c0dd8",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 110,
+      "seed": "4846d91f71d25e41e6d6f1627a4c7121de9734814170f097d2d4a7c639213df6",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 111,
+      "seed": "214a67d24a7b245794238d79ec5fe570c3b77f84f3adaf5d9774f7f63fed5f4b",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 112,
+      "seed": "eb7b2382da7cb8dc6050a7dcc9546cf1e8f138e8ba9b09520c09b41b20964934",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 113,
+      "seed": "8c569947810ad02d9c312115f1ab78cdd90e96906ed5e68175c19ca50cc89a90",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 114,
+      "seed": "08aa8c51761696385703c499b124423acf0b2ae0b2b0e7969435e751e8229815",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 115,
+      "seed": "ff195d286fc7b09030659bc8faf2660479791870aa4ba68a45283e1088c60e90",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 2
+    },
+    {
+      "id": 116,
+      "seed": "ddf9f4d208b0e65b3398068e7616860c6de2a99b3234c3eb765b18ff4b61709f",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 117,
+      "seed": "69feb5e8c2008bd5ed89f6abbc01ea854ba9914e63dd804937c4e9b73466c15d",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 118,
+      "seed": "6b97bd4943379b1dca67f254fe68bacf47a022d0242cc05ce8393b58ab579e71",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 0
+    },
+    {
+      "id": 119,
+      "seed": "e9756d1dcc0a9acc67f58d3be031c40b464bc33d2859fef7f2be8f7be998814f",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 120,
+      "seed": "78be2ad88641aefeef7e0a44e9ec6a1520d455700996339fcbcd160a7d59e3a0",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 121,
+      "seed": "2f7628e6c628e8fd303a2a433a46b7308576bc9092aa6c5fe01017257ea13bd9",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 122,
+      "seed": "f0df2d5165cd7c016bfa83726d0f731d98b837f4ae24321b8010e969a242442e",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 123,
+      "seed": "940bab419c1bac53cf712c062a9283da065b420c1c364fedcfffef3beb6d3e9b",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 0,
+      "noComeback": 1
+    },
+    {
+      "id": 124,
+      "seed": "865cfba9f6caa3f548d4cbeabdab7d099c58cd1999ac47a40123ad9f38743bc9",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 3,
+      "noTraits": 0,
+      "noComeback": 3
+    },
+    {
+      "id": 125,
+      "seed": "032718ce3a6f95eb65c4ee5bdf9bdd0950adf0cc43af274a8fe28d2082b237c6",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 126,
+      "seed": "52cc59d4d4ffd722443bf38e9f852c0b46fb123867c3e92ce271e37b3813a15c",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 1
+    },
+    {
+      "id": 127,
+      "seed": "7be399dfcf1661dd8ef8aa3820adca9b964ae59e51fe309d5fdc3843ad15b0c6",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 128,
+      "seed": "16e3804180b52d1d1c1667d8191f68039111a16aa0d6bcae9217657107c8b48e",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 129,
+      "seed": "ce50ee2ffbe67f173f94b449970db47b0e932020e6fe0ee8437688b06866d6b5",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 130,
+      "seed": "640ac366ed4abb1dd92ad636d5fac1cb9e40868d17ff726802f82bd005d985c7",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 131,
+      "seed": "c78a4baff19b99d199c45122734db6be210ce2ba4e7b90be07631ebc0d349828",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 132,
+      "seed": "5350872cb4f1c3335052ea294ba54b561bbc1de2459aefd688a35a86a5acb869",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 133,
+      "seed": "232237d7b1f4af64fed3a162dfdeb0b2c91de10e64578b8fdd596ffdf31943fa",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 134,
+      "seed": "46a0ff1b95884be9f3ce15ee0febab2b08e7ead1634de6ebc256639904975208",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 1,
+      "noTraits": 0,
+      "noComeback": 1
+    },
+    {
+      "id": 135,
+      "seed": "2cb9978e1157d2e703d4059bc7bcc2f308358ed5272cf87631b935f60d193832",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 136,
+      "seed": "7c6f43ea4e13e64e7a8f3af8df053f0ce2ac2c9f00995f6be13d64c326cb22bf",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 137,
+      "seed": "5777d6f5f7e5755e8cb87feb307838e2ddac30ffab2f2b4b54bfc1e736b82bc4",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 1
+    },
+    {
+      "id": 138,
+      "seed": "5086a44d542bd34a16d073cc8e1826493a3aebfd6033149efca316684aa899bb",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 2
+    },
+    {
+      "id": 139,
+      "seed": "243992117912eea3b0dcde44f0c7929cd1c56e3c9fe095f3033d4cd9769fd4b6",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 140,
+      "seed": "2edd5670c70abb433f76ee54ad9067a90574419c5e66b295d59a7e7a88646068",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 141,
+      "seed": "98e991b1ee397a319a354a9870b7f51efd073ceb5be27a4f7124a43aec183d59",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 3,
+      "noComeback": 1
+    },
+    {
+      "id": 142,
+      "seed": "61ea28152032e246fe030840717969589e7fd924a2e1ec800ce14a3cc9eb66a1",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 3,
+      "noComeback": 1
+    },
+    {
+      "id": 143,
+      "seed": "a3a4222cb8fa787b0689559543bc76f278afbf70e2ffc2e656f83f79667a12d3",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 144,
+      "seed": "83f6c8dc8251d83437058954e0a41cb3f1c6b81e530a84600c569c463cb68fae",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 145,
+      "seed": "f2117379e3af73290a9c56ad17452168923b74ee65c7aa27f08162d7208ca1ae",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 146,
+      "seed": "909276d5ace46df19e65b7007a1afc7d7c8f08d02e3e99e1674659a154bc912f",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 147,
+      "seed": "25a93fc43e9df3232d58f818ab1b5093990dd454afdbfd8d33c59206a7f47ff7",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 148,
+      "seed": "e4dbb97fe90b15cc0585553927387130d2430c71e2081190c1108e2808e60714",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 149,
+      "seed": "e40eb163cf04041090951caa996d17b54327df4b4849b8f7845ffb1a1555bb35",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 150,
+      "seed": "3b8f7e13ecadce8388bf10e35f02fc943d32327635a5bf4279d45728a22195a4",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 151,
+      "seed": "b27d855d7125038bbfa813b66471e3caab4fbab901c9e91a17d04c6e04bfc263",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 1
+    },
+    {
+      "id": 152,
+      "seed": "547efc098664992c60bd3210751d4848f80a4bcb4a2f3f647576c735cac882dd",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 153,
+      "seed": "009d392b8e076e2f358c3dae20c4143dc94d228399f8fe828605814c0d35e4a6",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 154,
+      "seed": "30e7e2cd7d0dfe3b12f581532b2b81c10f16f75e3277b5d2da1ffe38a1b21449",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 1
+    },
+    {
+      "id": 155,
+      "seed": "bcabc195e335c2fe3121770bf6c37fc46b438f093a04c72c27693f66f4afb2f9",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 156,
+      "seed": "6e11faebba2f34df376602b343d8380bd29c972685ccc62b09cbaa176627376f",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 3,
+      "noComeback": 0
+    },
+    {
+      "id": 157,
+      "seed": "1ce0201ef6a6099e19283b762cbf40b644bf76b0a591134604532f379b78becd",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 158,
+      "seed": "793ae61aa414ef221cbdd24b8bb4077c560c73043c97a8fa3d9c25158ba57622",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 159,
+      "seed": "47f92b2bc27ed7f14d3a4d0804431819384074f5faccc8469ed33e2f8141e800",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 160,
+      "seed": "9412cba196acc7866ed9d58daefbf03ef51ab9da08a4cafb473bb44c51eedc29",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 161,
+      "seed": "525682f6bf697633808ebb8faab44ecf24c949a63bd545f16471da361a937977",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 162,
+      "seed": "d6a42732bd9b48269ed75df483b6ff8c781cc14fefe631bb985c3bb390f15321",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 163,
+      "seed": "6838b7d9c337b7f5b8477193014fcd308b5486b0e32c4b267fa3d33ae37be7a7",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 1,
+      "noComeback": 2
+    },
+    {
+      "id": 164,
+      "seed": "2e1f0d375df8c2d1ac27be3dcdea330c8c023b9aafcd94128c2a2627c5ad6721",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 165,
+      "seed": "035eac48424e4d9389562b28c6cb47d7a571cac099e7d3f244b857a5b8de6ee0",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 166,
+      "seed": "d732e1e70c74d4678449bfed7c922d2cf4dce7897b60a895221b34eb7e6b254c",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 167,
+      "seed": "46742da2299a08e4e8481554f07a5fcc751fbc73c9f5b9df0d1faa1c04eaa3d2",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 1
+    },
+    {
+      "id": 168,
+      "seed": "2d91d66878d2d1688e230d95e30edd509ced597013399ef00681c7a8696d412a",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 169,
+      "seed": "0fe8ba0a1baeedafbd03dea61c4ce2b07bf0cc681e586a8b4dee165963e97fb7",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 170,
+      "seed": "73a6e23e0a43d108c6a322e1028ca39b232b42ab29223c0bbfe709fa6e3d5092",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 2,
+      "noComeback": 0
+    },
+    {
+      "id": 171,
+      "seed": "63b6eb9d11787d6e5488f45d04c11537eeb7079d329adc3f517a381fefc474df",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 172,
+      "seed": "3b91f8febd1a65ce56b088a2232ef7e0e592add50ffff0fe042925bf0236a0ac",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 173,
+      "seed": "4d2085a9fab5ad858bd1b0a00cc26e2ce069292fd4b1944c7afb7761fe039b39",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 2
+    },
+    {
+      "id": 174,
+      "seed": "f18117e7ac90df7eeec051c432fb4616ce9dab574679cffefdfcc803cc07df42",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 2
+    },
+    {
+      "id": 175,
+      "seed": "c855a8ab49090b0e81d8265cfcbf750346452c8745361ff9f860e621e804b11b",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 176,
+      "seed": "6ad7617be4f37c5bdc189d6fa673a11a0340efd869d711ee6291f3148c9dfc64",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 177,
+      "seed": "beb86f889d35c3b984e75719aae5951c8392809b1cd6378cb8cfc032fadcfebb",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 1
+    },
+    {
+      "id": 178,
+      "seed": "a78ccb44116751a07c5b640f4b847ed7bd65c8a7f52a2cb7a8f270352d1ee2b2",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 1
+    },
+    {
+      "id": 179,
+      "seed": "e7b4dd9148f9888c4a21ebbd072c796736a33bc4b26c122b2849c50e97a7d841",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 180,
+      "seed": "60f531590e5ea2388ae0e7a9584254760c66de5cc151c2b01132931e8d9c4034",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 181,
+      "seed": "8a5d630f55bbd123716e3c2fbad41bc798adcde82466b6317d85c729903de05c",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 182,
+      "seed": "1ee68bbdf6d9d5455716a290b979c158535d8df776590739c554a5e5669c3a35",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 2,
+      "noComeback": 1
+    },
+    {
+      "id": 183,
+      "seed": "6d5a625993b373cb06908ee5c4c0e82d56f24ebee9ae630e1126d5af94e9d707",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 184,
+      "seed": "299ce7b5d611066e728a8683ef56b6aa9b5b6141319edc1a9a36a974f924da60",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 185,
+      "seed": "4f2212b490d0593e46dd6bf58a51859f91c4d22c648f505325dc71e87d764520",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 1,
+      "noComeback": 3
+    },
+    {
+      "id": 186,
+      "seed": "caa42ed99a4542d6d4b0facd4b122b59d3e34872db6db41bac8d151d9abae83b",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 187,
+      "seed": "3bbc609a1211fbed139dc9babf307fc89e21350bfa4c72c35e6c41a5c2877360",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 3
+    },
+    {
+      "id": 188,
+      "seed": "aabd0306a0299023c6d84106807596a89a835670ee1a6f3945eeb2781cf0f081",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 189,
+      "seed": "17a139558bfc2425a57e54673996823769fc16b5d6e22f511f075cd737b994f7",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 0,
+      "noComeback": 2
+    },
+    {
+      "id": 190,
+      "seed": "c822ad22c0b682b3309a306fc3a5c42257946b5f469eabcf0360d10ac758a338",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 191,
+      "seed": "439294b7f1a4fc77c54d6061ef2d1aeab0d58894d7f3f10b122277b46b7921ed",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 192,
+      "seed": "e47d24ed5f116f45aceed2b0ee1641a3ea42dbcb4041bd1364f0f8f9bc5680cd",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 3,
+      "noComeback": 1
+    },
+    {
+      "id": 193,
+      "seed": "271d52563567895f3cd68670c52c1497d0049f6ce82ca2fe828fb4ef903d9afb",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 194,
+      "seed": "03ea2a85c6fc007f96b42f00d54fde5984a76b4d7d5cadc88c18786f9f78586b",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 0
+    },
+    {
+      "id": 195,
+      "seed": "a4009404f510117c3a133ed992613eda4fa2c8ae2bd3359e946cbbdacc908f83",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 196,
+      "seed": "fd5e69b3ae6bd0953532510dea9d71c10225f6ea6e0edc441f398881a363d17e",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 197,
+      "seed": "295168ba1259a63febd406d71425c42e2895df71b69f29f55dac7871521f4d83",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 198,
+      "seed": "a32a051118fe06ecbef1659b49e8460d47dd4c42f9fc9c6f5620d80aba7b07e1",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 199,
+      "seed": "4c95f7b4d6e190c8da50c5f80d9f78b4f3d247eb99211d34d2bc2576244d5d6f",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 200,
+      "seed": "791657cf4f9d6780cba4a6845c4a6822dbe43aff1c98682f85865d97fdc0f085",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 201,
+      "seed": "11717bef04bdffe2dbf37c8f8cae255891f90a886370edddb9f918b606a76341",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 1
+    },
+    {
+      "id": 202,
+      "seed": "a9ed302ecd36d9f2079f97d6739bb36702c4aab4a5845314b67674189439cb07",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 1,
+      "noComeback": 3
+    },
+    {
+      "id": 203,
+      "seed": "0ca431ddb9f613a8f6bf7d72c4a85b2b5c5cc7c9171be4952c8d9dcbd4739260",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 204,
+      "seed": "fab23425810eda406f583af447ef58d76cd82f24abcc99984c9b418cd08b9061",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 205,
+      "seed": "c3c5eba3729e691c31f07c400759896d0c797fc18b35aca9622c6ed8062d036c",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 3,
+      "noComeback": 2
+    },
+    {
+      "id": 206,
+      "seed": "d6453b8e8ac26cf0457fe7da8511f997ea0710bb4e75f3f149041c0cd5481c1f",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 0,
+      "noComeback": 1
+    },
+    {
+      "id": 207,
+      "seed": "247c2f37b79016d3bf56dedc901daa655dfb96205b5c69109f1abb7cd435734c",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 1,
+      "noComeback": 0
+    },
+    {
+      "id": 208,
+      "seed": "7fbe7b4af1cba1638b057e684a5e1f10910ce3c494b155dfaa74230905234c5d",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 209,
+      "seed": "7d5b57f9f578a74cd7057841f9c29d81b5a2c01a012965b28de25953ed3098bd",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 210,
+      "seed": "ec84011de235e3f0fea9371efa15406acecbffeb937b15f7616909c3c06b62af",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 3
+    },
+    {
+      "id": 211,
+      "seed": "a16e8c266ef121dd4935f75aff857c79fbcfb1fbec6af6a9ebd7f4cd64b47b9b",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 3,
+      "noTraits": 0,
+      "noComeback": 3
+    },
+    {
+      "id": 212,
+      "seed": "25bda7a80f8cb12696d4ef120c0e6c8bdbab75912a11b48f4cce15f443d428a8",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 1
+    },
+    {
+      "id": 213,
+      "seed": "ad482006a8361feb1d302b6d86e702d585c45ffe570c68bc6314ef29e62a2b35",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 214,
+      "seed": "9915c72343eb1808d9392fde8219a45d0533954670ddb25f957de860d57a41b3",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 215,
+      "seed": "b84135f3c6933a7764dfb017126feb2e01fb42ad6d478a6605924d5fdfc58457",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 0,
+      "noComeback": 3
+    },
+    {
+      "id": 216,
+      "seed": "6e4eaff2ca022a1478e88a6f7d53b03c007fd5011b13da8778430735df084cab",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 217,
+      "seed": "4486597a8c46c1c9e39889cf018f86b363afcd0fdea95a8bb018247f771b26b6",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 218,
+      "seed": "f9a81c96bf5183c4240f026d50a63246aaa3eea4247477591ca324fe4c485517",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 219,
+      "seed": "256c871a63c62aa43914fc3967e4db29b635748de6f4cadb5ca0adca548b05c8",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 220,
+      "seed": "4747a2d72b188ffb3b6430a55f77abfbee502ea12cf6aa763cf14b767af900f6",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 221,
+      "seed": "d4d023e3d4d6ac9733a384ea94b0ab3cd1d4d8bd8e2ba6772033a00bc48d80e6",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 222,
+      "seed": "fb7c0beb9370a3c26a9be380cbe030ca3b3327be12c3449f3e6ae56b51c4383f",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 223,
+      "seed": "5879abe95907849d8112ab2bd5a6d9cee2480524f6c79404701f35652d812e34",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 0,
+      "noComeback": 1
+    },
+    {
+      "id": 224,
+      "seed": "0281fb15ff96f8f3478221a8d0054c802a14a69d271af804e2f1ed0f8eed1db3",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 225,
+      "seed": "1218d90f6a425986dc2ed47377421176f4f01a38477a7c1ca3c5400d9d9b6eee",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 226,
+      "seed": "59b24bac0edfb4747b0867d7f345dbad388391700924f1ad315c4b698cfed16b",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 1,
+      "noComeback": 0
+    },
+    {
+      "id": 227,
+      "seed": "7a83ae1da928b442fb178ff397fc09788d84d38ce8734030d23ef1545e409fef",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 0,
+      "noComeback": 3
+    },
+    {
+      "id": 228,
+      "seed": "90f16a4a3dc534f6423a4e2ac00d72b4c7d1dc83f6bff7d86f5b6119592cbedc",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 229,
+      "seed": "3d36940146aeed504fbe77acd7826589253691b53c2effc88030d9054c099785",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 2
+    },
+    {
+      "id": 230,
+      "seed": "d736458a662f4a6c09de38100ab519cee90ace419cd6fc41fd6b82a65ab184ad",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 231,
+      "seed": "45574939d7042a5b43892be69789423f4886a68c3a0db414fd327dcb89ef88ce",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 3,
+      "noTraits": 1,
+      "noComeback": 3
+    },
+    {
+      "id": 232,
+      "seed": "1fd0371c2e6fd3ad1259dca64b3b5ae38cd9e43de0cb14bd86f089b0c623edd0",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 233,
+      "seed": "0c59716627ee995d2c1f41465edca9dda19da74350f4b325ca962b36ae9ce6bf",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 234,
+      "seed": "417dc9d54b3c7cc4120da1118d9ddfd017dfbf3b90582b16d76c0c7e5c101f03",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 235,
+      "seed": "802d8b78dca2b7f8b761c457bcdbf25682ca6f08735b2d086f4dc915d5e9879b",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 236,
+      "seed": "97cb99b60804a6396b4f51ceed32125ba4f67d101c098e93c343226da1f066f2",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 237,
+      "seed": "51da15611a63d4aeac53ac4240a6437d62f0ef871112155883a207f0bb31b4d5",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 1,
+      "noComeback": 2
+    },
+    {
+      "id": 238,
+      "seed": "74d8df0cb4fa83efb7fe2d2be2d7e09d51e4efe182db6bda8963090e39bde688",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 3,
+      "noTraits": 2,
+      "noComeback": 1
+    },
+    {
+      "id": 239,
+      "seed": "108acf3e9300afa5631f106c967e1f86d402132d47e1a9fbe81f2e9c8e4a20e8",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 0,
+      "noComeback": 2
+    },
+    {
+      "id": 240,
+      "seed": "2bf245df532f7ceee371e28d4e220f9f19b7d34113dfeba6f233ebe13e3e6ba3",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 241,
+      "seed": "921b1a3e63e42cefea8a7ffd9ade601de775b890c52373427da4cef29807ad59",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 2,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 242,
+      "seed": "e69fe04a79d4275a9e4729d5362978c097908d069f5d56502726a54855041e38",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 0,
+      "noTraits": 1,
+      "noComeback": 0
+    },
+    {
+      "id": 243,
+      "seed": "df5021e4f6ebc319645906a32ebc5cd6d8d5f2194f845046017580f44a01c2c7",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 244,
+      "seed": "a587efc0c7f7b8e51d908189bdc39fc42a2ad8b22776d027d6ea68053117f56e",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 2
+    },
+    {
+      "id": 245,
+      "seed": "8a6a4c7c5d1505b2811b4a064134d866fc9d5553b90ac9baadb57798618bc5ba",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 246,
+      "seed": "746cdbed43de9c01a942c0281b7a12b6621b50f3cdcc411b47674153aaea02b8",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 247,
+      "seed": "f033d8bebb0acc096d8c252ccde695c9a98397290d414b5351b9968e80a73c9b",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 1
+    },
+    {
+      "id": 248,
+      "seed": "707a0098149a3f13a49e93921609d7e48e80201c3e56c44ad11bc1a790f3c00b",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 249,
+      "seed": "755e655105e038a3a43e66545cb6deb8bd36e15e15e8cd5d74d96cb8c403de99",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 250,
+      "seed": "d39f1e11c6e21215354a9e8903c2df91295d51376c067d242a5a54975f5dcfda",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 251,
+      "seed": "4ffa8e5ede055ff63a12880642848fc252e5adad9758c15876ec93266296abb8",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 252,
+      "seed": "9dbcc0f1bd5fabd768129e148cd075d0014c24ba91889427eafbef3faf3282c1",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 0,
+      "noTraits": 3,
+      "noComeback": 0
+    },
+    {
+      "id": 253,
+      "seed": "f42de256449976431103e4a2d2c48d4b2e03613b435d48221f0876b550c5876c",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 254,
+      "seed": "3581cc5604eca2cd736639d7c1e179bec10d605e8861650fdee01dd423a1141c",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 255,
+      "seed": "13073709f799e5b409706df2078985827a502ba49af415f4de46f65077b3ff6f",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 256,
+      "seed": "1e6a98227338aaf6d124a856a52c02df74c499f0ae55d0972497f07461016083",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 257,
+      "seed": "8ff05d7bec36c50427324b49ce98ff6f54a8493ffa901c2b4f91535293ebc2a0",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 258,
+      "seed": "80f0f0da1d700cd874841064cfd8ac1c9e9b5ec5ac5c0c0fb047ac134a24a8c1",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 3,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 259,
+      "seed": "87d83b88b2b6f7196d5f165fda077b5ae7d127677dca00e870902a133eaba9e0",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 260,
+      "seed": "daf4b7a37f1a36334ca6f8222b77cca85e8ce32ad484ae36242d3b9de54e213b",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 261,
+      "seed": "a052b6f0d23a55de9f72311ac710100dc99cb982d042e0c525b64812aaee79aa",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 2,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 262,
+      "seed": "b0ed9007be051156272f5663b3af3923c60529b9f45b14c6a714dd4d4f30be74",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 263,
+      "seed": "e520f0a4c013af787676c5cc2e623aaeb68cc7bc03c4a4bfad927105fc753b9a",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 1,
+      "noComeback": 3
+    },
+    {
+      "id": 264,
+      "seed": "20295ed076a05e706e3285f4af94945014f60f65b1bf03721f468b319e822cca",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 265,
+      "seed": "09095d18a38ceeb35a15dce377451ab1a29701f370e8fb00311a49cc96ff012d",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 266,
+      "seed": "ec9779eafd7da07fa7f7a014c27f6e704320fc5fd1d5cfa795003edfc84bc0c5",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 267,
+      "seed": "5d9e88785baa2edd484ec612aa3c965af03a2720b2cc456a9028f0fa12edb8c6",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 268,
+      "seed": "6db3492bd9882effbd11d2abd55022e23f8e1bed201f096b7914cfe69f116819",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 269,
+      "seed": "91c9c1e36b04b36b8bf5696af740e4ece99ea1433009236b0254d4e497ec58cd",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 270,
+      "seed": "1fba384cbfefa3114b607c2c7fd537088b12c849826e389aab40c6c356d3b1f4",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 3,
+      "noComeback": 0
+    },
+    {
+      "id": 271,
+      "seed": "328ae5e4cc8f0ffa76a2742f40ffc3529b85e2a098a20508ba7f98c0bc100100",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 3
+    },
+    {
+      "id": 272,
+      "seed": "37b0664e174333360d7e56cc74ad02d8986333eb778f5281a9b7a053b9fcf80f",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 273,
+      "seed": "996c86ceadf04d9af755a268bff2c888dca890c027a01f88bd7cb402e01aab5c",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 274,
+      "seed": "41102c91b5a8e164313aff6e486ca004abe9bbd32ace6ed4612b1efe44cca72c",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 0
+    },
+    {
+      "id": 275,
+      "seed": "1d99a63d2dc9f36b11eebd71151b79c3e17b4f45708e3f808e35671481c2b5fa",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 1,
+      "noTraits": 3,
+      "noComeback": 0
+    },
+    {
+      "id": 276,
+      "seed": "2f521d5e17fa7ff70ce9fcc7546cb4a8293d56c29ea74a82a9510745b463559f",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 3,
+      "noTraits": 1,
+      "noComeback": 0
+    },
+    {
+      "id": 277,
+      "seed": "8afc37ef8c4b9bf4bbf68d8c5e7763211fe66340e3a1c56e4d15a67bf26fe65e",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 1,
+      "noComeback": 3
+    },
+    {
+      "id": 278,
+      "seed": "193b558410c4cbd920991121edd58b5e4150c15fa82b5b4dc5da995c145672e8",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 279,
+      "seed": "bb629d9911bf61bd9f2051ea1819bfd177c172c2a463c20044c9b3fadb97b2f5",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 280,
+      "seed": "77af5e1cb3d468ff5a8a5067c37717dfdafbbe6e81fbff591f169ddc2ba2182d",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 281,
+      "seed": "1eaa1d88d23182a0463ed71d34c7a000e3a3fdc0501aca694117b830ec64d996",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 3
+    },
+    {
+      "id": 282,
+      "seed": "26f69b6e580a869148c28082b22b97335da3d86b34a7b079ce9c91c0751cf50c",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 283,
+      "seed": "a79d93d505dc60662d1547c912a14f236d28ead5274ca35066e69fd0d657b842",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 1
+    },
+    {
+      "id": 284,
+      "seed": "83cab988cd05cbc26f8f49a1952a23bed6976547dd335421088b0107768e1900",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 1,
+      "noComeback": 0
+    },
+    {
+      "id": 285,
+      "seed": "59ca66e6935ff8d706453e72677e24b66713297dcb2b60e2b55ee22c08c63a21",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 286,
+      "seed": "fdaf9789f070b0e4663068556f0d8d1829f5adb0d760e1df3c46b5b3f71f55d8",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 0
+    },
+    {
+      "id": 287,
+      "seed": "a125059fd22cce5b2a0234bca89f7bf1298126b4ba691f86a10ed461d4fe5263",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 3
+    },
+    {
+      "id": 288,
+      "seed": "2f6963c28dfc19131024b80bc8600caaa9bd980c1bfe13fb1719b6dd8eb1bb1a",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 0,
+      "noComeback": 1
+    },
+    {
+      "id": 289,
+      "seed": "e23f55af06668116a5658de557b557b89463338987fe94077d43fc16ba46545b",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 290,
+      "seed": "bac90f60e61700db8121a5cfb73532699aefc52bbbd4abfc886b6df9cde1f498",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 291,
+      "seed": "656380520d0030f7eddecc4b1ceb46207cbe8ea5345589ce2347f4e820decc7a",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 3
+    },
+    {
+      "id": 292,
+      "seed": "7563dda45c2c2ce468aa6c34d923959cd1ed787d19edc287ec43d41d2f95374c",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 293,
+      "seed": "877cae05e600019eeb5a477cd86e7bd090c073b5c92f40ae1024c6bf41d4b4af",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 294,
+      "seed": "30252d2ffd78869a04ae6fb5e2a6f149354c0acd5af6a02f8a4d56b6e8335b83",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 2,
+      "noComeback": 0
+    },
+    {
+      "id": 295,
+      "seed": "df817ef63bc3b9670c489ed7f3560af1a6f6c1e0215c6f25ce0575e4677112e3",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 296,
+      "seed": "0438836a8c6d76b971e5727e3ba5dc116c747e3c0e582001cce068ab482796f2",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 297,
+      "seed": "748bc23ad33ecbbb828048ebd615432be1137fd51b1e61d8d71ee6e91174c681",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 298,
+      "seed": "eb285d6826bb8c28e70b98702ca66c70c964c3f71fe8feb072fd962fb9c180f5",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 3,
+      "noComeback": 2
+    },
+    {
+      "id": 299,
+      "seed": "77d6381c9330d555ec0bc478fa7731eac54855acb799bc2264935aaa76d1451a",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 300,
+      "seed": "fd1acb46009092105f35babe10353c58bc4a14c47afadb8e6815e20372a61382",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 3
+    },
+    {
+      "id": 301,
+      "seed": "3b546443a0e088d8a204bc91eef0b753589459a9a1fa9bb1d227aa105ee17bee",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 302,
+      "seed": "abccd7e5ffe355f6e95e92e07a442e5df8bd74f4a09ca4466053a3d93147e191",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 0,
+      "noComeback": 2
+    },
+    {
+      "id": 303,
+      "seed": "be56c619d72dc5d7a18cb1de0447f2ca3fcc0a9ddf51cb8b006f5c4b4ae4e022",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 304,
+      "seed": "5cb79861dcdc9554029be87da23dcb1f34893377198359036aa90aac18ca0ee8",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 305,
+      "seed": "ffca6e57454e1f9378cc90de6a0e352d7f7eedf9db5489f8049ac15f1d963f1c",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 306,
+      "seed": "c2156f80225edbb16b5d56578acc20e91b729e9aebe70524ae5671bf7c9ffcfd",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 1
+    },
+    {
+      "id": 307,
+      "seed": "ed608cce20d78098ec9ac63036d7db88f49372ea796512929f614b8aef4cd9ec",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 1,
+      "noComeback": 3
+    },
+    {
+      "id": 308,
+      "seed": "2c2ef91a061fe47d00b9005ac3d9ca0955d5586b4a143569b94f6f495a262c92",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 2
+    },
+    {
+      "id": 309,
+      "seed": "3bfa71e69bd76a24a862ecaad8513808d1f792be9a2398b613a08845f03d694d",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 2
+    },
+    {
+      "id": 310,
+      "seed": "87ab3fe1ba1c46b1772476a61a56221e775aa689eb0d91b058d014235331d435",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 2
+    },
+    {
+      "id": 311,
+      "seed": "0af23592fe77672c78ef3675eed905d2f085b43bac907ca09a233b46f7881b7f",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 1
+    },
+    {
+      "id": 312,
+      "seed": "dd06fd866b26ef459231fa1c3d8f6c416332e6281e74d13d0d10cba70b2a571b",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 313,
+      "seed": "af2c6dc2ae34ea66a15e72737ea65aea688657c823958cb7d4bb8c6e5bbf94ad",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 314,
+      "seed": "cc6b8ba2dbc3f911da2264f1bd3e515789378cbc654b9f76f5666e8d2fad36d6",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 1,
+      "noComeback": 2
+    },
+    {
+      "id": 315,
+      "seed": "71175cb2d3ac1b5b278f7d3c3c446efe2d6ad05201e3db6af01666a374d97f22",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 316,
+      "seed": "bc4bae6b7147bb5d49e18d0d9792278d03a4ef8551185115e0870dc51b636bc4",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 317,
+      "seed": "aed0aa3bf2fb6a69a19b2d2dd6557e68aabf30a6afdc47d2f9f42fd5be3859b5",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 318,
+      "seed": "08e39e4689b3fb8fb2e3ffc66102d56901ef823b1f88e448ad50e55d72f7b4d8",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 319,
+      "seed": "42f209e2f947f526e31aa487f864c534bdcac400a1bac03e706b66567f3abb29",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 320,
+      "seed": "f4e5c86a044b5c09c9d6056a1fd3a76f4aaa649e9ebd1b3188bf858c072c7b79",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 321,
+      "seed": "c1e310477c8c18683cd9c47725e5f89667fcd6719224a9a4004244b386422c93",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 322,
+      "seed": "eef5aaf29137ee5f13bdeb01d42e4c31ed6153717340a4b47ec6ed35e8ee6721",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 323,
+      "seed": "b3586fa46959506b7a0fa240b5c1b2fc3c3b21450244edd8b53edadb4fd4d81c",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 324,
+      "seed": "9c2c061e19a96b94a4ce646f9f4f12df6cf3f94c69184860f10b8e6a702e570f",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 325,
+      "seed": "f2012185c2b64acf2a28f7814931efda4b9e412a4eb6016d04f12de4f6cae0db",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 326,
+      "seed": "a681db0e98fba7d2312f227e4ddd0d1a7e46c62789ea4f3ef125f4700c3c0089",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 327,
+      "seed": "43b79608245600c016c0c8c5fc7148c4ee9a3dbbc8a68a12653e09eeea5def70",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 328,
+      "seed": "c183207bf84c77db75ddf26e4fd43fea98bd4b3f741db597ab00193163f6a2c1",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 329,
+      "seed": "4578b201d74f24ede0f19863d46c645fa29a3b078bf5601ba57208c464967605",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 330,
+      "seed": "586d978103c581450c7445d2188b416288f6bb99663b8d9297db0f5471587e73",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 3
+    },
+    {
+      "id": 331,
+      "seed": "1aeed758d1cf82d861213bf095201bf6e6fb1a0a972a093285cf91764cb3c2c7",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 332,
+      "seed": "3910c11c66bbe3407d4a52e7330fa5cd0fd52b43a1e915e1bdc33fc2efb87fd8",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 333,
+      "seed": "a0c5241a85c8151089952952c64fa8459bfd0a8537aec0b1bd66fe9b7a4a28df",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 334,
+      "seed": "3221157f4543d56bd108a9ce5e2c40e38b2ab3be9923913b1d07caf196e81d9b",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 1,
+      "noComeback": 2
+    },
+    {
+      "id": 335,
+      "seed": "f79a1ca72f2d4a34183d91533b16377e98236f2209550326a8a8d4dbe8fe0f95",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 336,
+      "seed": "dd33871ef11da82f8ab12d34ce88e02141b2f5b600e34a46a90a85c51fb40391",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 337,
+      "seed": "c51240a167907e6cf050ebbf0693534c130f485dd6881e4286758b9eb4fc16ac",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 1
+    },
+    {
+      "id": 338,
+      "seed": "be9805a2e05d9c6dff102ee8a77a66b21ab023135a3d152f94e60c712b774ed6",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 339,
+      "seed": "877aca43dad5d7c523f4fdfc9ea4451683bcb5390944aae326098e15fcbbb782",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 340,
+      "seed": "beaf2a0541db3734591a20d105dc359e4f26f30b4ac7b4189d53039ede789a2a",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 341,
+      "seed": "fe759c3876f65e0a0a10f806cf902c726ef026f1199624bf43e7c4115b4b6b3c",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 3
+    },
+    {
+      "id": 342,
+      "seed": "87a016cd518a2e23e91d19cbfb636519e0b59fc61660730e909120edd4fce6d8",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 343,
+      "seed": "47ef389aa1828dbac37edf6cc4b554bd2f374318efcdb55c6765242768ec596d",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 344,
+      "seed": "86ed6cbb717af1a3635ecc2e35ded7fb1843de07d4d02097b22fbfb79e40f9ab",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 345,
+      "seed": "d58cfdab3d54332deb8d0720182e34b8c91d452009f5c42f2aaa3fb47c9f22e0",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 346,
+      "seed": "b869cfcc7341af9b384e2a3eaae205443c060170f0510ab4056b745bfc515230",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 3,
+      "noComeback": 2
+    },
+    {
+      "id": 347,
+      "seed": "f11e97e9cb6fd00dc9d88ba250c26a5cdb247dc536d64567e6a40ee0e78efd9c",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 348,
+      "seed": "194cfc1ddef8a498df7e69dbc0a3b42c5819808e7fa3b4e757050df6e32829c0",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 349,
+      "seed": "f13e7b2bd53adc8bfc8addf2782974c7c766f9d7af6eac9d029e9168318cd4aa",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 2
+    },
+    {
+      "id": 350,
+      "seed": "659f33370f8096b9e7fffab7eccdade33b096f2245b4cd6b6d41cc6500878be0",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 351,
+      "seed": "a05660ba4cc7fab892243e7adb05fd8840669af5067bcea95e13b7a5009de5e4",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 352,
+      "seed": "d51027aa4700ab5d490000f711a59a17e8baeab74a267cfd982bd9fa5b83e18f",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 353,
+      "seed": "030c35e949ae3206dec0ed0ac7a613cbc01e567604386a240dd3c567d6936a90",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 3
+    },
+    {
+      "id": 354,
+      "seed": "5cf24a1b0965062f904271008960d68b399996a7e11629fad27c3781c7daff14",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 355,
+      "seed": "047c06b4f5a70630e799af866cefd626575d3cc06a5600fc91449c75bb53933b",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 3,
+      "noComeback": 0
+    },
+    {
+      "id": 356,
+      "seed": "fa608e4f61a9658ff998eccf85852b0baae5c4ebff6e8adcb6361cc33be2622f",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 357,
+      "seed": "8754620edb5e50e179d050890322ffdc36aabba5c49d46aa2bcacae78b414fd4",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 1,
+      "noComeback": 3
+    },
+    {
+      "id": 358,
+      "seed": "2b7b0214198432df1ddab89415968bf7df34af718c5aca3bef473348f2a7b3d8",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 3,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 359,
+      "seed": "fc015adfb6e29ba0d23f17edb906016b8a8ea9a89198560f0bd855a3a2ec7a60",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 2
+    },
+    {
+      "id": 360,
+      "seed": "7fdb93a0e0a70a2000f4ee75f632b7366f877b715a5e98e24d39940ca28859f2",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 361,
+      "seed": "52eeab1d9c47695858b82e89a7f8c7ff74ddb2dc74382383224be95248f9e4b4",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 362,
+      "seed": "c01bc36ef5332972ecdf8c17839ed2794a16c9590c63f8cf5e3156591f4cdc9b",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 0,
+      "noTraits": 2,
+      "noComeback": 0
+    },
+    {
+      "id": 363,
+      "seed": "3bb6544f12f76d6df8ad4fc432b3d1c64b3724b79c4ffdc6ff0d9ea238c72daf",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 364,
+      "seed": "473c7859951fd15660842749a37fcaf26d8cf89e6f8796f92b2b59575e4013b9",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 2,
+      "noComeback": 0
+    },
+    {
+      "id": 365,
+      "seed": "7f443fc95901007abc59874efab00281ae962db0810f9704997ee6a8f4902ba7",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 366,
+      "seed": "7e93962151d3c1aa72986eb7fdccaf3bca033572616833f014b0c9a6d2bb4ea8",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 367,
+      "seed": "119143979e86afc76ee41339a710c4dce913425f17ef8e62e1d3b29bb95920a3",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 0,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 368,
+      "seed": "bc5a3410f2db7d74ccc2a9e278f57b74f3a1d912cbdb6b9c222429455a385755",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 369,
+      "seed": "af33e71a372c709a1d10344fcb124a29a1d5629b125d7481c4259deb39ffa115",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 370,
+      "seed": "20814dca73fe42372e125d03660291323f7846b609cb675ce8711245832d7634",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 1,
+      "noComeback": 3
+    },
+    {
+      "id": 371,
+      "seed": "f215c35bef2e3066b9bf1233d16e7013fe16cea564a3c43888ac5c5c149f3970",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 372,
+      "seed": "e56f8b66e3c874e3b238106c8c52a1c4a96c87616d4caa4e23085286e694522b",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 373,
+      "seed": "f2a91e8e2ace733f4dafc5790dbbc12e59c56ac4f5ed88d7cde09e7b37d349ed",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 374,
+      "seed": "1c470a10875a94c7efb4cbc967535770b2d7a647aec284d3241f870027d4dad5",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 375,
+      "seed": "7f3a3874424b2613c8902b5dab7f39b4c0cdcbaffb9ebd601d64d24740362313",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 376,
+      "seed": "2024c273056fbcb04af38ee166b178203e4e84b5dc90590cfa90eebbc32eae0f",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 3,
+      "noComeback": 1
+    },
+    {
+      "id": 377,
+      "seed": "1fc1b75ee7a6eacc5a2726d709926089008192d89415dac567ab167ad2f06aac",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 378,
+      "seed": "7df61c068596e8322f8fcf71354d4c5c8ab8abb096071c0368fd329f2f12d2e3",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 379,
+      "seed": "7e94061dbf33ee63c4babaa77463e431b3d2462964e45543cacc7e719b7462e9",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 0
+    },
+    {
+      "id": 380,
+      "seed": "49e1812261befd52da237082eac7508d7f9be2c2983ae743b287e2d9d7610bfb",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 381,
+      "seed": "063c712155bdc92904aa787798327a2099615dd1f7c837502e3bdcd600e7c422",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 1
+    },
+    {
+      "id": 382,
+      "seed": "f847cfbb337fbda324a71b8e4061d2e30465c70f7e1bafacbe8de3a7ecedf4c4",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 383,
+      "seed": "540463e6ead28b8297013b0ed20b8d81b4a7ad76521b5a143e2e9aa667e75016",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 384,
+      "seed": "e973c185e45ab558128a87db4869a9df413b6aa63e6f966fea074609f2dc2589",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 385,
+      "seed": "5a3ebcced84a6cfcec6d92d95efd1a072c1e2c2bd3798a780a02864a391880c4",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 1,
+      "noComeback": 3
+    },
+    {
+      "id": 386,
+      "seed": "024b9bc7a51fe3c23c6dc42b7aa4289ee100a742834a52e45ca30bb73e1552fe",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 1
+    },
+    {
+      "id": 387,
+      "seed": "84fab4591e7fbe34341615638dec11ba714501268405bac44e89fa248b014b3f",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 3,
+      "noComeback": 1
+    },
+    {
+      "id": 388,
+      "seed": "1e1f4d24a5c953e910392a7f2b655393b1d579170e5eaf41c59cf65f91c71d44",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 1
+    },
+    {
+      "id": 389,
+      "seed": "eeaa038350adb72dd55eb3e449d2058b407398d1884648fcfc3d18afc024fbaf",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 390,
+      "seed": "d5bbdccaed6d7989c826083520627a4ffa85fc0531c88995016204d112bde4b5",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 391,
+      "seed": "871665179c6e44c923e0f81ed37690e87666625d467e1f27578e51f2dfbbb5be",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 392,
+      "seed": "491e51477583e6413901335ec8bb6b4e172ee6e5140a785aed03c34712ad3a15",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 393,
+      "seed": "114d63ac392ca2e3e3e51f72e94340bda7021aa25d28f26d841e3ecf2aec399d",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 2
+    },
+    {
+      "id": 394,
+      "seed": "4f6c9ebb285b49fe1cf7270c9543099aef598b11010ab432ec7c7c70177e2451",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 395,
+      "seed": "778ccf3de3245ba75f174fabb7f4b33dda02b4146ad44f9279c6a3b5d05f3dd2",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 396,
+      "seed": "b60230408137aced5a6bd4162a792d8215a2317d135350e5bd2007f38baa1de2",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 397,
+      "seed": "2b74e1ea346725868d36b1fc9db83d205a5fbdc3629400b810a6143a516be613",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 1
+    },
+    {
+      "id": 398,
+      "seed": "be986b08bacafa51abf75a760ecb6aa3fd256fc4298756d104884a116311095a",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 399,
+      "seed": "1fb830f44b33f6322527f1657b8740437abf24b836a44759c285026f58e00f49",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 400,
+      "seed": "b8e9c206f0d0ee721dfa9974d8da0a11e2165d2bf8b88558be3f00ecf9ef1c7e",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 0,
+      "noComeback": 3
+    },
+    {
+      "id": 401,
+      "seed": "160918b9394e513270c9ea6dd9fb1fa34d2c062b283eae9989a78942c5597600",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 402,
+      "seed": "6b88b65fcad2a0927c22dd237c70eb311144797ebd4ac18ede2a7474c752101a",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 1
+    },
+    {
+      "id": 403,
+      "seed": "ac89d54e7615992b8281a233b78dd3d2b00c460d2f2aa679fe6afba2b6c4ec6a",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 404,
+      "seed": "9bf8656e9c1ed0c8716fed04d3a0561f54fb8b32c0985e8bcaa7d415bc47f76e",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 405,
+      "seed": "36a7c99733d3f015de038829fcfefef4691286639bc395d13bec219b5149e961",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 406,
+      "seed": "6a558fc44a7b8519465b6f8170af15ea9bc7e87d498a5077e3aa9869a0e6a69e",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 407,
+      "seed": "c5d4b8c4243bc54ae15ccad4ca00d4e7af6ea01406df21c17bf2bd51266bca3c",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 408,
+      "seed": "7557b8f3bdb7229ef259746e1bd0c1224269264c607feb530b4d40cd76f2d079",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 409,
+      "seed": "0881eda26c7d728eba276cd35ddc856cc44ed7dc08c85feab5c1ee5b9163c201",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 2,
+      "noComeback": 0
+    },
+    {
+      "id": 410,
+      "seed": "344cffdb86bd960bd6008a7ead0bb15a0254b5aaf9e89e71aa1305b20dd53640",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 411,
+      "seed": "608e0d44b8555ba1c0423c8f32b7a57588e0f52064f7330c91e2c030e01e4bae",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 2,
+      "noComeback": 0
+    },
+    {
+      "id": 412,
+      "seed": "26a7dccbd6b0efb9dbd685f82844a2fd554685e9db266e41925a23dcf0dd9070",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 0,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 413,
+      "seed": "9a8249c38d3b9ac6c36959dfbc3717ea6ec0dd444563c2c6b374e9438a05ae60",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 414,
+      "seed": "5a24f3573571a0edc4d1d1cc89d78e0b42a86cc32720fc39de63bd451194837f",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 415,
+      "seed": "cf2cb461ca6491ec582a6953402098d308be5fa59406bb8ef282b1c6f3e5768a",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 416,
+      "seed": "e189952fa13b279bedf5d9d1df27cce0c236f5aff98638d8c05c02efc1fb829b",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 417,
+      "seed": "5bff44c130cf47d794758da87c4279b76947737468d9cad06ed35f9c126076bd",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 418,
+      "seed": "6aadecbf3c71ebdfb1f36f574edde4315cd5d66bd66b0ce3be8ad414d7c79ea8",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 0,
+      "noComeback": 2
+    },
+    {
+      "id": 419,
+      "seed": "e541e36099d6ac0eecb71d026276559332dd9dd0b508d09602960c0a63a29c0a",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 420,
+      "seed": "7905d3ae19de38d60bcab9b7204ac3009affd905f5d38e8e1811b2204b4d651e",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 3,
+      "noComeback": 0
+    },
+    {
+      "id": 421,
+      "seed": "492eb7ebd938ab1c1e5ea8b3773a95c1c17f70d5ceb91d0bc5629e8ae04f019b",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 422,
+      "seed": "ae6e30cc4da1b8a074fda83856e70664b8e5f16bb73cd006964dd4c59dea64e4",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 423,
+      "seed": "b9f619cdf4290ae35b298631f2e511b11cefed358c89ff342b4f7b611c34507c",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 424,
+      "seed": "2d100ab928ebd6aea9fcc2bb99c03d99daef4a9597937c140a5593207e47f734",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 425,
+      "seed": "f270d477a935f11e4dcbdd5877c22c300ab32a78e8d603971ce27f61c68c5e70",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 426,
+      "seed": "7d751196fefc7b15348c553a2101ac87b141f8ea02dfd137df6c969b50cd3bef",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 427,
+      "seed": "04d57de7773afcbe270d8d78f687e86cf9fe0a90b44ba0b8c3850cdcd59ad947",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 428,
+      "seed": "10e233314692cf5d297437822c395f11e7e66c1efe8dc6b4dafb61dc5829b3bf",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 429,
+      "seed": "2c86b17bf0722c3d2f77c8a370336facec49797b8197b9503b9177c732d6433e",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 430,
+      "seed": "1c6dbc13c54378d5f484e849388cb9e94706cfb56b4005a4d880fd79b08408fd",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 431,
+      "seed": "b881493cb4e342eac3961e49d59abb41820b109c99dc5a83288994076a9d8876",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 2
+    },
+    {
+      "id": 432,
+      "seed": "0c6cedf13dba022c738aedbd9d9a378e62b8e8dfd541756900a1fe180a867a5e",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 2,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 433,
+      "seed": "2c027926ea87057059801bb7becf27619321fd6ef36064255622a9cdd3c873b6",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 434,
+      "seed": "3cbfd17edd97895c76d45ea1d0d8a976d4c45fa1d4034bb5d55d3ae97b9d3856",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 435,
+      "seed": "600eaa65b16f5df6253d64f612e12daa6024ca1464ee9e04e2b40e8ab18ee904",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 436,
+      "seed": "1ecb4489bf4e6aea2b068311a1ffa599719fb34788710696591c13c6e5304727",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 437,
+      "seed": "1d7c4b49da19ebbd665ed3e1fa8df07b1fd0598d8d22e7e2423007e5e5122371",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 438,
+      "seed": "56f2fcdce303de3c2420117facb98a0a9327588d25fd453b1db9c9da36a3451a",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 3,
+      "noTraits": 2,
+      "noComeback": 3
+    },
+    {
+      "id": 439,
+      "seed": "b19c1306caa9e15fb8733e2439fa548eb2ff7d5124ca3d8b3228e7d61a6e7b61",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 440,
+      "seed": "b257f28bd76e34b2990f52e6d8f969fe531de12087e7236ea6598dd7fb1b3fc5",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 441,
+      "seed": "e509a5530fa41ea91de36024b270af1da57f2ecdf318c835ac032270f072ddeb",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 3,
+      "noTraits": 1,
+      "noComeback": 3
+    },
+    {
+      "id": 442,
+      "seed": "e44d7cc53b77ade12bc0519b8b2e7532d820df05324a9f7202177d8e484205c9",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 443,
+      "seed": "72b33d64d61dc56815a77e375605c9b04c6fe4098dc47ab26d4150e20860c273",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 3,
+      "noComeback": 2
+    },
+    {
+      "id": 444,
+      "seed": "c790065ab24476874ccfef8d9d9230c8a986afbaa9d4a9adca0d4d10ed5fa0e6",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 445,
+      "seed": "f775297755c59528273ba6f1ca89728087d7c505a0a0601852e0522412633dac",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 0,
+      "noTraits": 3,
+      "noComeback": 0
+    },
+    {
+      "id": 446,
+      "seed": "692a4917e2db06776c51c110011d74b560900818433b87670164cf7711acfe12",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 3,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 447,
+      "seed": "5455d1e656b36e534e7927936cabf731316ccdb4e3b7e87eb197f70879cb0d1f",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 448,
+      "seed": "c79db1804568e169c82ad36cb6807ec27a19fa361ccff2c5ad8ac531fcbf906e",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 0,
+      "noComeback": 2
+    },
+    {
+      "id": 449,
+      "seed": "14aa2094db2eba609635cf904dbbf5cd51e9a131cd9cd713f3c15ef86962a1ef",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 450,
+      "seed": "5dc1ef13f686ddfff71bdafde864a1b3e5be4a9a8ebca4ad9744ccbb2e87efad",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 451,
+      "seed": "e337c1fd1146085cc65ce7cd8c1dfb6563ff14ceb7f41dc1814a71b4627184e0",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 452,
+      "seed": "a3696da78cf5e0a312831f6fd7852c6638e6d3065e25847d43d8a50fabe802da",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 2,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 453,
+      "seed": "6898259e2478271d087768c879e908d869a0a492cb203fa04f192703912f3a24",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 454,
+      "seed": "12d48dbb5e2075dec1105e3e7e6170cadd3e93582b26efe571f581a684d7948f",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 455,
+      "seed": "ca2c28f67cefb0005900d985178a7c86ab49395d963179428702f6583f084543",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 3
+    },
+    {
+      "id": 456,
+      "seed": "c87fd78643ca6bc6cb7ba34b704588fdf3be624d3d2dee64f106433215f58874",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 2,
+      "noTraits": 1,
+      "noComeback": 2
+    },
+    {
+      "id": 457,
+      "seed": "1e22762efd8f2a6c2d5b89a2ebaff8d824cb6ec465b4858d5a0e38faebe1067c",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 458,
+      "seed": "d09aeec70de19595266f7de99f6fbae79cfc4d12262a35843787ee074463ecbd",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 459,
+      "seed": "5d3dc95411bd990a6e7a6a2498fa8d2934c7f024efc2f4f0b997d77b1958ef89",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 460,
+      "seed": "a7de78d9d2ac5259cb88306e1c7007c031fe58eaf8614c3fd9d25cad07d56eef",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 461,
+      "seed": "b62ee957d62bac846f22b41503826a90f42947d1cde6beb9401dc2b47e2248a7",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 2,
+      "noComeback": 3
+    },
+    {
+      "id": 462,
+      "seed": "36139d56f373231eb5cf9cc5418317affb1defc282681247694a97644e5841ee",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 0,
+      "noTraits": 3,
+      "noComeback": 1
+    },
+    {
+      "id": 463,
+      "seed": "3c67f34a728d3732c1aaf27c6a7cc2a104a5549ef02f55c683313c6fd9e75656",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 3,
+      "noComeback": 2
+    },
+    {
+      "id": 464,
+      "seed": "32301d71dc740600dbe5f72c5d1521b83f77cd16abc23d3fc9efa7b86f62f821",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 465,
+      "seed": "eb979e707f34c3392d199ce0bedd670fb2ebf1c3b09fa1dcdd3f50f5b76ad3c8",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 466,
+      "seed": "4a16670335c2660c54c68fbd8979ad0696f4b21e7308330fb3b4187d695477b5",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 467,
+      "seed": "5c8e0f230e5ef45dcc6f4c328854a7a99ef7a2f36554c2ce2fdef431e9800315",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 468,
+      "seed": "7c3376a1b4ea3ee362de6bcb68ad0bc694ed6a93cbbe6984deefe924a0f85ec5",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 469,
+      "seed": "f287745da6413891101362ae4e3be4cdd20beb16a9a0618752aa508f5185a70a",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 470,
+      "seed": "49946c5e5ddffa90e4e92517ea85543f6178f5ecb4ff43ca8608d4db1d93d1e4",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 471,
+      "seed": "3f9f39be498f35ce7a1ad368150d263073beed29f9ca963907cdacdea336975a",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 0
+    },
+    {
+      "id": 472,
+      "seed": "64e878856a980dd6f57924b0019c1b1f6397baeeda2778ce9a38a0528fdd260c",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 473,
+      "seed": "eee0ce02d934dbcbb41efbd31b797bdc579a09bf331704e647ee1d43a241763f",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 474,
+      "seed": "a5e4414341f6c8c17e0034669baa62cb15adcf0a5bbaa85ee5548e62a5256acd",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 475,
+      "seed": "669e6975614399d7ffc19fe25cdf5fa2c9504b9069ca6d20bb7d9060cb5b0f85",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 3,
+      "noTraits": 1,
+      "noComeback": 3
+    },
+    {
+      "id": 476,
+      "seed": "4596d122ea1b0cdcc12ba7ea50851f860aff349d7a742e0aca92160e994076de",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 477,
+      "seed": "93b87746a68780b5a1950a3964b4c5f96f859dc0e8068cd07b37c0cef05102f7",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 3,
+      "noComeback": 1
+    },
+    {
+      "id": 478,
+      "seed": "ee9b9963a838726f50de8957c13af865e4153a87881d9cc7583ef956c469b274",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 479,
+      "seed": "e5193a544067d0cbb4f6765060cf8b59a07e85925aaf5f3383b34e1e6abe304c",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 480,
+      "seed": "a9ca3a462b21473e3a6c102d46248b1d16e3b926deba68d4ebf9c92fdfe0d46c",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 481,
+      "seed": "786887aca7cff34105e7e899b6accb3106d73778c05e8b4f6e7c77157d0cfa1a",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 482,
+      "seed": "385cd275cf8bd166af2beb84ac6052a73d5e285085526fe16b527c6865670a36",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 483,
+      "seed": "ebfddd79419c01f8b3dfc4c2863c5a2fddcc77daf7b63bc2bbe5f034a63083a9",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 484,
+      "seed": "9889fc8a4c1e6a28af8eddc6c357dfda249d1ec9cd19cd0b2a468daf6b15a15b",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 485,
+      "seed": "e3beac170b29d010c24dcca0455bde1e534d0825594e1ffc465625827cfcf4af",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 3
+    },
+    {
+      "id": 486,
+      "seed": "b0ad27cf54ffbd409df6922881e0609c74b46559ddad0d607a353ef5a09ec225",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 3,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 487,
+      "seed": "6fb06d38322d2c89243eb632b28cd9ea51ff9e68185062531835f3a25842b985",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 1,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 488,
+      "seed": "42ba4446ef0a9d239418f79e93592496fe9a7d40455ea22aca9df2601082cee1",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 489,
+      "seed": "e6c2951133df2e88880f7a453c589dd322c4d28187e9cdd87046218d72807939",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 3,
+      "noComeback": 2
+    },
+    {
+      "id": 490,
+      "seed": "7098687fdc0f7c46d9db3062d8b8fb5b4c76113a29fe0844432abac871805808",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 2,
+      "noTraits": 0,
+      "noComeback": 2
+    },
+    {
+      "id": 491,
+      "seed": "7bf21788921fc6643d7eb3b4ac0b077cbe9ba0e724bfe2e61b87c3efa633945f",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 2,
+      "noTraits": 3,
+      "noComeback": 0
+    },
+    {
+      "id": 492,
+      "seed": "98680f7a8b7a7499e0b2392f3c8e999ab53107d5f354073fadb652012be9edf9",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 0,
+      "noTraits": 3,
+      "noComeback": 3
+    },
+    {
+      "id": 493,
+      "seed": "04f50871e1e6d2c099afed913eafbebb2017cd39e870d3eff1a41735211455b8",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 494,
+      "seed": "ec750b6e290a550f9f61ade821c40d0bee5001a7389d441048faeb5d148ddca4",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 0,
+      "noTraits": 0,
+      "noComeback": 0
+    },
+    {
+      "id": 495,
+      "seed": "9ca54f6866154821b67ccf13c798989d6650f95ebf995c35de444d5e427c3554",
+      "picks": [
+        0,
+        3,
+        1,
+        4
+      ],
+      "normal": 1,
+      "noTraits": 2,
+      "noComeback": 2
+    },
+    {
+      "id": 496,
+      "seed": "3cfab7e7aaca1413ae7bb0f233c048662a10878cfd28ebd971335fa04fe0fe0d",
+      "picks": [
+        1,
+        4,
+        2,
+        0
+      ],
+      "normal": 0,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 497,
+      "seed": "e573aea482c8e66d271327b498b8436c31266781bda2f26267b6c005a2e34926",
+      "picks": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "normal": 3,
+      "noTraits": 1,
+      "noComeback": 1
+    },
+    {
+      "id": 498,
+      "seed": "2617a4666e58615f001987921d0e67ddf333b8fba5e1a9251e11f9b9584e0a53",
+      "picks": [
+        3,
+        1,
+        4,
+        2
+      ],
+      "normal": 0,
+      "noTraits": 1,
+      "noComeback": 3
+    },
+    {
+      "id": 499,
+      "seed": "a4411f482b5eb4d63bb84207c3a8e49448cc6d82600e6188865d1d0913b48b1e",
+      "picks": [
+        4,
+        2,
+        0,
+        3
+      ],
+      "normal": 2,
+      "noTraits": 2,
+      "noComeback": 0
+    }
+  ]
+}

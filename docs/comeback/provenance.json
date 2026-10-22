@@ -1,0 +1,15 @@
+{
+  "rules": "dynamic-comeback-2",
+  "physics": "matter-0.20-comeback-2",
+  "node": "v22.18.0",
+  "hashNormalization": "UTF-8 with LF line endings",
+  "seedRule": "SHA256(draw-race-comeback-study-1:<id>)",
+  "ids": "0..9999",
+  "hashes": {
+    "lib/physics.ts": "109d0b16bffc2697e427b284f6bcd5caad98f7eba6fdab35010abe5dccadf4f4",
+    "lib/comeback.ts": "e9679660c1b283c155c392ace298389382bc6cf3f883585f9890811824b69858",
+    "lib/physics-course.ts": "be4aeb95dee6780197a580233525cb4e5561ecf7c401aefc4dcd68728f151854",
+    "tests/baseline/physics.ts": "ad2d02827689570c8a64476ad82124a2f141b531b00785d0b333fe24a5f5e316",
+    "tests/baseline/physics-course.ts": "80fae233d78725163432faabc098d3c4212344833f5deb76fb1b2689cd2f689a"
+  }
+}

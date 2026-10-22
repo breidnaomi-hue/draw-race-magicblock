@@ -1,0 +1,273 @@
+{
+  "phase": "pilot",
+  "total": 240,
+  "seconds": 21.512,
+  "checkpoints": [
+    {
+      "second": 30,
+      "allLeaders": {
+        "wins": 131,
+        "count": 240,
+        "rate": 0.5458333333333333
+      },
+      "leader15to20": {
+        "wins": 0,
+        "count": 0,
+        "rate": null
+      },
+      "trailing10to20": {
+        "wins": 1,
+        "count": 50,
+        "rate": 0.02
+      },
+      "alreadyFinished": 0
+    },
+    {
+      "second": 45,
+      "allLeaders": {
+        "wins": 157,
+        "count": 240,
+        "rate": 0.6541666666666667
+      },
+      "leader15to20": {
+        "wins": 0,
+        "count": 1,
+        "rate": 0
+      },
+      "trailing10to20": {
+        "wins": 2,
+        "count": 135,
+        "rate": 0.014814814814814815
+      },
+      "alreadyFinished": 0
+    },
+    {
+      "second": 65,
+      "allLeaders": {
+        "wins": 191,
+        "count": 240,
+        "rate": 0.7958333333333333
+      },
+      "leader15to20": {
+        "wins": 4,
+        "count": 4,
+        "rate": 1
+      },
+      "trailing10to20": {
+        "wins": 0,
+        "count": 243,
+        "rate": 0
+      },
+      "alreadyFinished": 0
+    }
+  ],
+  "racesWithLeadChange": 195,
+  "meanLeadChanges": 3.2333333333333334,
+  "comeback10": 9,
+  "comeback15": 1,
+  "events": {
+    "JUMP": 2992,
+    "PERFECT LANDING": 13424,
+    "OBSTACLE CRASH": 6787,
+    "CRASH": 2687,
+    "BAD LANDING": 3370,
+    "GET UP": 6293,
+    "ADRENALINE RUSH": 848,
+    "SLIP": 3937,
+    "PERFECT RHYTHM": 1033,
+    "RAGE MODE": 415,
+    "SECOND WIND": 700,
+    "BOOST STRIP": 1160,
+    "FINAL PUSH": 240,
+    "LUCKY JUMP": 719,
+    "LUCKY RECOVERY": 461,
+    "COMEBACK SURGE": 114,
+    "STUMBLE": 41,
+    "SLIPPERY TURN": 23
+  },
+  "falls": 2687,
+  "recoveries": 2649,
+  "forms": [
+    {
+      "shape": 0,
+      "wins": 52,
+      "count": 153,
+      "rate": 0.33986928104575165
+    },
+    {
+      "shape": 1,
+      "wins": 44,
+      "count": 153,
+      "rate": 0.2875816993464052
+    },
+    {
+      "shape": 2,
+      "wins": 12,
+      "count": 154,
+      "rate": 0.07792207792207792
+    },
+    {
+      "shape": 3,
+      "wins": 5,
+      "count": 154,
+      "rate": 0.032467532467532464
+    },
+    {
+      "shape": 4,
+      "wins": 79,
+      "count": 154,
+      "rate": 0.512987012987013
+    }
+  ],
+  "equalSeatWins": [
+    13,
+    11,
+    14,
+    10
+  ],
+  "examples": {
+    "held": [
+      2,
+      20,
+      29,
+      34,
+      40,
+      41,
+      46,
+      49,
+      50,
+      52
+    ],
+    "comeback": [
+      {
+        "id": 15,
+        "deficit": 20.52,
+        "at": 39000
+      },
+      {
+        "id": 8,
+        "deficit": 13.825000000000001,
+        "at": 24000
+      },
+      {
+        "id": 39,
+        "deficit": 13.745,
+        "at": 52000
+      },
+      {
+        "id": 124,
+        "deficit": 11.63,
+        "at": 68000
+      },
+      {
+        "id": 209,
+        "deficit": 11.485,
+        "at": 34000
+      },
+      {
+        "id": 153,
+        "deficit": 11.04,
+        "at": 74000
+      },
+      {
+        "id": 217,
+        "deficit": 11.04,
+        "at": 42000
+      },
+      {
+        "id": 208,
+        "deficit": 10.505,
+        "at": 20000
+      },
+      {
+        "id": 96,
+        "deficit": 10.355,
+        "at": 60000
+      }
+    ],
+    "changes": [
+      0,
+      1,
+      4,
+      5,
+      8,
+      10,
+      13,
+      15,
+      16,
+      21,
+      31,
+      32,
+      35,
+      37,
+      38,
+      42,
+      43,
+      45,
+      51,
+      53
+    ],
+    "obstacle": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      10,
+      12,
+      13,
+      15,
+      16,
+      17,
+      19,
+      21,
+      22,
+      24,
+      25,
+      26,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      47,
+      51,
+      52,
+      53,
+      54,
+      57,
+      58,
+      60,
+      61,
+      62,
+      63,
+      64,
+      66,
+      69,
+      70,
+      72,
+      73,
+      75,
+      76,
+      77,
+      81,
+      82
+    ]
+  }
+}

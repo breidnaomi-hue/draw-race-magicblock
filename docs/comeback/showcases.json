@@ -1,0 +1,34 @@
+{
+  "phase": "after",
+  "entries": [
+    {
+      "id": 20,
+      "key": "held",
+      "category": "Leader holds on",
+      "description": "A 5.6-point lead at 45s survives the chase.",
+      "url": "/showcases/20.json"
+    },
+    {
+      "id": 1328,
+      "key": "comeback",
+      "category": "From behind to winner",
+      "description": "The winner was 24.4 points behind at 61s.",
+      "url": "/showcases/1328.json"
+    },
+    {
+      "id": 3971,
+      "key": "changes",
+      "category": "Lead keeps changing",
+      "description": "18 lead changes after the opening five seconds.",
+      "url": "/showcases/3971.json"
+    },
+    {
+      "id": 16,
+      "key": "barrier",
+      "category": "The barrier changes the result",
+      "description": "At 32.1s the leader hits a barrier. Removing only that barrier changes the winner.",
+      "url": "/showcases/16.json"
+    }
+  ],
+  "counterfactualTries": 22
+}

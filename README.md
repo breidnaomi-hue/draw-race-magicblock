@@ -1,96 +1,79 @@
-# DRAW RACE — Matter.js edition
+# DRAW RACE — dynamic comeback edition
 
-Бесплатная игра: нарисовать лошадь, пригласить друзей в комнату на 2/4 человека или бежать против трёх ботов. Публичный адрес: https://draw-race-party.breid222.chatgpt.site/
+Draw a horse and race with two or four friends, or practice against three doodle bots. Races last 90 seconds. Play at https://draw-race-party.breid222.chatgpt.site/.
 
-## Что изменилось
+## Run locally
 
-Движение и результат вычисляет Matter.js 0.20.0 с фиксированным шагом 1/60 секунды. Корпус и голова — твёрдые тела с массой и инерцией; шея — пружинная связь. Четыре опорные ноги работают как пружины с фазами опоры и переноса. Ноги используют контакт с высотой поверхности, а не отдельные твёрдые сегменты. Это упрощённая управляемая физика, не биомеханический симулятор.
-
-Сервер один раз рассчитывает 90 секунд после последнего READY. Он сохраняет состояния корпуса, головы, ног, скорости, энергии и события с частотой 10 Гц. Клиенты интерполируют одну запись; частота кадров устройства не определяет результат. До начала гонки не выбирается победитель: место берётся из пересечения финиша корпусом. Если участник не успел за 90 секунд, учитывается пройденное расстояние. Стартовый отсчёт идёт отдельно.
-
-Исходный рисунок остаётся текстурой 640×400. Сетка PixiJS 25×17 деформируется по физическим точкам корпуса, головы, шеи и двух пар ног. При недоступном WebGL используется тот же рисунок на текстурированных треугольниках Canvas. Никакая готовая модель лошади не подставляется. Пять кнопок-примеров помогают проверить обычную, округлую, длинноногую, длинношею и квадратную формы. Кнопка Adjust animation joints позволяет указать пять точек вручную. Изменение примера можно отменить через Undo.
-
-## Баланс
-
-Пять характеристик SPEED, ACCELERATION, BALANCE, JUMP, ENDURANCE делят 250 очков и ограничены 25–75. Каждая характеристика мотора смешивается по формуле:
-
-`effective = 0.30 × shape + 0.70 × seededVariation`
-
-Случайная часть лежит в том же диапазоне 25–75. Худые длинноногие формы получают скорость/прыжок за счёт устойчивости/выносливости; округлые — обратный обмен. Качество штрихов как художественная оценка не используется.
-
-30/70 — вес параметров, а не доля объяснённой дисперсии и не вероятность победы. Геометрия головы дополнительно задаёт плечо и массу физического рычага. Длинная шея и морда тянут переднюю часть вниз; при столкновениях и ветре это может закончиться клевком и опрокидыванием. Длина носа не участвует в определении финиша. Автоматические точки — эвристика, не распознавание анатомии; необычные рисунки могут потребовать ручной настройки. Тесты пяти примеров не доказывают отсутствие оптимального рисунка.
-
-## Трасса и события
-
-11 препятствий: твёрдые барьеры, углубление, лужи, грязь, рампы и лёд. У барьеров есть коллайдеры; впадина и рампы меняют физическую высоту земли. Грязь создаёт сопротивление; лужи и лёд снижают сцепление. Прыжок — импульс с последующей гравитационной траекторией. Падение определяется углом корпуса, подъём выполняется ограниченными силами и моментом, без перестановки позиции.
-
-Три окружения: Woodland, Farmyard, Snowfield. Прямые, пологие повороты, шпилька, подъём и спуск. Продольное движение идёт вдоль координаты трассы; повороты отображаются изгибом дороги и уменьшают доступный темп в зависимости от баланса. Это не свободное двухмерное руление по плоскости.
-
-Погода меняется четыре раза по seed: Sunshine, Rain, Strong wind, Fog, Snow & ice. Ветер действует на корпус и голову, осадки меняют сцепление, туман сокращает дистанцию обнаружения барьера. Смена погоды видна на экране.
-
-SECOND WIND и RAGE MODE усиливают целевой темп; EXHAUSTION и PANIC снижают его. SLIP даёт импульс и временно снижает сцепление. CRASH отражает реальный контакт/угол, GET UP — физическое восстановление. LUCKY JUMP усиливает прыжковый импульс; PERFECT LANDING пополняет энергию и даёт небольшой толчок. Случайные режимы имеют интервалы и не запускаются в состоянии падения.
-
-Камера следует за лидером, фон имеет параллакс, есть пыль/брызги, погодный слой, мини-карта и текущая таблица мест. Звуки копыт и событий синтезируются Web Audio, включается/выключается звук. В режиме reduced motion сокращаются частицы. Повтор имеет паузу и ползунок времени. Предпросмотр рисунка также позволяет выбрать момент.
-
-## Комнаты и проверяемость
-
-READY фиксирует рисунок, точки, характеристики и nonce. Сервер заранее публикует SHA-256(secret); seed включает версию, секрет, комнату, раунд и зафиксированных участников. SHA-256 записи проверяет её целостность. Все участники комнаты получают одинаковые данные и startAt; повтор использует исходную запись, а не повторную симуляцию на телефоне.
-
-Сервер остаётся доверенной стороной: он может прекратить обслуживание, а хеш записи сам по себе не доказывает честность расчёта. Это не on-chain VRF. Solana wallet/escrow/VRF/выплаты не реализованы; все доступные забеги бесплатны. Статус дальнейшей интеграции: `docs/SOLANA_DEVNET.md`.
-
-Комнаты работают без регистрации. Сессия хранится на устройстве, reload восстанавливает место. На Sites используется D1 с revision CAS и HTTP-поллингом. В standalone Node дополнительно есть WebSocket-уведомления. Две вкладки одного профиля — один игрок; для второго человека нужен другой профиль/устройство. Есть результаты, реванш, история 12 гонок на устройстве, PNG рисунка и победителя, запись 8-секундного клипа через MediaRecorder.
-
-## Локальный запуск
-
-Node.js 22.18+:
+Node.js 22.18 or newer:
 
 ```sh
 npm ci
 npm run local
 ```
 
-Frontend: http://localhost:5174/, backend: порт 8788. Для Node-хостинга:
+Frontend: http://localhost:5174/; HTTP/WebSocket backend: port 8788. ROOM_DATA selects the persistent room directory. Keep a single Node process for the file store. A public standalone server needs HTTPS and WebSocket upgrades for /ws.
 
 ```sh
 npm run build:standalone
 npm run serve:standalone
 ```
 
-Данные комнат хранятся в `room-data` или `ROOM_DATA`. FileStore рассчитан на один процесс; нужен постоянный диск. Порт задаётся через PORT. Для публичного размещения нужен HTTPS/reverse proxy и WebSocket upgrade `/ws`.
+The Sites build uses Vinext and D1 with revision CAS and room polling. Preserve .openai/hosting.json; npm run build creates deployment output. If the Windows npm shim fails, invoke the installed npm-cli.js through Node.
 
-В данной Windows-среде npm-обёртка определяла неверный путь; рабочий обход:
+## Physical race and replay
 
-```powershell
-$env:npm_config_cache = "$env:TEMP\draw-race-npm"
-node 'C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js' ci
-node scripts/local.mjs
-```
+Matter.js 0.20.0 solves each racer at a fixed 60 Hz. A torso and heavy head are colliders connected by a spring neck. Four alternating foot motors apply support and propulsion forces. The drawing remains the visible skin: PixiJS deforms its original ink around the torso, head and planted feet, with Canvas fallback. Manual joint markers help unusual drawings.
 
-Sites Worker/Vinext: `npm run build`. Хостинг сохраняет `.openai/hosting.json` и существующий D1 binding. Публичная аудитория сайта не меняется.
+The server computes the full simulation before the synchronized start, including real barrier contacts, slopes, mud, ice, wind, falls and recovery. Clients play the same recorded poses and events at 10 Hz with interpolation. The torso crosses the finish line; a long nose cannot finish early. If nobody finishes, distance at 90 seconds decides. The head's mass and lever make an extreme neck harder to control.
 
-## Проверки
+Five shape attributes share a 250-point budget. Solver attributes use 0.30 × shape + 0.70 × seeded variation. These are parameter weights, not a claim that exactly 30% of wins depend on drawing. Physical geometry also matters. The report includes form win rates and a matched-seed ablation, including remaining differences between forms.
+
+## Comebacks and zones
+
+SECOND WIND, RAGE MODE, ADRENALINE RUSH, PERFECT RHYTHM, LUCKY RECOVERY and COMEBACK SURGE change forces, energy, balance or grip. Chances use the actual gap, fatigue, time and conditions. Each racer has usage limits and cooldowns. Only one primary boost is active. Trailing racers receive bounded gradual pace assistance; leaders get no rank-based penalty. The rare surge has one use and spends energy. It cannot guarantee a win.
+
+OVERHEAT, EXHAUSTION, BAD LANDING, SLIPPERY TURN, OBSTACLE CRASH and STUMBLE arise from speed, energy, angle, terrain or real contacts. At 65 seconds FINAL PUSH announces the last phase and gives eligible trailing racers a seeded chance for their remaining surge. Comeback logic never assigns positions, rankings or finish times.
+
+Zones include MUD TRAP, WET CORNER, BOOST STRIP, optional DOUBLE JUMP and RISKY SHORTCUT, then FINAL CHAOS ZONE. The shortcut is a lane-specific fast ramp/strip with risk, not a geometrically shorter route. Courses have real elevation, bends, four weather phases and three environments. Bends change motor load and wet grip in a side-view course, rather than providing 3D steering.
+
+History includes four actual study races: leader holds, large comeback, many lead changes and an obstacle changing the winner. Key-moment buttons seek the recording. The barrier case offers a separate simulation with only that barrier removed. Direct links: ?example=held, ?example=comeback, ?example=changes, ?example=barrier.
+
+## Verification
 
 ```sh
 npm run typecheck
-node --import tsx --test tests/game.test.ts
-node --import tsx scripts/physics-batch.ts 1000
-# При работающем backend:
+node --import tsx --test tests/game.test.ts tests/comeback.test.ts
 node scripts/smoke.mjs
 ```
 
-18 автоматических тестов: детерминизм записи; реальная скорость и контакт ног; барьер и баллистический прыжок; ветер/грязь/лёд/поворот; ускорение и истощение; падение и подъём; пять форм и skinning; бюджет 250 и формула 30/70; валидация длинного рычага; смена погоды; комнаты 2/4 и конкурентный READY; идентичные записи клиентов; подмена рисунка/записи; восстановление сессии и права; персистентность CAS.
+The smoke check needs the backend. It creates two- and four-player rooms with independent HTTP clients and checks identical seeds, starts and tapes, plus the standalone WebSocket transport.
 
-Пакетная проверка: 500 гонок одинаковых форм для сравнения мест и 500 гонок равномерно между десятью парами пяти форм с чередованием сторон. Каждая гонка длится полные 90 секунд, два участника. Сводка хранится в `docs/physics-batch.json`. Это ограниченная выборка для поиска грубых перекосов, не гарантия игрового баланса.
+Reproduce the study:
 
-Браузерная проверка выполнялась в Chromium на desktop и в мобильной ширине. Физические Android/iPhone и Safari не тестировались. Видеоэкспорт зависит от поддержки браузера. Google Fonts бесплатны и имеют системную замену. Платных AI API в игровом процессе нет.
+```sh
+node scripts/balance-study.mjs before 10000 6
+node scripts/balance-study.mjs after 10000 6
+node --import tsx scripts/comeback-ablation.ts 500
+node --import tsx scripts/make-showcases.ts after
+node scripts/balance-report.mjs
+```
 
-## Основные файлы
+The before phase imports the frozen previous engine in tests/baseline/. Both phases use SHA-256 of draw-race-comeback-study-1:<id> and the same drawings/seats. Raw per-race JSONL is ignored by Git; aggregates are retained in docs/comeback/. The report generator exports CSVs for analysis. See docs/COMEBACK.md and docs/comeback/BALANCE.md.
 
-- `lib/physics.ts` — Matter solver, запись/интерполяция, состояния и ранжирование.
-- `lib/physics-course.ts` — препятствия, высота, повороты, погода.
-- `lib/rig.ts`, `lib/skin.ts` — характеристики, точки и skinning исходного рисунка.
-- `components/race-surface.tsx` — камера, Pixi/Canvas, сцена, звук и эффекты.
-- `components/drawing-editor.tsx` — рисование, примеры и ручные точки.
-- `lib/rooms.ts` — серверная фиксация и запись; `lib/d1-store.ts` — размещённые комнаты.
-- `server/node.ts` — standalone HTTP/WebSocket; `tests/game.test.ts` — проверки.
+## Trust and scope
 
+READY locks the drawing, rig, identity and nonce. A server secret commitment precedes drawing; its reveal and locked contributions derive the seed. The physical record has a SHA-256 hash. The receipt can independently recompute the current solver and compare the full tape, detecting a rehashed altered result. Old v5 rooms retain their original recording and verification.
+
+This is a free game, not an on-chain proof or VRF. The operator can abort a room. Browser QA found different trajectories and a different recomputed winner in Chromium despite identical parameters and course. Do not use cross-runtime recomputation as a universal cheating detector. Players still receive the same original server tape. The Node reference audit can be run with `node --import tsx scripts/verify-replay.ts receipt.json ROOMCODE`. Solana wallet, escrow, deposits and payouts remain disabled and unfinished; see docs/SOLANA_DEVNET.md. No external AI service runs during gameplay.
+
+Drawing tools, brush colors, erase, undo, preview, invites, reconnect, rematch, local history, PNG export and short clip recording remain available. History holds 12 races on the device. Browser checks use Chromium with mobile viewport emulation; physical phones and Safari are not covered.
+
+## Main files
+
+- lib/physics.ts and lib/physics-course.ts: solver, course and replay.
+- lib/comeback.ts: opportunities, boost rules and bounded assistance.
+- lib/rig.ts and lib/skin.ts: attributes, joints and drawing skin.
+- components/race-surface.tsx and lib/race-camera.ts: rendering, effects and camera.
+- components/draw-race.tsx and components/race-examples.tsx: game flow and study replays.
+- lib/rooms.ts, lib/d1-store.ts and server/node.ts: room authority and persistence.
+- tests/ and scripts/balance-*: verification and simulation study.

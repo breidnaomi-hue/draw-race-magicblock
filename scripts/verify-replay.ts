@@ -1,0 +1,11 @@
+import {readFile} from 'node:fs/promises';
+import {auditSimulation,verifyRace,sha,VERSION} from '../lib/game';
+import {tapePayload} from '../lib/physics';
+const file=process.argv[2];
+if(!file)throw Error('Usage: node --import tsx scripts/verify-replay.ts receipt.json [ROOMCODE]');
+const race=JSON.parse(await readFile(file,'utf8')),code=process.argv[3]||race.code;
+const integrity=!!race.tape&&await sha(tapePayload(race.tape))===race.tape.hash;
+const receipt=race.example?'study sample':code?await verifyRace(code,race):'room code required';
+const physics=race.version===VERSION?await auditSimulation(race):'old recording; current recomputation unavailable';
+console.log(JSON.stringify({node:process.version,integrity,receipt,physics,version:race.version},null,2));
+if(!integrity||receipt===false||physics===false)process.exitCode=1;
