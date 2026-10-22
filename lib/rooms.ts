@@ -1,4 +1,5 @@
-import {Drawing,Room,PublicRoom,randomHex,sha,seedInput,VERSION,DURATION,validateDrawing} from './game';
+import {Drawing,Room,PublicRoom,randomHex,sha,seedInput,VERSION,DURATION,validateDrawing,attachTape} from './game';
+import {validateRig,specFor} from './rig';
 export interface Store {get(code:string):Promise<Room|null>; create(room:Room):Promise<boolean>; save(room:Room,previous:number):Promise<boolean>}
 export class GameError extends Error {constructor(message:string,public status=400){super(message);}}
 const pubPlayer=({token,...p}:Room['players'][number])=>p;
@@ -35,10 +36,10 @@ export async function act(store:Store,code:string,token:string,action:string,dat
       if(now>room.deadline)throw new GameError('Drawing time expired. The host can reset the room.',409);
       if(p.ready)throw new GameError('Already ready. Wait for the other riders.',409);
       if(!/^[a-f0-9]{64}$/.test(data.nonce))throw new GameError('Invalid random contribution');
-      p.drawing=validateDrawing(data.drawing);p.nonce=data.nonce;p.ready=true;p.name=nameOf(data.name);
+      p.drawing=validateDrawing(data.drawing);p.rig=validateRig(data.rig);p.spec=specFor(p.drawing,p.rig);p.nonce=data.nonce;p.ready=true;p.name=nameOf(data.name);
       if(room.players.length===room.capacity&&room.players.every(x=>x.ready)) {
         const seed=await sha(seedInput(room.secret,room.code,room.round,room.players));
-        room.race={seed,secret:room.secret,startAt:now+4500,duration:DURATION,track:parseInt(seed.slice(2,4),16)%3,round:room.round,players:room.players.map(pubPlayer),commitment:room.commitment,version:VERSION};
+        const began=Date.now();room.race=await attachTape({seed,secret:room.secret,startAt:now+4500,duration:DURATION,track:parseInt(seed.slice(2,4),16)%3,round:room.round,players:room.players.map(pubPlayer),commitment:room.commitment,version:VERSION});room.race.startAt=now+(Date.now()-began)+5000;
       }
     } else if(action==='rematch') {
       if(!room.race||now<room.race.startAt+room.race.duration)throw new GameError('Finish the race first.',409);
@@ -74,7 +75,7 @@ export async function api(request:Request,store:Store,transport='poll') {
     if(request.method==='GET'&&!action) {
       const room=await store.get(code);if(!room||room.expires<Date.now())throw new GameError('Room expired or does not exist.',404);
       const p=room.players.find(p=>p.token===token);if(!p)throw new GameError('Join this room first.',403);
-      return response({room:publicRoom(room),playerId:p.id});
+      const result=publicRoom(room);if(result.race&&url.searchParams.get('known')===result.race.seed)result.race={...result.race,tape:undefined};result.history=result.history.map(r=>({...r,tape:undefined}));return response({room:result,playerId:p.id});
     }
     if(request.method==='POST'&&action)return response(await act(store,code,token,action,await body(request)));
     throw new GameError('Method not allowed',405);

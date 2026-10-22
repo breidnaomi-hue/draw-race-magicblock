@@ -1,0 +1,62 @@
+{
+  "total": 1000,
+  "seconds": 96.322,
+  "equalBuildSeatWins": [
+    243,
+    257
+  ],
+  "mixedBuildWins": [
+    116,
+    119,
+    98,
+    39,
+    128
+  ],
+  "samples": [
+    {
+      "name": "Horse",
+      "starts": 400,
+      "meanDistance": 8048,
+      "finishRate": 0.69
+    },
+    {
+      "name": "Blob",
+      "starts": 400,
+      "meanDistance": 7989,
+      "finishRate": 0.65
+    },
+    {
+      "name": "Lanky",
+      "starts": 400,
+      "meanDistance": 7823,
+      "finishRate": 0.525
+    },
+    {
+      "name": "Long neck",
+      "starts": 400,
+      "meanDistance": 7009,
+      "finishRate": 0.3
+    },
+    {
+      "name": "Box",
+      "starts": 400,
+      "meanDistance": 8152,
+      "finishRate": 0.7275
+    }
+  ],
+  "events": {
+    "LUCKY JUMP": 983,
+    "JUMP": 4129,
+    "PERFECT LANDING": 21472,
+    "CRASH": 30692,
+    "GET UP": 13060,
+    "SECOND WIND": 2887,
+    "RAGE MODE": 2911,
+    "SLIP": 5611,
+    "PANIC": 2943,
+    "EXHAUSTION": 2947
+  },
+  "falls": 6466,
+  "recoveries": 6432,
+  "maxAir": 374.44412547612967
+}

@@ -10,5 +10,6 @@ for(const n of [2,4]){
   const drawing=[{color:'#282637',width:9,erase:false,points:[[100,150],[400,150],[450,90],[500,150],[400,200],[100,200],[100,150]]}];
   await Promise.all(tokens.map(t=>call('/api/rooms/'+code+'/ready',t,{drawing,nonce:randomBytes(32).toString('hex')})));
   const snapshots=await Promise.all(tokens.map(t=>call('/api/rooms/'+code,t)));
-  assert.equal(new Set(snapshots.map(s=>s.room.race.seed)).size,1);assert.equal(new Set(snapshots.map(s=>s.room.race.startAt)).size,1);assert.equal(snapshots[0].room.race.players.length,n);ws?.close();console.log('PASS '+n+' independent HTTP players: same seed, start timestamp, locked roster; '+conf.transport);
+  assert.equal(new Set(snapshots.map(s=>s.room.race.seed)).size,1);assert.equal(new Set(snapshots.map(s=>s.room.race.startAt)).size,1);assert.equal(snapshots[0].room.race.players.length,n);assert.equal(new Set(snapshots.map(s=>s.room.race.tape.hash)).size,1);assert.equal(snapshots[0].room.race.tape.frames,901);assert.ok(snapshots[0].room.race.tape.diagnostics.jumps>0);ws?.close();console.log('PASS '+n+' independent HTTP players: same physics tape hash, 901 frames, seed, start timestamp and locked roster; '+conf.transport);
 }
+
