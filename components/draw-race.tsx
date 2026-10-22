@@ -11,8 +11,7 @@ import TraitCard from './trait-card';
 import {courseFor} from '../lib/course';
 type SavedRace={code:string;race:Race;me:string;date:number};
 type Modal='how'|'profile'|'history'|'join'|'fairness'|'stake'|'preview'|null;
-const demoPlayers=Array.from({length:4},(_,i)=>({id:'demo'+i,name:['Sir Scribbles','Neigh Sayer','Potato Pony','Lil’ Chaos'][i],drawing:exampleHorse(i),nonce:'0'.repeat(64),ready:true,lastSeen:0,rematch:false}));
-const demoRace:Race={seed:'5269a4495cf12edda478fabef933c55eb2a419382c2355dedfed0b738ba911098',secret:'',startAt:0,duration:DURATION,track:0,round:1,players:demoPlayers,commitment:'',version:VERSION};
+import {demoPlayers,demoRace} from '../lib/demo';
 const time=(ms:number)=>{const s=Math.max(0,Math.ceil(ms/1000));return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')};
 const rank=(r:Race)=>raceOrder(r.seed,r.players.map(p=>p.drawing),r.track);
 function read<T,>(key:string,fallback:T):T{try{return JSON.parse(localStorage.getItem(key)||'null')??fallback}catch{return fallback}}

@@ -9,8 +9,10 @@ import {analyze,terrainScore} from '../lib/traits';
 import {exampleHorse} from '../lib/drawing';
 import {FileStore} from '../server/file-store';
 import {courseFor,routeY} from '../lib/course';
+import {demoRace} from '../lib/demo';
 class Memory implements Store{map=new Map<string,Room>();async get(code:string){return structuredClone(this.map.get(code)||null)}async create(r:Room){if(this.map.has(r.code))return false;this.map.set(r.code,structuredClone(r));return true}async save(r:Room,v:number){if(this.map.get(r.code)?.revision!==v)return false;this.map.set(r.code,structuredClone(r));return true}}
 const horse=exampleHorse(0),ready=(drawing=horse)=>({drawing,nonce:randomHex(),name:'Tester'});
+test('shipped home demo and drawing preview contain valid race seeds',()=>{for(const seed of [demoRace.seed,'1234'+demoRace.seed.slice(4)]){assert.match(seed,/^[a-f0-9]{64}$/);assert.equal(makePlan(seed,4,DURATION,demoRace.players.map(p=>p.drawing)).ranking.length,4)}});
 for(const n of [2,4] as const)test(n+' players: concurrent joins/ready, secret, replay, locked roster, rematch',async()=>{
   const db=new Memory(),tokens=Array.from({length:n},()=>randomHex()),created=await createRoom(db,tokens[0],'Host',n,1000),code=created.room.code;
   assert.equal('secret' in created.room,false);assert.equal(JSON.stringify(created).includes(tokens[0]),false);
