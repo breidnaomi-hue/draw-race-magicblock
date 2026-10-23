@@ -1,0 +1,54 @@
+{
+  "baselineCommit": "0da445b34ab3c5f9cadd0de0abdc50c78c51f62b",
+  "normalization": "CRLF to LF before UTF-8 SHA-256",
+  "files": [
+    {
+      "file": "lib/physics.ts",
+      "baselineSha256": "109d0b16bffc2697e427b284f6bcd5caad98f7eba6fdab35010abe5dccadf4f4",
+      "currentSha256": "109d0b16bffc2697e427b284f6bcd5caad98f7eba6fdab35010abe5dccadf4f4",
+      "unchanged": true
+    },
+    {
+      "file": "lib/physics-course.ts",
+      "baselineSha256": "be4aeb95dee6780197a580233525cb4e5561ecf7c401aefc4dcd68728f151854",
+      "currentSha256": "be4aeb95dee6780197a580233525cb4e5561ecf7c401aefc4dcd68728f151854",
+      "unchanged": true
+    },
+    {
+      "file": "lib/comeback.ts",
+      "baselineSha256": "e9679660c1b283c155c392ace298389382bc6cf3f883585f9890811824b69858",
+      "currentSha256": "e9679660c1b283c155c392ace298389382bc6cf3f883585f9890811824b69858",
+      "unchanged": true
+    },
+    {
+      "file": "lib/rig.ts",
+      "baselineSha256": "7d6013a4a2ae79e38bff3ba8731acfc2110e3abac9534bfd463f09d412d163d7",
+      "currentSha256": "7d6013a4a2ae79e38bff3ba8731acfc2110e3abac9534bfd463f09d412d163d7",
+      "unchanged": true
+    },
+    {
+      "file": "lib/traits.ts",
+      "baselineSha256": "f1cc83b17cb8a16104365cb36603797619c9b65dcc707e2f4a7e016d90937e1c",
+      "currentSha256": "f1cc83b17cb8a16104365cb36603797619c9b65dcc707e2f4a7e016d90937e1c",
+      "unchanged": true
+    },
+    {
+      "file": "lib/rooms.ts",
+      "baselineSha256": "0e9227f575d43c7b7e310f9f11bf7a22169c9e7bb5543a3c42dcf325f6894ff9",
+      "currentSha256": "0e9227f575d43c7b7e310f9f11bf7a22169c9e7bb5543a3c42dcf325f6894ff9",
+      "unchanged": true
+    },
+    {
+      "file": "lib/d1-store.ts",
+      "baselineSha256": "1499a19d44136b5081e4190277025528ef50f5d48b77116d86d8ee64a94dfd99",
+      "currentSha256": "1499a19d44136b5081e4190277025528ef50f5d48b77116d86d8ee64a94dfd99",
+      "unchanged": true
+    },
+    {
+      "file": "server/node.ts",
+      "baselineSha256": "170180b06194d27f604e777af8ea6f9e850015e07cca0329780acf3b9573b8cc",
+      "currentSha256": "170180b06194d27f604e777af8ea6f9e850015e07cca0329780acf3b9573b8cc",
+      "unchanged": true
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "room": "R4HQKF",
+  "players": 4,
+  "duration": 90000,
+  "frames": 901,
+  "identicalPeerHash": "db9711e5b7019368075c9e41fdee828149f882175c977f97b6e509297581d2a2",
+  "ranking": [
+    0,
+    1,
+    3,
+    2
+  ],
+  "rematchRound": 2,
+  "readinessCleared": true,
+  "source": "Observed browser host + three HTTP peers; round verified from local persisted room after UI rematch"
+}

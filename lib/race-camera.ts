@@ -1,8 +1,12 @@
 import type {Pose,ReplayTape} from './physics';
 import {clamp} from './rig';
-export function raceCamera(poses:Pose[],tape:ReplayTape,t:number,width:number,compact:boolean){
- const order=poses.map((_,i)=>i).sort((a,b)=>poses[b].x-poses[a].x),leader=order[0],normal=compact?.65:clamp(width/850,.78,1.22),baseCamera=Math.max(-85,poses[leader].x-width/normal*.59);
+export function raceCamera(poses:Pose[],tape:ReplayTape,t:number,width:number,compact:boolean,height=600){
+ const order=poses.map((_,i)=>i).sort((a,b)=>poses[b].x-poses[a].x),leader=order[0],normal=compact?.65:Math.min(height<420?.62:1.22,clamp(width/850,.78,1.22)),baseCamera=Math.max(-85,poses[leader].x-width/normal*.59);
  if(compact)return {scale:normal,camera:baseCamera,focus:leader,comeback:false};
+ const left=Math.min(...poses.map(q=>q.x)),right=Math.max(...poses.map(q=>q.x));
+ // Portrait framing keeps a reasonably close field together without changing
+ // a single recorded position. Widely separated fields retain action framing.
+ if(width<600&&right-left<1800){const scale=Math.min(normal,width*.74/(right-left+200));return {scale,camera:Math.max(-85,(left+right)/2-width/scale*.5),focus:leader,comeback:false};}
  const charges=tape.events.filter(e=>['COMEBACK SURGE','RAGE MODE','ADRENALINE RUSH'].includes(e.type)&&e.at<t&&e.at+e.duration>t&&e.lane!==leader&&poses[e.lane]?.vx>poses[leader].vx+.15&&(e.gap||0)>.05);
  const score=(e:typeof charges[number])=>(e.type==='COMEBACK SURGE'?1200:0)+poses[e.lane].vx*180-Math.abs(poses[e.lane].x-poses[leader].x)*.6;
  const charge=charges.sort((a,b)=>score(b)-score(a))[0];

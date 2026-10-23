@@ -1,0 +1,30 @@
+{
+  "base": "http://127.0.0.1:8788",
+  "date": "2026-10-22T23:56:09.420Z",
+  "results": [
+    {
+      "players": 2,
+      "room": "MA7QLL",
+      "seconds": 90,
+      "frames": 901,
+      "recordHash": "d12f0edef25c8435e94a59e3944ccc4cb245ba3bd08ff2cca64f5246f7086f63",
+      "seedVerified": true,
+      "referenceAudit": true,
+      "identicalClients": true,
+      "rematchRound": 2,
+      "historyRetained": true
+    },
+    {
+      "players": 4,
+      "room": "MDJX5M",
+      "seconds": 90,
+      "frames": 901,
+      "recordHash": "ede3eb429e5b1169b0e3bef276ed4718aa67c301da8ce36921498fcec9e19da2",
+      "seedVerified": true,
+      "referenceAudit": true,
+      "identicalClients": true,
+      "rematchRound": 2,
+      "historyRetained": true
+    }
+  ]
+}

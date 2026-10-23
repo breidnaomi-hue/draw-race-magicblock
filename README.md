@@ -1,4 +1,4 @@
-# DRAW RACE — dynamic comeback edition
+# DRAW RACE - party derby edition
 
 Draw a horse and race with two or four friends, or practice against three doodle bots. Races last 90 seconds. Play at https://draw-race-party.breid222.chatgpt.site/.
 
@@ -42,7 +42,7 @@ History includes four actual study races: leader holds, large comeback, many lea
 
 ```sh
 npm run typecheck
-node --import tsx --test tests/game.test.ts tests/comeback.test.ts
+node --import tsx --test tests/*.test.ts
 node scripts/smoke.mjs
 ```
 
@@ -77,3 +77,13 @@ Drawing tools, brush colors, erase, undo, preview, invites, reconnect, rematch, 
 - components/draw-race.tsx and components/race-examples.tsx: game flow and study replays.
 - lib/rooms.ts, lib/d1-store.ts and server/node.ts: room authority and persistence.
 - tests/ and scripts/balance-*: verification and simulation study.
+
+## Party interface redesign
+
+The cream/plum/coral identity uses shared buttons, cards, tooltips, progress bars and modals. Home, participant cards, editor, racing HUD and podium are separate components. EN/RU is available in the header; some detailed legacy receipt/help text remains English. Sound and reduced decorative motion persist on the device. Native fullscreen has an expanded-layout fallback. Replay highlights seek actual tape events; they never alter outcomes.
+
+The editor supports pointer input, erase, brush width, undo/redo and optional joint adjustment. On narrow screens the tools move above the canvas. The racing HUD keeps positions, time, weather, energy and active boosts around the field, with an optional whole-herd camera. Results support highlights, rematch, local history, sharing and PNG export. Stakes remain disabled.
+
+The redesign did not change the solver, 30/70 attribute calculation, course, authority rules or D1 store. Browser QA exposed two unrelated development defects: the standalone proxy forwarded the wrong Host for the Origin check, and concurrent reads on Windows could block local FileStore atomic replacement. The proxy preserves the real Host; FileStore now queues reads and writes per room, uses unique temporary paths and bounded retries. Run only one Node process against that directory.
+
+See docs/REDESIGN.md for reference adaptation, checks, screen sizes and limitations, docs/redesign-e2e.json for complete real-time 2/4-player runs, and docs/redesign-invariants.json for normalized source hashes against the previous published commit.

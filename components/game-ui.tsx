@@ -1,0 +1,10 @@
+'use client';
+import {LoaderCircle,X} from 'lucide-react';
+import {useGameLanguage} from './game-language';
+type ButtonProps=React.ButtonHTMLAttributes<HTMLButtonElement>&{variant?:'primary'|'secondary'|'danger'|'mint';loading?:boolean};
+export function GameButton({variant='primary',loading=false,className='',children,disabled,...props}:ButtonProps){return <button {...props} disabled={disabled||loading} aria-busy={loading||undefined} className={'button '+variant+' '+className}>{loading&&<LoaderCircle size={19} className="spin"/>}{children}</button>}
+export function IconButton({label,children,className='',...props}:React.ButtonHTMLAttributes<HTMLButtonElement>&{label:string}){return <span className="tooltip-wrap"><button {...props} className={'icon-button '+className} aria-label={label}>{children}</button><span className="tooltip" role="tooltip">{label}</span></span>}
+export function StatusBadge({children,tone='neutral'}:{children:React.ReactNode;tone?:'neutral'|'mint'|'coral'|'purple'|'yellow'}){return <span className={'status-badge '+tone}>{children}</span>}
+export function GameCard({children,className='',...props}:React.HTMLAttributes<HTMLDivElement>){return <div {...props} className={'game-card '+className}>{children}</div>}
+export function ProgressBar({value,label,color}:{value:number;label:string;color?:string}){return <div className="progress-bar" role="progressbar" aria-label={label} aria-valuemin={0} aria-valuemax={100} aria-valuenow={Math.round(value)}><i style={{width:Math.max(0,Math.min(100,value))+'%',background:color}}/></div>}
+export function GameModal({title,onClose,children,wide=false}:{title:string;onClose:()=>void;children:React.ReactNode;wide?:boolean}){const {tx}=useGameLanguage();return <div className="modal-backdrop" onClick={e=>{if(e.target===e.currentTarget)onClose()}}><section className={'modal '+(wide?'wide-modal':'')} role="dialog" aria-modal="true" aria-label={title}><button className="modal-close icon-button" onClick={onClose} aria-label={tx('Close dialog','Закрыть окно')}><X size={23}/></button>{children}</section></div>}
