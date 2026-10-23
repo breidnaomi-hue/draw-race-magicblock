@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "generator": "Magenta MusicVAE mel_2bar_small + original DRAW RACE arrangement and oscillator/noise synthesis",
+  "tracks": [
+    {
+      "id": "lobby",
+      "title": "Paddock Doodles",
+      "url": "/music/lobby.mp3",
+      "duration": 36.9230625,
+      "loop": true,
+      "loopStart": 0,
+      "loopEnd": 36.9230625,
+      "bpm": 104,
+      "bytes": 370270,
+      "sha256": "ea29012f2bb4ac7641238445faced630389629884b875a4bafcb3842462a2f6b",
+      "sampleRate": 32000,
+      "pcmSamples": 1181538,
+      "motifs": [
+        "lobby-1"
+      ]
+    },
+    {
+      "id": "race",
+      "title": "Hooves in a Hurry",
+      "url": "/music/race.mp3",
+      "duration": 58.1818125,
+      "loop": true,
+      "loopStart": 0,
+      "loopEnd": 58.1818125,
+      "bpm": 132,
+      "bytes": 583032,
+      "sha256": "e2bb71a6bc0aab810f68a97a54b23cfd83731cb4f4a6a3610d767920f8e5dd8b",
+      "sampleRate": 32000,
+      "pcmSamples": 1861818,
+      "motifs": [
+        "race-1",
+        "race-2"
+      ]
+    },
+    {
+      "id": "final",
+      "title": "One More Gallop",
+      "url": "/music/final.mp3",
+      "duration": 24.615375,
+      "loop": true,
+      "loopStart": 0,
+      "loopEnd": 24.615375,
+      "bpm": 156,
+      "bytes": 247150,
+      "sha256": "524dae449925d04a1d1654f860cb3a8a9e6d2c2063f6b657957636bd3cf1ba35",
+      "sampleRate": 32000,
+      "pcmSamples": 787692,
+      "motifs": [
+        "final-3",
+        "final-2"
+      ]
+    },
+    {
+      "id": "results",
+      "title": "A Very Doodled Victory",
+      "url": "/music/results.mp3",
+      "duration": 8,
+      "loop": false,
+      "loopStart": 0,
+      "loopEnd": 8,
+      "bpm": 144,
+      "bytes": 81197,
+      "sha256": "d87901a51708fbd796608d87c8d9213f31ab787ad97d2367f3e23686dbc135ba",
+      "sampleRate": 32000,
+      "pcmSamples": 256000,
+      "motifs": [
+        "results-3"
+      ]
+    }
+  ]
+}

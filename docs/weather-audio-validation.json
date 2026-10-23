@@ -1,0 +1,115 @@
+{
+  "baselineCommit": "b6f3c5492aeac3ae3b89f18e3ac0df6df7e549e5",
+  "hashNormalization": "UTF-8, CRLF normalized to LF",
+  "invariants": [
+    {
+      "file": "lib/physics.ts",
+      "sha256": "109d0b16bffc2697e427b284f6bcd5caad98f7eba6fdab35010abe5dccadf4f4",
+      "unchanged": true
+    },
+    {
+      "file": "lib/physics-course.ts",
+      "sha256": "be4aeb95dee6780197a580233525cb4e5561ecf7c401aefc4dcd68728f151854",
+      "unchanged": true
+    },
+    {
+      "file": "lib/comeback.ts",
+      "sha256": "e9679660c1b283c155c392ace298389382bc6cf3f883585f9890811824b69858",
+      "unchanged": true
+    },
+    {
+      "file": "lib/rig.ts",
+      "sha256": "7d6013a4a2ae79e38bff3ba8731acfc2110e3abac9534bfd463f09d412d163d7",
+      "unchanged": true
+    },
+    {
+      "file": "lib/traits.ts",
+      "sha256": "f1cc83b17cb8a16104365cb36603797619c9b65dcc707e2f4a7e016d90937e1c",
+      "unchanged": true
+    },
+    {
+      "file": "lib/rooms.ts",
+      "sha256": "0e9227f575d43c7b7e310f9f11bf7a22169c9e7bb5543a3c42dcf325f6894ff9",
+      "unchanged": true
+    },
+    {
+      "file": "lib/d1-store.ts",
+      "sha256": "1499a19d44136b5081e4190277025528ef50f5d48b77116d86d8ee64a94dfd99",
+      "unchanged": true
+    },
+    {
+      "file": "server/node.ts",
+      "sha256": "170180b06194d27f604e777af8ea6f9e850015e07cca0329780acf3b9573b8cc",
+      "unchanged": true
+    },
+    {
+      "file": "server/file-store.ts",
+      "sha256": "e09d269e02005e1cb28b247936a48885c0a82fe44e6e74ec8c8c7b18df673b25",
+      "unchanged": true
+    },
+    {
+      "file": "lib/game.ts",
+      "sha256": "a5f6cf79c52ca5d8f06d90189eafc9573615474a0a2ac287e38895ec01cee928",
+      "unchanged": true
+    }
+  ],
+  "audioBytes": 1281649,
+  "checks": {
+    "typeScript": true,
+    "tests": 37,
+    "standaloneBuild": true,
+    "sitesBuild": true,
+    "localTwoAndFourPlayerSmoke": "passed, WebSocket; equal seed/start/901-frame tape",
+    "fullBrowserPractice": "90 seconds, Farmyard with dusty Strong wind, Lil’ Chaos first, Doodler second",
+    "audioPhases": [
+      "lobby",
+      "race",
+      "final",
+      "results"
+    ],
+    "audioControls": "independent music/SFX, master mute, 28%/64% persisted across reload",
+    "reducedMotion": "0 weather particles verified",
+    "viewports": [
+      [
+        1280,
+        720
+      ],
+      [
+        390,
+        844
+      ],
+      [
+        360,
+        800
+      ],
+      [
+        844,
+        390
+      ]
+    ],
+    "horizontalOverflow": false,
+    "observedFrameMsApprox": 33,
+    "frameMetricScope": "IAB Chromium environment, not a real-device FPS claim",
+    "physicalAndroidChrome": false,
+    "physicalIPhoneSafari": false
+  },
+  "weatherReplayFixtures": {
+    "fog": {
+      "file": "1328.json",
+      "ms": 45000
+    },
+    "rain": {
+      "file": "1328.json",
+      "ms": 10000
+    },
+    "snow": {
+      "file": "16.json",
+      "ms": 60000
+    }
+  },
+  "limitations": [
+    "Physical iOS Safari and Android device audio/performance remain unverified",
+    "No subjective listening review is claimed",
+    "Older MusicVAE checkpoint has no separately verified output-rights warranty"
+  ]
+}

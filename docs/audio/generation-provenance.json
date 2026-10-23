@@ -1,0 +1,75 @@
+{
+  "generatedAt": "2026-10-23T05:21:53.267Z",
+  "generator": "Google Magenta MusicVAE",
+  "package": "@magenta/music",
+  "packageVersion": "1.23.1",
+  "tensorflowVersion": "2.8.6",
+  "backend": "cpu",
+  "nodeVersion": "v22.18.0",
+  "modelSource": "https://storage.googleapis.com/magentadata/js/checkpoints/music_vae/mel_2bar_small",
+  "checkpointFiles": [
+    {
+      "name": "config.json",
+      "bytes": 168,
+      "sha256": "9d61c1182d4fd99726762bf1bb137ea44fbe224835063818355e5c69180aaf50",
+      "source": "https://storage.googleapis.com/magentadata/js/checkpoints/music_vae/mel_2bar_small/config.json"
+    },
+    {
+      "name": "weights_manifest.json",
+      "bytes": 1644,
+      "sha256": "8520ed17fd2406215ac558c34871d184cf651ecffcfc03dff0eb381c3124cb1a",
+      "source": "https://storage.googleapis.com/magentadata/js/checkpoints/music_vae/mel_2bar_small/weights_manifest.json"
+    },
+    {
+      "name": "group1-shard1of5",
+      "bytes": 4194304,
+      "sha256": "2ff2d2da62470f9c9e0c8069e5705f4f70400962a771a8d613b0581f72a5985b",
+      "source": "https://storage.googleapis.com/magentadata/js/checkpoints/music_vae/mel_2bar_small/group1-shard1of5"
+    },
+    {
+      "name": "group1-shard2of5",
+      "bytes": 4194304,
+      "sha256": "b692831ad0b72919b36dad17e0740e535c47a3c7c49c6310b0708bf091447d8b",
+      "source": "https://storage.googleapis.com/magentadata/js/checkpoints/music_vae/mel_2bar_small/group1-shard2of5"
+    },
+    {
+      "name": "group1-shard3of5",
+      "bytes": 4194304,
+      "sha256": "c8cc4377fe87301c8246d7d931b408e66529a18d61781782ce9513ad3ee05051",
+      "source": "https://storage.googleapis.com/magentadata/js/checkpoints/music_vae/mel_2bar_small/group1-shard3of5"
+    },
+    {
+      "name": "group1-shard4of5",
+      "bytes": 4194304,
+      "sha256": "cb5a830db4dc46ee32a40cbf44cdf87faad99b345c0bb18b29b57af038db0556",
+      "source": "https://storage.googleapis.com/magentadata/js/checkpoints/music_vae/mel_2bar_small/group1-shard4of5"
+    },
+    {
+      "name": "group1-shard5of5",
+      "bytes": 917864,
+      "sha256": "7f32a9ac0ec69bc980defa41073ac4c2e311cc99d37d98e75d94535dff7cfc59",
+      "source": "https://storage.googleapis.com/magentadata/js/checkpoints/music_vae/mel_2bar_small/group1-shard5of5"
+    }
+  ],
+  "config": {
+    "type": "MusicVAE",
+    "dataConverter": {
+      "type": "MelodyConverter",
+      "args": {
+        "numSteps": 32,
+        "minPitch": 21,
+        "maxPitch": 108
+      }
+    }
+  },
+  "method": "Seeded tf.randomNormal latent vectors decoded with temperature=0 (argmax); no copyrighted prompt/song input or reference audio; exact latent vectors and raw outputs retained",
+  "seedBase": 20261023,
+  "repeatedDecodeIdentical": true,
+  "outputSha256": "52a82cf0fa31cbb8d1cab5a7b862854675081d6e93e756fe3710ed14075c3a16",
+  "license": {
+    "code": "Apache-2.0",
+    "codeSource": "https://github.com/magenta/magenta-js/blob/master/LICENSE",
+    "checkpointPublication": "https://github.com/magenta/magenta-js/blob/master/music/checkpoints/README.md",
+    "note": "Official checkpoint docs explicitly allow use in apps and local/self-hosted downloads. No separate output-rights warranty or explicit older-checkpoint model-card license was found; code license is not a guarantee of generated output copyright or exclusivity. Do not redistribute third-party soundfonts. Final synthesis should use original oscillators/noise."
+  }
+}

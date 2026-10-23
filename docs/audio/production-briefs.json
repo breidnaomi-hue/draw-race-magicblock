@@ -1,0 +1,60 @@
+{
+  "generator": "MusicVAE symbolic model, not natural-language conditioned",
+  "arrangement": "Original oscillator/noise instrument synthesis; neural motifs octave-folded, major-scale/chord-fitted and phrase-varied. Harmony, bass, drums, countermelodies and final cadence are authored arrangement.",
+  "themes": [
+    {
+      "id": "lobby",
+      "title": "Paddock Doodles",
+      "bpm": 104,
+      "bars": 16,
+      "loop": true,
+      "lufs": -18,
+      "seed": 20261023,
+      "lead": [
+        "lobby-1"
+      ],
+      "brief": "Light marimba, plucked strings, soft sine bass and shaker; friendly waiting-room bounce; 16 bars."
+    },
+    {
+      "id": "race",
+      "title": "Hooves in a Hurry",
+      "bpm": 132,
+      "bars": 32,
+      "loop": true,
+      "lufs": -17,
+      "seed": 20261123,
+      "lead": [
+        "race-1",
+        "race-2"
+      ],
+      "brief": "Playful cartoon arcade race; bouncy bass, original drums, marimba lead and light bell answers; 32 bars."
+    },
+    {
+      "id": "final",
+      "title": "One More Gallop",
+      "bpm": 156,
+      "bars": 16,
+      "loop": true,
+      "lufs": -16,
+      "seed": 20261223,
+      "lead": [
+        "final-3",
+        "final-2"
+      ],
+      "brief": "Urgent but cheerful final push; brighter mallets, running bass, tighter kick/snare and rising fills; 16 bars."
+    },
+    {
+      "id": "results",
+      "title": "A Very Doodled Victory",
+      "bpm": 144,
+      "bars": 4,
+      "loop": false,
+      "lufs": -17,
+      "seed": 20261323,
+      "lead": [
+        "results-3"
+      ],
+      "brief": "Short joyful soft-brass and mallet fanfare with a major-key cadence and natural room tail; 4 bars plus tail."
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+/* Weather sits between scenery and protected original ink. DOM HUD stays above all. */
+.race-scenery{z-index:0}
+.race-atmosphere{z-index:1;pointer-events:none}
+.race-actors{z-index:2}
+.race-readability{z-index:3;pointer-events:none}
+.audio-settings{margin:20px 0;border:2px solid #d5c4e5;border-radius:15px;background:#f5edff;padding:4px 16px 14px}
+.audio-settings legend{font-weight:1000;font-size:14px;padding:0 8px}
+.audio-settings .settings-row{margin:16px 0 8px}
+.audio-slider{display:grid;grid-template-columns:1fr auto;gap:4px 12px;font-size:12px;font-weight:900;margin-bottom:14px}
+.audio-slider input{grid-column:1/-1;width:100%;height:32px;accent-color:var(--purple)}
+.audio-status{display:flex;gap:8px;align-items:center;padding:10px 12px;border-radius:10px;background:#fff9f0;font-size:11px;line-height:1.5}
+.audio-status button{margin-left:auto;white-space:nowrap;min-height:38px}
+.audio-credit{font-size:10px;line-height:1.5;color:#75617e;margin:10px 0 0}
+@media(max-width:760px){.audio-settings{padding:3px 12px 12px}.audio-slider input{height:38px}.audio-status{flex-wrap:wrap}.audio-status button{min-height:44px}}
