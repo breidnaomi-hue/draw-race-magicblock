@@ -47,11 +47,14 @@ No ER, delegation, tokens, NFTs, USDC, escrow, deposits, payouts, session-key pr
 node --import tsx scripts/verify-vrf-race.ts public/vrf-demo.json
 ```
 
+The verifier reports three separate results. A nonmatching physics recomputation is a runtime limitation, not a failed VRF check. Add `--strict-physics` when identical physics is specifically required.
+
 ## Evidence and reproduction
 
 - `vrf/deployment.json`: deployment signature, program-data address and ELF hash.
 - `vrf/live-evidence.json`: four real races (solo, 2 players, 4 players, rematch after the actual first 90-second clock). Each has exactly two successful transactions: one request and one oracle callback.
 - `public/vrf-demo.json`: complete first VRF race, drawings, seed and recorded physics.
+- `public/vrf-production.json` and `vrf/production-evidence.json`: a fresh race requested through the published Cloudflare site. Direct chain verification and the seed/drawing commitment both passed. Its recomputed Node physics produced a different winner (`Neigh Sayer`) from Cloudflare's authoritative record (`Public VRF test`), while the generated course matched. Thus full independent physics reproduction is **not achieved**. Every client still plays the same original Cloudflare tape. This pre-existing solver limitation was retained; no whole-race on-chain claim is made.
 - `tests/vrf.test.ts`: concurrent callers, exact-wire recovery, RPC loss, unaccepted expiry, accepted delay, mismatched commitment, cancellation and session authorization.
 - Live simulation rejects a forged callback with a wallet signer and a repeated request. Neither negative transaction was submitted.
 

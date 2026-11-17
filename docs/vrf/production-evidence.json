@@ -1,0 +1,38 @@
+{
+  "site": "https://draw-race-party.breid222.chatgpt.site",
+  "checkedAt": "2026-11-17T20:50:07.606Z",
+  "code": "YUX7R9",
+  "seed": "3de3b716d36a929b004e71b54a2bfba4e1eeccae96dfacfce266b01c4a42416f",
+  "proof": {
+    "provider": "magicblock-vrf",
+    "cluster": "devnet",
+    "programId": "Gz9wroDHou467yg7AFmf3pcoPUq92qkoawpXPaF7m3zP",
+    "account": "CFK6D5Dy47Jwf1XqkhTc3KioopxJxD5F8DYNWVm3kuii",
+    "payer": "CH8xVUgsf5CLXWUce7S61HD8fBcGNDMXgq5mwruMoKhW",
+    "commitment": "89628633e557d21bdfd7d0d847ef5a24198b827d3259855db0d8ae3d7fc22087",
+    "randomness": "5d5ce23d5dc8318b3a9a0e6c57d0fe6c2215a103524909f2e160bb8963c419e1",
+    "requestSignature": "2PvrULNRFvPiQ2KJtMgTscG2JfafQcEzfpKfrmQC8mH5k28ArdbfgpU7YDhAdmRC8yUSr1tBijko8ZJiaBDhuoVJ",
+    "fulfillmentSignature": "yiLUYPC5nnXTjJfcj3wt8dR74KxyNaUXVUA6VZzpoxTfLDp2Snojnxxy6CsjEe4NRvo6MFLfD4iwfkS8afiNY6p",
+    "requestSlot": 523394694,
+    "fulfillmentSlot": 523394697,
+    "feeLamports": 500000
+  },
+  "seedVerified": true,
+  "chainVerified": true,
+  "localPhysicsMatches": false,
+  "serverRanking": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "nodeRanking": [
+    1,
+    2,
+    3,
+    0
+  ],
+  "serverWinner": "Public VRF test",
+  "nodeWinner": "Neigh Sayer",
+  "courseMatches": true
+}
