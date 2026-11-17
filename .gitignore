@@ -32,8 +32,10 @@ yarn-error.log*
 
 # Local environment and keys
 .env*
+!.env.example
 .dev.vars*
 *.pem
+**/*-keypair.json
 
 # Checkout-local tool state
 /.wrangler/

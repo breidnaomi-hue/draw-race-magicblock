@@ -3,13 +3,14 @@ import { runWithConnectorBinding } from "../lib/connector-context";
 import type { ConnectorBinding } from "../lib/connector-contract.mjs";
 import { api, response } from '../lib/rooms';
 import { D1Store } from '../lib/d1-store';
+import {MagicBlockVrf} from '../lib/solana-vrf';
 
 const worker = {
   fetch(request: Request, env: Cloudflare.Env, ctx: ExecutionContext<{ CONNECTORS?: ConnectorBinding }>) {
     if(new URL(request.url).pathname.startsWith('/api/')) {
       if(!env.DB)return response({error:'Room service is not configured.'},503);
       if(request.method==='POST'&&request.headers.get('origin')&&request.headers.get('origin')!==new URL(request.url).origin)return response({error:'Origin not allowed'},403);
-      return api(request,new D1Store(env.DB));
+      return api(request,new D1Store(env.DB),'poll',new MagicBlockVrf(env));
     }
     let binding = ctx.props?.CONNECTORS;
     // Local preview emulates the same request-scoped capability. This branch and

@@ -5,6 +5,7 @@ import type {ReplayTape} from './physics';
 import type {RigMarks,Spec} from './rig';
 import {specFor} from './rig';
 import {COMEBACK_RULESET} from './comeback';
+import {vrfSeedInput,type VrfProof,type RandomnessState} from './vrf';
 export const VERSION = 'draw-race-v6-comeback-2';
 export const SUPPORTED_VERSIONS=[VERSION,'draw-race-v5-matter-rig'];
 export const DURATION = 90000;
@@ -12,11 +13,11 @@ export const COLORS = ['#b393ee','#f7976e','#93bd9a','#efce62'];
 export type Point = [number, number];
 export type Stroke = {color:string; width:number; erase:boolean; points:Point[]};
 export type Drawing = Stroke[];
-export type Player = {id:string; name:string; drawing:Drawing; rig?:RigMarks;spec?:Spec; ready:boolean; nonce:string; lastSeen:number; token:string; rematch:boolean};
+export type Player = {id:string; name:string; drawing:Drawing; rig?:RigMarks;spec?:Spec; ready:boolean; nonce:string; lastSeen:number; token:string; rematch:boolean;bot?:boolean};
 export type PublicPlayer = Omit<Player,'token'>;
 export type RaceExample={id:number;key?:string;category:string;description:string;markers:{at:number;label:string}[];counterfactual?:string;variant?:boolean};
-export type Race = {seed:string; secret:string; startAt:number; duration:number; track:number; round:number; players:PublicPlayer[]; commitment:string; version:string;tape?:ReplayTape;example?:RaceExample};
-export type Room = {code:string; revision:number; capacity:2|4; host:string; created:number; expires:number; deadline:number; round:number; secret:string; commitment:string; players:Player[]; race:Race|null; history:Race[]};
+export type Race = {seed:string; secret:string; startAt:number; duration:number; track:number; round:number; players:PublicPlayer[]; commitment:string; version:string;tape?:ReplayTape;example?:RaceExample;vrf?:VrfProof};
+export type Room = {code:string; revision:number; capacity:2|4; host:string; created:number; expires:number; deadline:number; round:number; secret:string; commitment:string; players:Player[]; race:Race|null; history:Race[];practice?:boolean;randomness?:RandomnessState};
 export type PublicRoom = Omit<Room,'secret'|'players'|'history'> & {players:PublicPlayer[]; history:Race[]; serverTime:number};
 export const hex = (bytes:Uint8Array) => Array.from(bytes,b=>b.toString(16).padStart(2,'0')).join('');
 export const randomHex = (n=32) => hex(crypto.getRandomValues(new Uint8Array(n)));
@@ -43,7 +44,12 @@ export function makePlan(seed:string,n:number,duration=DURATION,drawings?:Drawin
 export function raceOrder(seed:string,drawings:Drawing[],track:number) {return simulate(seed,drawings,[],track).ranking;}
 export function progress(plan:Plan,lane:number,elapsed:number) {return Math.min(1,Math.max(0,poseAt(plan.tape,lane,elapsed).x/plan.tape.course.length));}
 export async function attachTape(race:Race){const tape=simulate(race.seed,race.players.map(p=>p.drawing),race.players.map(p=>p.rig),race.track,{specs:race.players.map(p=>p.spec!).every(Boolean)?race.players.map(p=>p.spec!):undefined});tape.hash=await sha(tapePayload(tape));race.tape=tape;return race;}
-export async function verifyRace(code:string,race:Race) {return SUPPORTED_VERSIONS.includes(race.version)&&race.duration===DURATION&&race.track===parseInt(race.seed.slice(2,4),16)%3&&(race.players.length===2||race.players.length===4)&&await sha(race.secret)===race.commitment&&await sha(seedInput(race.secret,code,race.round,race.players,race.version))===race.seed&&(!race.tape||await sha(tapePayload(race.tape))===race.tape.hash);}
+export async function verifyRace(code:string,race:Race) {
+  const locked=await sha(seedInput(race.secret,code,race.round,race.players,race.version)),proof=race.vrf;
+  if(proof&&(proof.provider!=='magicblock-vrf'||proof.cluster!=='devnet'||proof.commitment!==locked||!/^[a-f0-9]{64}$/.test(proof.randomness)||proof.fulfillmentSlot<=proof.requestSlot))return false;
+  const expected=proof?await sha(vrfSeedInput(locked,proof.randomness)):locked;
+  return SUPPORTED_VERSIONS.includes(race.version)&&race.duration===DURATION&&race.track===parseInt(race.seed.slice(2,4),16)%3&&(race.players.length===2||race.players.length===4)&&await sha(race.secret)===race.commitment&&expected===race.seed&&(!race.tape||await sha(tapePayload(race.tape))===race.tape.hash);
+}
 export async function auditSimulation(race:Race){if(race.version!==VERSION||!race.tape||race.tape.rules?.id!==COMEBACK_RULESET)return false;const specs=race.players.map(p=>specFor(p.drawing,p.rig)),tape=simulate(race.seed,race.players.map(p=>p.drawing),race.players.map(p=>p.rig),race.track,{specs,...(race.example?.variant?{course:race.tape.course}:{})});return await sha(tapePayload(tape))===race.tape.hash;}
 export function validateDrawing(value:unknown):Drawing {
   if(!Array.isArray(value)||value.length<1||value.length>250) throw Error('Draw your horse first (up to 250 strokes).');

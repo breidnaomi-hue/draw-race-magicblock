@@ -1,6 +1,14 @@
-# DRAW RACE - party derby soundtrack edition
+# DRAW RACE — MagicBlock VRF Devnet edition
 
 Draw a horse and race with two or four friends, or practice against three doodle bots. Races last 90 seconds. Play at https://draw-race-party.breid222.chatgpt.site/.
+
+## MagicBlock VRF
+
+One real scoped MagicBlock VRF request per race on Solana Devnet. Its returned bytes drive the existing weather, obstacles, boosts and physics seed. Quick Race and multiplayer rooms use the same path. A sponsor covers test fees; no user wallet or real money is required.
+
+[Integration, proofs, costs and reproduction](docs/MAGICBLOCK.md) · [Recorded VRF race](https://draw-race-party.breid222.chatgpt.site/?vrf=demo) · [GitHub](https://github.com/breidnaomi-hue/draw-race-magicblock)
+
+Configure the server variables in `.env.example` in ignored `.dev.vars` or hosting secrets. Never publish a sponsor seed.
 
 ## Run locally
 
@@ -62,9 +70,9 @@ The before phase imports the frozen previous engine in tests/baseline/. Both pha
 
 ## Trust and scope
 
-READY locks the drawing, rig, identity and nonce. A server secret commitment precedes drawing; its reveal and locked contributions derive the seed. The physical record has a SHA-256 hash. The receipt can independently recompute the current solver and compare the full tape, detecting a rehashed altered result. Old v5 rooms retain their original recording and verification.
+READY locks drawings, rigs, names and nonces. A server secret commitment precedes drawing. After all players lock in, one real MagicBlock VRF request binds those inputs to an authenticated random result. Its bytes derive the original solver seed. No race starts before fulfillment. Receipts link the program, request, callback and immutable account, with direct public-RPC verification. The tape retains its original SHA-256 hash.
 
-This is a free game, not an on-chain proof or VRF. The operator can abort a room. Browser QA found different trajectories and a different recomputed winner in Chromium despite identical parameters and course. Do not use cross-runtime recomputation as a universal cheating detector. Players still receive the same original server tape. The Node reference audit can be run with `node --import tsx scripts/verify-replay.ts receipt.json ROOMCODE`. Solana wallet, escrow, deposits and payouts remain disabled and unfinished; see docs/SOLANA_DEVNET.md. No external AI service runs during gameplay.
+Physics remains on the server. VRF verifies randomness, not the full physical computation or server availability. Floating-point runtimes can recompute different trajectories; all players receive the original server record. Legacy study examples are explicitly local replays. Only faucet SOL Devnet is used: no tokens, USDC, stakes, deposits, NFTs or payouts. See docs/MAGICBLOCK.md for measured costs and verification limits.
 
 Drawing tools, brush colors, erase, undo, preview, invites, reconnect, rematch, local history, PNG export and short clip recording remain available. History holds 12 races on the device. Browser checks use Chromium with mobile viewport emulation; physical phones and Safari are not covered.
 

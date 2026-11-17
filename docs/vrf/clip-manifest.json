@@ -1,0 +1,23 @@
+{
+  "fps": 30,
+  "seconds": 12,
+  "width": 1280,
+  "height": 720,
+  "source": "public/vrf-demo.json",
+  "seed": "b9ec3c0883111f4106a34e65394f7c89ea96ad1a3dbc83c56fd8e0cd4a6cacbf",
+  "proof": {
+    "provider": "magicblock-vrf",
+    "cluster": "devnet",
+    "programId": "Gz9wroDHou467yg7AFmf3pcoPUq92qkoawpXPaF7m3zP",
+    "account": "2QhVoHYTt4VuUJdA5x1hh79xkMB7ZWM5k5fCakmsB5FB",
+    "payer": "CH8xVUgsf5CLXWUce7S61HD8fBcGNDMXgq5mwruMoKhW",
+    "commitment": "03eebfb554cf9a97766f2315a3ffb3fdd71b3900580035244893748694e02949",
+    "randomness": "4ef4fc44ec74fadf04d1f663eec444e110904514c5b88c9ebbe9a98ce17fde4b",
+    "requestSignature": "uRbTQFUmcmN48bB6cRUxFE3nyJmSmw9LTvcWC3iB6kB2UnAYkx39g2eLabpSzzkx4Af8SEvZgEMbDCi4VAoG5AL",
+    "fulfillmentSignature": "3RukSqyKbmPHTv9VmAaPLAfZvkot4fSQmiHt2kJsM4tgKQqbWi6x5jpweL3ZKb6jB2bhT7oGKpHCkrvqUdXCWAZH",
+    "requestSlot": 523388930,
+    "fulfillmentSlot": 523388932,
+    "feeLamports": 500000
+  },
+  "method": "Offline replay of the real tape, using original background, warp and skinPoint renderers; not a browser screen recording."
+}

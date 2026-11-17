@@ -1,0 +1,258 @@
+{
+  "startedAt": "2026-11-17T20:26:49.598Z",
+  "base": "http://localhost:8788",
+  "cluster": "devnet",
+  "programId": "Gz9wroDHou467yg7AFmf3pcoPUq92qkoawpXPaF7m3zP",
+  "races": [
+    {
+      "code": "MZJ285",
+      "round": 1,
+      "players": 4,
+      "seed": "b9ec3c0883111f4106a34e65394f7c89ea96ad1a3dbc83c56fd8e0cd4a6cacbf",
+      "proof": {
+        "provider": "magicblock-vrf",
+        "cluster": "devnet",
+        "programId": "Gz9wroDHou467yg7AFmf3pcoPUq92qkoawpXPaF7m3zP",
+        "account": "2QhVoHYTt4VuUJdA5x1hh79xkMB7ZWM5k5fCakmsB5FB",
+        "payer": "CH8xVUgsf5CLXWUce7S61HD8fBcGNDMXgq5mwruMoKhW",
+        "commitment": "03eebfb554cf9a97766f2315a3ffb3fdd71b3900580035244893748694e02949",
+        "randomness": "4ef4fc44ec74fadf04d1f663eec444e110904514c5b88c9ebbe9a98ce17fde4b",
+        "requestSignature": "uRbTQFUmcmN48bB6cRUxFE3nyJmSmw9LTvcWC3iB6kB2UnAYkx39g2eLabpSzzkx4Af8SEvZgEMbDCi4VAoG5AL",
+        "fulfillmentSignature": "3RukSqyKbmPHTv9VmAaPLAfZvkot4fSQmiHt2kJsM4tgKQqbWi6x5jpweL3ZKb6jB2bhT7oGKpHCkrvqUdXCWAZH",
+        "requestSlot": 523388930,
+        "fulfillmentSlot": 523388932,
+        "feeLamports": 500000
+      },
+      "tapeHash": "18271abd3453a174f2d8cbf9e2dc548e2930262b29afd886ac5b5f9cb5bc04ea",
+      "winner": "Neigh Sayer",
+      "weather": [
+        {
+          "at": 0,
+          "kind": "Snow & ice",
+          "wet": 0.25,
+          "wind": 0,
+          "visibility": 1,
+          "ice": 0.9
+        },
+        {
+          "at": 29061,
+          "kind": "Snow & ice",
+          "wet": 0.25,
+          "wind": 0,
+          "visibility": 1,
+          "ice": 0.9
+        },
+        {
+          "at": 57793,
+          "kind": "Fog",
+          "wet": 0.05,
+          "wind": 0,
+          "visibility": 0.35,
+          "ice": 0
+        },
+        {
+          "at": 76000,
+          "kind": "Sunshine",
+          "wet": 0.05,
+          "wind": 0,
+          "visibility": 1,
+          "ice": 0
+        }
+      ],
+      "successfulTransactions": 2,
+      "transactionFeeLamports": 5000,
+      "payerDebitLamports": 1769920
+    },
+    {
+      "code": "YTKGFJ",
+      "round": 1,
+      "players": 2,
+      "seed": "90a805b32751ac92a78713daff796653f7e332f70ac12690039590e4600f0c2f",
+      "proof": {
+        "provider": "magicblock-vrf",
+        "cluster": "devnet",
+        "programId": "Gz9wroDHou467yg7AFmf3pcoPUq92qkoawpXPaF7m3zP",
+        "account": "2jm3ks1LGc1R76YDjHRoyrPXkxi23ixqy6Zi7P6SHYad",
+        "payer": "CH8xVUgsf5CLXWUce7S61HD8fBcGNDMXgq5mwruMoKhW",
+        "commitment": "d15344bcb7a9dae8e35a7ca85797085d977605f3070d5fb92bb8f1f3cbc5b7f2",
+        "randomness": "4de460a90653eda321bd78e1e780f84acb673abe824190dc856236ad5cdec8b2",
+        "requestSignature": "46g487SV43y7D8nmU8QodnNEP9frYGqqNr74gJk3BB6iJeviGkhvVuJZTmGJ7Hm5vjwCVPfCw2CEqgfKTzoE64mL",
+        "fulfillmentSignature": "LiCj7vcCjdTjXfJcSj7SXiwdRVbDknLTP8t8CvYTUN2gkhHSjybzqbRDo1bZs3WBXqPNHPTrVRttU2wVgzpTjfh",
+        "requestSlot": 523388968,
+        "fulfillmentSlot": 523388971,
+        "feeLamports": 500000
+      },
+      "tapeHash": "4d64aa6f922cd7124b73a125d775a4564329392ebc655c6873e58b979247ed9d",
+      "winner": "VRF Artist",
+      "weather": [
+        {
+          "at": 0,
+          "kind": "Strong wind",
+          "wet": 0.05,
+          "wind": 0.8387587243923917,
+          "visibility": 1,
+          "ice": 0
+        },
+        {
+          "at": 31870,
+          "kind": "Fog",
+          "wet": 0.05,
+          "wind": 0,
+          "visibility": 0.35,
+          "ice": 0
+        },
+        {
+          "at": 57283,
+          "kind": "Sunshine",
+          "wet": 0.05,
+          "wind": 0,
+          "visibility": 1,
+          "ice": 0
+        },
+        {
+          "at": 76000,
+          "kind": "Fog",
+          "wet": 0.05,
+          "wind": 0,
+          "visibility": 0.35,
+          "ice": 0
+        }
+      ],
+      "successfulTransactions": 2,
+      "transactionFeeLamports": 5000,
+      "payerDebitLamports": 1769920
+    },
+    {
+      "code": "DA3NNM",
+      "round": 1,
+      "players": 4,
+      "seed": "85218857411efb7e83bd562e14997de755fb5c227b54e164dcebe9c2ea6954e3",
+      "proof": {
+        "provider": "magicblock-vrf",
+        "cluster": "devnet",
+        "programId": "Gz9wroDHou467yg7AFmf3pcoPUq92qkoawpXPaF7m3zP",
+        "account": "6NEheHMiFAfNkUoKQLAyP2mGBvSQbeEnRjjig7oYpHFi",
+        "payer": "CH8xVUgsf5CLXWUce7S61HD8fBcGNDMXgq5mwruMoKhW",
+        "commitment": "70e8b35a4b5a2904ac11b2e41ad24edb847303fe19b659c4eb697ff5076a707e",
+        "randomness": "dab03db2587701c3e954482be939c5fd43dd7d5c22f95cced1540dd4fe960d7d",
+        "requestSignature": "5U5YAH2QYrpgZYhyvnoBDNEaM3YTJQ2UNThWVkTbmuAw9n3Ev41uTBNc7DkTN4qwZo6oApNjucDaDRzofpZgKgei",
+        "fulfillmentSignature": "2uEp13Rbub3gWHemiqJWqxDqWKPyr7koV8NiHrLc1t9Ptgqz9zZ1pV4fAeXP6KDETXhN4zoAMWtDcZcZFak2EzbQ",
+        "requestSlot": 523389002,
+        "fulfillmentSlot": 523389005,
+        "feeLamports": 500000
+      },
+      "tapeHash": "e8f0bd46ef91deaf84f5bfdca9c09dae6798459f3946d41b556251293bd27f00",
+      "winner": "VRF Artist",
+      "weather": [
+        {
+          "at": 0,
+          "kind": "Snow & ice",
+          "wet": 0.25,
+          "wind": 0,
+          "visibility": 1,
+          "ice": 0.9
+        },
+        {
+          "at": 26150,
+          "kind": "Fog",
+          "wet": 0.05,
+          "wind": 0,
+          "visibility": 0.35,
+          "ice": 0
+        },
+        {
+          "at": 56854,
+          "kind": "Fog",
+          "wet": 0.05,
+          "wind": 0,
+          "visibility": 0.35,
+          "ice": 0
+        },
+        {
+          "at": 76000,
+          "kind": "Sunshine",
+          "wet": 0.05,
+          "wind": 0,
+          "visibility": 1,
+          "ice": 0
+        }
+      ],
+      "successfulTransactions": 2,
+      "transactionFeeLamports": 5000,
+      "payerDebitLamports": 1769920
+    },
+    {
+      "code": "MZJ285",
+      "round": 2,
+      "players": 4,
+      "seed": "6b4d84de9d4598957ce5a7fc113a98b7f8eeea4efb24820d10791c529732c80f",
+      "proof": {
+        "provider": "magicblock-vrf",
+        "cluster": "devnet",
+        "programId": "Gz9wroDHou467yg7AFmf3pcoPUq92qkoawpXPaF7m3zP",
+        "account": "7BT8tzj7R5XqehAHio5Nz8DA1Ja7sXvSaCmaypcvx4jo",
+        "payer": "CH8xVUgsf5CLXWUce7S61HD8fBcGNDMXgq5mwruMoKhW",
+        "commitment": "a1fd19952e88e8c43cb89d96fe6c119e331741920f8b535a9928eb5b12fc9f34",
+        "randomness": "60a49c0f0370ac210efaed998d7e0865249e42ec8e394687014e71d4b3509d77",
+        "requestSignature": "3Ce7qCA4i6beurasy31S5omxhYuHpb4aHCsBFAKa5NgJcXxQ7yvXL29JDTr7XFhxgVj9pTjYDTAzsBpd2CRXCQm2",
+        "fulfillmentSignature": "SCfvSYZdvRpdMx8paD9wg3EPC4Rrge2aqaQYqtibop1PuxHxU3WAeBL6Lyk5wEciTjL2m41hNtvDWmmdNAs6hMY",
+        "requestSlot": 523389356,
+        "fulfillmentSlot": 523389359,
+        "feeLamports": 500000
+      },
+      "tapeHash": "1c5838618050d4ab59bc804c251dff6282a196f0a9bab4d4558c770e86a5674c",
+      "winner": "VRF Artist",
+      "weather": [
+        {
+          "at": 0,
+          "kind": "Fog",
+          "wet": 0.05,
+          "wind": 0,
+          "visibility": 0.35,
+          "ice": 0
+        },
+        {
+          "at": 30765,
+          "kind": "Rain",
+          "wet": 0.8,
+          "wind": 0,
+          "visibility": 1,
+          "ice": 0
+        },
+        {
+          "at": 54349,
+          "kind": "Rain",
+          "wet": 0.8,
+          "wind": 0,
+          "visibility": 1,
+          "ice": 0
+        },
+        {
+          "at": 76000,
+          "kind": "Sunshine",
+          "wet": 0.05,
+          "wind": 0,
+          "visibility": 1,
+          "ice": 0
+        }
+      ],
+      "successfulTransactions": 2,
+      "transactionFeeLamports": 5000,
+      "payerDebitLamports": 1769920
+    }
+  ],
+  "negativeChecks": [
+    {
+      "check": "Direct callback with wallet signer",
+      "result": "Rejected by on-chain program in simulation",
+      "error": "Error: Devnet simulation failed: {\"InstructionError\":[0,\"MissingRequiredSignature\"]} Program Gz9wroDHou467yg7AFmf3pcoPUq92qkoawpXPaF7m3zP invoke [1] Program Gz9wroDHou467yg7AFmf3pcoPUq92qkoawpXPaF7m3zP consumed 3822 of 200000 compute units Program Gz9wroDHou467yg7AFmf3pcoPUq92qkoawpXPaF7m3zP failed: missing required signature for instruction"
+    },
+    {
+      "check": "Second request for same locked race",
+      "result": "Rejected by on-chain program in simulation",
+      "error": "Error: Devnet simulation failed: {\"InstructionError\":[0,\"AccountAlreadyInitialized\"]} Program Gz9wroDHou467yg7AFmf3pcoPUq92qkoawpXPaF7m3zP invoke [1] Program Gz9wroDHou467yg7AFmf3pcoPUq92qkoawpXPaF7m3zP consumed 7165 of 200000 compute units Program Gz9wroDHou467yg7AFmf3pcoPUq92qkoawpXPaF7m3zP failed: instruction requires an uninitialized account"
+    }
+  ],
+  "completedAt": "2026-11-17T20:28:45.937Z",
+  "result": "pass"
+}

@@ -12,7 +12,7 @@ import {playGameTone} from '../lib/game-audio';
 import {weatherVisualProfile,drawDistantHaze,drawWeatherParticles,ClearRegion} from '../lib/weather-visuals';
 type Props={race:Race;clockOffset?:number;demo?:boolean;replayAt?:number;sound?:boolean;seek?:number;hud?:boolean;cameraMode?:'action'|'herd';reducedMotion?:boolean};
 const NX=25,NY=17;
-function bend(c:PhysicsCourse,x:number){const s=sectionAt(c,x),q=clamp((x-s.from)/(s.to-s.from),0,1);return Math.sin(q*Math.PI)**2*s.curve*48}
+export function bend(c:PhysicsCourse,x:number){const s=sectionAt(c,x),q=clamp((x-s.from)/(s.to-s.from),0,1);return Math.sin(q*Math.PI)**2*s.curve*48}
 export default function RaceSurface(props:Props){
   const host=useRef<HTMLDivElement>(null),back=useRef<HTMLCanvasElement>(null),state=useRef(props),[fallback,setFallback]=useState(false);state.current=props;
   useEffect(()=>{
@@ -65,7 +65,7 @@ export default function RaceSurface(props:Props){
   },[props.race.seed,props.race.tape?.hash]);
   return <div ref={host} className={'race-surface physics-surface track-'+props.race.track}><canvas ref={back} className="race-scenery"/>{fallback&&<span className="renderer-note">Canvas renderer</span>}</div>;
 }
-function drawBackground(g:CanvasRenderingContext2D,w:number,h:number,c:PhysicsCourse,t:number,camera:number,scale:number,top:number,lh:number,n:number,compact:boolean,reduce:boolean,hud=false){
+export function drawBackground(g:CanvasRenderingContext2D,w:number,h:number,c:PhysicsCourse,t:number,camera:number,scale:number,top:number,lh:number,n:number,compact:boolean,reduce:boolean,hud=false){
   const weather=weatherAt(c,t),snow=c.environment==='Snowfield',farm=c.environment==='Farmyard',sx=(x:number)=>(x-camera)*scale,base=(lane:number,x:number)=>top+(lane+1)*lh+bend(c,x)*(compact?.28:.65)+groundAt(c,x,lane)*scale*.78;
   g.fillStyle=weather.kind==='Rain'?'#c4d2d8':snow?'#d9e6ed':farm?'#eee1ce':'#dce6df';g.fillRect(0,0,w,h);
   g.fillStyle='#ffe6a3';g.beginPath();g.arc(w*.8,compact?20:41,compact?12:23,0,7);g.fill();
@@ -90,7 +90,7 @@ function readableInk(ink:HTMLCanvasElement){
  for(let i=0;i<8;i++){const a=i/8*Math.PI*2;g.drawImage(dark,Math.cos(a)*1.35,Math.sin(a)*1.35)}
  g.drawImage(ink,0,0);return c;
 }
-function warp(g:CanvasRenderingContext2D,ink:HTMLCanvasElement,v:Float32Array){
+export function warp(g:CanvasRenderingContext2D,ink:HTMLCanvasElement,v:Float32Array){
   // Affine textured triangles provide the same skin when WebGL is unavailable.
   for(let row=0;row<NY-1;row+=2)for(let col=0;col<NX-1;col+=2){const ids=[row*NX+col,row*NX+col+2,(row+2)*NX+col,(row+2)*NX+col+2];for(const tr of [[0,1,2],[1,3,2]]){const a=ids[tr[0]],b=ids[tr[1]],c=ids[tr[2]],x0=a%NX/(NX-1)*640,y0=Math.floor(a/NX)/(NY-1)*400,x1=b%NX/(NX-1)*640,y1=Math.floor(b/NX)/(NY-1)*400,x2=c%NX/(NX-1)*640,y2=Math.floor(c/NX)/(NY-1)*400,den=(x1-x0)*(y2-y0)-(x2-x0)*(y1-y0);const ax=((v[b*2]-v[a*2])*(y2-y0)-(v[c*2]-v[a*2])*(y1-y0))/den,bx=((v[c*2]-v[a*2])*(x1-x0)-(v[b*2]-v[a*2])*(x2-x0))/den,ay=((v[b*2+1]-v[a*2+1])*(y2-y0)-(v[c*2+1]-v[a*2+1])*(y1-y0))/den,by=((v[c*2+1]-v[a*2+1])*(x1-x0)-(v[b*2+1]-v[a*2+1])*(x2-x0))/den;g.save();g.beginPath();g.moveTo(v[a*2],v[a*2+1]);g.lineTo(v[b*2],v[b*2+1]);g.lineTo(v[c*2],v[c*2+1]);g.closePath();g.clip();g.transform(ax,ay,bx,by,v[a*2]-ax*x0-bx*y0,v[a*2+1]-ay*x0-by*y0);g.drawImage(ink,0,0);g.restore()}}
 }
