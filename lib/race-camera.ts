@@ -18,3 +18,36 @@ export function raceCamera(poses:Pose[],tape:ReplayTape,t:number,width:number,co
  const scale=normal+(targetScale-normal)*ease,camera=baseCamera+(Math.max(-85,mid-width/scale*.5)-baseCamera)*ease;
  return {scale,camera,focus,comeback:!!charge};
 }
+
+type CameraView=ReturnType<typeof raceCamera>;
+function damp(value:number,target:number,velocity:number,time:number,maxSpeed:number,dt:number){
+ const omega=2/time,change=clamp(value-target,-maxSpeed*time,maxSpeed*time),goal=value-change;
+ const decay=Math.exp(-omega*dt),step=(velocity+omega*change)*dt;
+ return {value:goal+(change+step)*decay,velocity:(velocity-omega*step)*decay};
+}
+
+// raceCamera selects a composition from the immutable tape. Only its display
+// transition has memory: a boost/leader switch must not cut across the track.
+export class RaceCameraMotion {
+ private center=0;
+ private zoom=0;
+ private centerVelocity=0;
+ private zoomVelocity=0;
+ private width=0;
+ private height=0;
+ next(target:CameraView,width:number,height:number,deltaMs:number,reset=false):CameraView{
+  const targetZoom=Math.log(target.scale),targetCenter=target.camera+width/(target.scale*2);
+  if(reset||width!==this.width||height!==this.height){
+   this.center=targetCenter;this.zoom=targetZoom;this.centerVelocity=0;this.zoomVelocity=0;
+  }else{
+   const dt=Math.max(0,Math.min(deltaMs/1000,.1));
+   const zoom=damp(this.zoom,targetZoom,this.zoomVelocity,.4,.85,dt);
+   const center=damp(this.center,targetCenter,this.centerVelocity,.34,width/Math.exp(this.zoom)*.65,dt);
+   this.zoom=zoom.value;this.zoomVelocity=zoom.velocity;this.center=center.value;this.centerVelocity=center.velocity;
+  }
+  this.width=width;this.height=height;
+  const scale=Math.exp(this.zoom),camera=Math.max(-85,this.center-width/(scale*2));
+  this.center=camera+width/(scale*2);
+  return {...target,scale,camera};
+ }
+}

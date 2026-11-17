@@ -34,6 +34,8 @@ Matter.js 0.20.0 solves each racer at a fixed 60 Hz. A torso and heavy head are 
 
 The server computes the full simulation before the synchronized start, including real barrier contacts, slopes, mud, ice, wind, falls and recovery. Clients play the same recorded poses and events at 10 Hz with interpolation. The torso crosses the finish line; a long nose cannot finish early. If nobody finishes, distance at 90 seconds decides. The head's mass and lever make an extreme neck harder to control.
 
+Playback uses a monotonic clock with gradual network corrections and damped camera transitions, avoiding abrupt jumps on room polling or changes in camera focus. See [playback checks and measured continuity](docs/PLAYBACK-SMOOTHNESS.md).
+
 Five shape attributes share a 250-point budget. Solver attributes use 0.30 × shape + 0.70 × seeded variation. These are parameter weights, not a claim that exactly 30% of wins depend on drawing. Physical geometry also matters. The report includes form win rates and a matched-seed ablation, including remaining differences between forms.
 
 ## Comebacks and zones

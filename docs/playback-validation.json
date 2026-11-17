@@ -1,0 +1,139 @@
+{
+  "checkedAt": "2026-11-17T23:56:45.875Z",
+  "fps": 60,
+  "secondsPerCase": 90,
+  "metric": "Camera-only screen displacement of static world samples at left/center/right in CSS pixels. This measures continuity, not renderer FPS.",
+  "cases": [
+    {
+      "file": "public/vrf-reproducible.json",
+      "width": 1280,
+      "height": 600,
+      "before": {
+        "maxFrameShiftPx": 588.2176288904736,
+        "framesOver30px": 4
+      },
+      "after": {
+        "maxFrameShiftPx": 20.2777696892993,
+        "framesOver30px": 0
+      }
+    },
+    {
+      "file": "public/vrf-reproducible.json",
+      "width": 390,
+      "height": 702,
+      "before": {
+        "maxFrameShiftPx": 1.8917261373771908,
+        "framesOver30px": 0
+      },
+      "after": {
+        "maxFrameShiftPx": 1.5519843766543318,
+        "framesOver30px": 0
+      }
+    },
+    {
+      "file": "public/showcases/20.json",
+      "width": 1280,
+      "height": 600,
+      "before": {
+        "maxFrameShiftPx": 168.1449323173299,
+        "framesOver30px": 5
+      },
+      "after": {
+        "maxFrameShiftPx": 20.452531798258196,
+        "framesOver30px": 0
+      }
+    },
+    {
+      "file": "public/showcases/20.json",
+      "width": 390,
+      "height": 702,
+      "before": {
+        "maxFrameShiftPx": 2.5683322923173364,
+        "framesOver30px": 0
+      },
+      "after": {
+        "maxFrameShiftPx": 2.0928418414284806,
+        "framesOver30px": 0
+      }
+    },
+    {
+      "file": "public/showcases/1328.json",
+      "width": 1280,
+      "height": 600,
+      "before": {
+        "maxFrameShiftPx": 2837.6273809523805,
+        "framesOver30px": 16
+      },
+      "after": {
+        "maxFrameShiftPx": 21.24598203353512,
+        "framesOver30px": 0
+      }
+    },
+    {
+      "file": "public/showcases/1328.json",
+      "width": 390,
+      "height": 702,
+      "before": {
+        "maxFrameShiftPx": 1885.3249999999998,
+        "framesOver30px": 4
+      },
+      "after": {
+        "maxFrameShiftPx": 7.094964009298189,
+        "framesOver30px": 0
+      }
+    },
+    {
+      "file": "public/showcases/3971.json",
+      "width": 1280,
+      "height": 600,
+      "before": {
+        "maxFrameShiftPx": 695.7430952380963,
+        "framesOver30px": 2
+      },
+      "after": {
+        "maxFrameShiftPx": 19.236439671581408,
+        "framesOver30px": 0
+      }
+    },
+    {
+      "file": "public/showcases/3971.json",
+      "width": 390,
+      "height": 702,
+      "before": {
+        "maxFrameShiftPx": 2.554875082909973,
+        "framesOver30px": 0
+      },
+      "after": {
+        "maxFrameShiftPx": 2.335686791318267,
+        "framesOver30px": 0
+      }
+    },
+    {
+      "file": "public/showcases/16.json",
+      "width": 1280,
+      "height": 600,
+      "before": {
+        "maxFrameShiftPx": 295.5808666348981,
+        "framesOver30px": 25
+      },
+      "after": {
+        "maxFrameShiftPx": 21.294265816955036,
+        "framesOver30px": 0
+      }
+    },
+    {
+      "file": "public/showcases/16.json",
+      "width": 390,
+      "height": 702,
+      "before": {
+        "maxFrameShiftPx": 1560.9477702702707,
+        "framesOver30px": 4
+      },
+      "after": {
+        "maxFrameShiftPx": 7.111800259608333,
+        "framesOver30px": 0
+      }
+    }
+  ],
+  "browserVisualQA": "Unverified: local browser use is disabled in Work settings."
+}

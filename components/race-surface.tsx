@@ -7,7 +7,8 @@ import {weatherAt,groundAt,sectionAt,curveAt,PhysicsCourse} from '../lib/physics
 import {skinPoint} from '../lib/skin';
 import {clamp} from '../lib/rig';
 import {BOOSTS,isBoost} from '../lib/comeback';
-import {raceCamera} from '../lib/race-camera';
+import {raceCamera,RaceCameraMotion} from '../lib/race-camera';
+import {RacePlaybackClock,monotonicNow} from '../lib/race-playback';
 import {playGameTone} from '../lib/game-audio';
 import {weatherVisualProfile,drawDistantHaze,drawWeatherParticles,ClearRegion} from '../lib/weather-visuals';
 type Props={race:Race;clockOffset?:number;demo?:boolean;replayAt?:number;sound?:boolean;seek?:number;hud?:boolean;cameraMode?:'action'|'herd';reducedMotion?:boolean};
@@ -19,17 +20,17 @@ export default function RaceSurface(props:Props){
     let disposed=false,raf=0,app:any,meshes:any[]=[],front:HTMLCanvasElement,ctx:CanvasRenderingContext2D|null=null,w=800,h=420,dpr=1,lastTime=-1,lastBeat=-1,lastEvent=-1;
     let frameAverage=16,lastFrame=performance.now(),slowFrames=0,lowQuality=navigator.hardwareConcurrency<=4||((navigator as Navigator&{deviceMemory?:number}).deviceMemory??8)<=2;
     const root=host.current!,bg=back.current!,{tape,decoded}=replayFor(props.race),course=tape.course,drawings=props.race.players.map(p=>readableInk(drawingCanvas(p.drawing,false)));
-    const start=Date.now(),systemReduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-    function size(){if(disposed)return;w=root.clientWidth;h=root.clientHeight;dpr=Math.min(devicePixelRatio||1,2);bg.width=w*dpr;bg.height=h*dpr;if(app?.renderer)app.renderer.resize(w,h);if(ctx){front.width=w*dpr;front.height=h*dpr;}}
+    const start=monotonicNow(),systemReduce=matchMedia('(prefers-reduced-motion: reduce)').matches,playback=new RacePlaybackClock(),cameraMotion=new RaceCameraMotion(),vertices=drawings.map(()=>new Float32Array(NX*NY*2));
+    function size(){if(disposed)return;const nextW=root.clientWidth,nextH=root.clientHeight,nextDpr=Math.min(devicePixelRatio||1,2),changed=w!==nextW||h!==nextH||dpr!==nextDpr;w=nextW;h=nextH;dpr=nextDpr;const pw=Math.round(w*dpr),ph=Math.round(h*dpr);if(bg.width!==pw)bg.width=pw;if(bg.height!==ph)bg.height=ph;if(app?.renderer&&changed)app.renderer.resize(w,h);if(ctx){if(front.width!==pw)front.width=pw;if(front.height!==ph)front.height=ph;}}
     const resize=new ResizeObserver(size);resize.observe(root);size();
     function tone(freq:number,len:number,volume=.025){if(state.current.sound&&!state.current.demo&&state.current.seek===undefined)playGameTone(freq,len,volume,len>=.18)}
     async function init(){try{const {Application,MeshPlane,Texture}=await import('pixi.js');if(disposed)return;app=new Application();await app.init({width:w,height:h,resolution:dpr,autoDensity:true,backgroundAlpha:0,antialias:true,autoStart:false,preference:'webgl'});if(disposed){app.destroy(true);return}front=app.canvas;front.className='race-actors';root.appendChild(front);drawings.forEach(c=>{const mesh=new MeshPlane({texture:Texture.from(c),verticesX:NX,verticesY:NY});app.stage.addChild(mesh);meshes.push(mesh)})}catch{if(disposed)return;setFallback(true);front=document.createElement('canvas');front.className='race-actors';root.appendChild(front);ctx=front.getContext('2d')}size();draw()}
     function draw(){if(disposed)return;const frame=performance.now(),delta=frame-lastFrame;lastFrame=frame;if(delta<100){frameAverage=frameAverage*.95+delta*.05;slowFrames=frameAverage>29?slowFrames+1:Math.max(0,slowFrames-2);if(slowFrames>90)lowQuality=true}
-      const p=state.current,reduce=systemReduce||!!p.reducedMotion,now=Date.now(),elapsed=p.seek??(p.demo?((now-start+4000)%(p.race.duration+3500)):p.replayAt?now-p.replayAt-3500:now+(p.clockOffset||0)-p.race.startAt),t=clamp(elapsed,0,tape.duration),compact=h<250,n=tape.lanes;
-      const poses=Array.from({length:n},(_,i)=>poseAt(tape,i,t,decoded)),ordered=Array.from({length:n},(_,i)=>i).sort((a,b)=>poses[b].x-poses[a].x),leader=poses[ordered[0]],action=raceCamera(poses,tape,t,w,compact,h),minX=Math.min(...poses.map(q=>q.x)),maxX=Math.max(...poses.map(q=>q.x)),herdScale=Math.min(action.scale,w*.78/(maxX-minX+220)),view=p.cameraMode==='herd'?{scale:herdScale,camera:Math.max(-85,(minX+maxX)/2-w/herdScale*.5),focus:ordered[0],comeback:false}:action,{scale,camera}=view,short=h<420,top=p.hud?(short?58:95):compact?29:h-n*Math.min(76,(h-108)/n)-24,laneH=p.hud?Math.max(24,(h-top-(short?70:w<600?190:112))/n):compact?(h-54)/n:Math.min(76,(h-108)/n),weather=weatherAt(course,t);
+      const p=state.current,reduce=systemReduce||!!p.reducedMotion,now=monotonicNow(),loop=p.race.duration+3500,target=p.demo?(now-start+4000)%loop:p.replayAt?now-p.replayAt-3500:now+(p.clockOffset||0)-p.race.startAt,source=p.demo?'demo:'+Math.floor((now-start+4000)/loop):p.replayAt?'replay:'+p.replayAt:'live',tick=playback.sample(frame,target,source,p.seek),elapsed=tick.elapsed,t=clamp(elapsed,0,tape.duration),compact=h<250,n=tape.lanes;
+      const poses=Array.from({length:n},(_,i)=>poseAt(tape,i,t,decoded)),ordered=Array.from({length:n},(_,i)=>i).sort((a,b)=>poses[b].x-poses[a].x),leader=poses[ordered[0]],action=raceCamera(poses,tape,t,w,compact,h),minX=Math.min(...poses.map(q=>q.x)),maxX=Math.max(...poses.map(q=>q.x)),herdScale=Math.min(action.scale,w*.78/(maxX-minX+220)),targetView=p.cameraMode==='herd'?{scale:herdScale,camera:Math.max(-85,(minX+maxX)/2-w/herdScale*.5),focus:ordered[0],comeback:false}:action,view=cameraMotion.next(targetView,w,h,tick.delta,tick.reset),{scale,camera}=view,short=h<420,top=p.hud?(short?58:95):compact?29:h-n*Math.min(76,(h-108)/n)-24,laneH=p.hud?Math.max(24,(h-top-(short?70:w<600?190:112))/n):compact?(h-54)/n:Math.min(76,(h-108)/n),weather=weatherAt(course,t);
       const sx=(x:number)=>(x-camera)*scale,base=(lane:number,x:number)=>top+(lane+1)*laneH+bend(course,x)*(compact?.28:.65),sy=(lane:number,x:number,y:number)=>base(lane,x)+y*scale*.78;
       const g=bg.getContext('2d')!;g.setTransform(dpr,0,0,dpr,0,0);drawBackground(g,w,h,course,t,camera,scale,top,laneH,n,compact,reduce,p.hud);
-      if(labels.width!==Math.round(w*dpr)||labels.height!==Math.round(h*dpr)){labels.width=w*dpr;labels.height=h*dpr}const text=labels.getContext('2d')!;text.setTransform(dpr,0,0,dpr,0,0);text.clearRect(0,0,w,h);
+      const labelWidth=Math.round(w*dpr),labelHeight=Math.round(h*dpr);if(labels.width!==labelWidth)labels.width=labelWidth;if(labels.height!==labelHeight)labels.height=labelHeight;const text=labels.getContext('2d')!;text.setTransform(dpr,0,0,dpr,0,0);text.clearRect(0,0,w,h);
       const clear:ClearRegion[]=[];
       if(ctx){ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h)}
       // Original texture vertices are skinned to the physical pose, never to a progress curve.
@@ -38,7 +39,7 @@ export default function RaceSurface(props:Props){
         const headX=sx(q.headX),headY=sy(lane,q.x,q.headY),r=Math.max(17,42*scale);
         clear.push({x:Math.min(px,headX)-r,y:Math.min(py,headY)-r,width:Math.abs(px-headX)+r*2,height:Math.max(groundY,py,headY)-Math.min(py,headY)+r+12});
         g.fillStyle='#30283624';g.beginPath();g.ellipse(px,groundY+2,35*scale,4,0,0,7);g.fill();
-        const verts=new Float32Array(NX*NY*2);for(let row=0;row<NY;row++)for(let col=0;col<NX;col++){const v=skinPoint(col/(NX-1)*640,row/(NY-1)*400,spec,q),i=(row*NX+col)*2;verts[i]=sx(v.x);verts[i+1]=sy(lane,q.x,v.y)}
+        const verts=vertices[lane];for(let row=0;row<NY;row++)for(let col=0;col<NX;col++){const v=skinPoint(col/(NX-1)*640,row/(NY-1)*400,spec,q),i=(row*NX+col)*2;verts[i]=sx(v.x);verts[i+1]=sy(lane,q.x,v.y)}
         if(ctx)warp(ctx,ink,verts);else{const b=meshes[lane].geometry.getAttribute('aPosition').buffer;b.data.set(verts);b.update()}
         const activeBoost=tape.events.findLast(e=>e.lane===lane&&isBoost(e.type)&&e.at<=t&&e.at+e.duration>t);
         const ev=tape.events.findLast(e=>e.lane===lane&&e.at<=t&&Math.min(e.duration,1350)>t-e.at&&e.type!=='JUMP'&&e.type!=='PERFECT LANDING'),label=p.hud?'':ev?.type||'';
