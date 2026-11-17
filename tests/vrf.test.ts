@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {Room,randomHex,sha,verifyRace,auditSimulation} from '../lib/game';
+import {Room,randomHex,sha,seedInput,verifyRace,auditSimulation} from '../lib/game';
 import {createRoom,act,progressRandomness,Store,publicRoom} from '../lib/rooms';
 import {exampleHorse} from '../lib/drawing';
 import {DRAW_RACE_VRF_PROGRAM,vrfSeedInput,type VrfProof} from '../lib/vrf';
@@ -57,4 +57,14 @@ test('callback for a different commitment cannot start a race; cancel creates a 
  await assert.rejects(act(db,code,token,'reset',{},Date.now()),/still pending/);
  await act(db,code,token,'reset',{},Date.now()+200000);const room=(await db.get(code))!;assert.equal(room.round,2);assert.equal(room.randomness!.status,'drawing');assert.ok(room.players.slice(1).every(p=>p.bot&&p.ready));
  await assert.rejects(progressRandomness(db,code,randomHex(),oracle),/Join/);
+});
+test('a pending pre-upgrade request keeps its original version and never buys a reroll',async()=>{
+ const {db,token,code,oracle}=await locked(),room=(await db.get(code))!,previous=room.revision;
+ const version='draw-race-v6-comeback-2',commitment=await sha(seedInput(room.secret,room.code,room.round,room.players,version));
+ room.randomness={status:'locked',commitment};room.revision++;assert.ok(await db.save(room,previous));
+ await progressRandomness(db,code,token,oracle);oracle.proof=proof(commitment);
+ await progressRandomness(db,code,token,oracle,Date.now()+10000);
+ const race=(await db.get(code))!.race!;
+ assert.equal(oracle.prepares,1);assert.equal(race.version,version);assert.equal(race.vrf!.commitment,commitment);
+ assert.ok(await verifyRace(code,race));assert.ok(await auditSimulation(race));
 });

@@ -1,0 +1,992 @@
+Package: @stdlib/array-base-filled
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/array-base-zeros
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/array-float32
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/array-float64
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/array-uint16
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/array-uint32
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/array-uint8
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-has-float32array-support
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-has-float64array-support
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-has-own-property
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-has-symbol-support
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-has-to-primitive-symbol-support
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-has-tostringtag-support
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-has-uint16array-support
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-has-uint32array-support
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-has-uint8array-support
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-is-array
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-is-big-endian
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-is-boolean
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-is-buffer
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-is-float32array
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-is-float64array
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-is-function
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-is-little-endian
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-is-number
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-is-object
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-is-object-like
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-is-plain-object
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-is-regexp
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-is-string
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-is-uint16array
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-is-uint32array
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-is-uint8array
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-napi-equal-typedarray-types
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-napi-equal-types
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-napi-is-type
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-napi-is-typedarray
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-napi-status-ok
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/assert-tools-array-function
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/boolean-ctor
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/complex-float32-ctor
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/complex-float32-reim
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/complex-float64-ctor
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/complex-float64-reim
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float16-eps
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float16-exponent-bias
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float16-exponent-mask
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float16-max
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float16-num-significand-bits
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float16-sign-mask
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float16-significand-mask
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float16-smallest-normal
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float32-abs-mask
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float32-eps
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float32-exponent-bias
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float32-exponent-mask
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float32-ninf
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float32-num-significand-bits
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float32-pinf
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float32-sign-mask
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float32-significand-mask
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float64-eps
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float64-exponent-bias
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float64-fourth-pi
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float64-half-pi
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float64-high-word-abs-mask
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float64-high-word-exponent-mask
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float64-high-word-sign-mask
+Copyright (c) 2016-2024 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float64-high-word-significand-mask
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float64-ln-two
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float64-max-base2-exponent
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float64-max-base2-exponent-subnormal
+Copyright (c) 2016-2024 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float64-min-base2-exponent-subnormal
+Copyright (c) 2016-2024 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float64-ninf
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float64-num-high-word-significand-bits
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float64-pi
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float64-pinf
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-float64-smallest-normal
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-uint16-max
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-uint32-max
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/constants-uint8-max
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/error-tools-fmtprodmsg
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/fs-exists
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/fs-resolve-parent-path
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-assert-is-even
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-assert-is-finite
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-assert-is-finitef
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-assert-is-infinite
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-assert-is-integer
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-assert-is-nan
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-assert-is-nanf
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-assert-is-negative-zero
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-assert-is-odd
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-napi-binary
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-napi-unary
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-special-abs
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-special-absf
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-special-acos
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-special-asin
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-special-atan
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-special-atan2
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-special-copysign
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-special-cos
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-special-floor
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-special-hypot
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-special-kernel-cos
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-special-kernel-sin
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-special-ldexp
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-special-pow
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-special-rempio2
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-special-round
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-special-sin
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/math-base-special-sqrt
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/napi-argv
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/napi-argv-double
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/napi-argv-float
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/napi-argv-float64array
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/napi-argv-int32
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/napi-create-double
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/napi-create-int32
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/napi-export
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/number-ctor
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/number-float16-base-to-float32
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/number-float16-base-to-float64
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/number-float16-ctor
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/number-float32-base-exponent
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/number-float32-base-to-float16
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/number-float32-base-to-word
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/number-float64-base-exponent
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/number-float64-base-from-words
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/number-float64-base-get-high-word
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/number-float64-base-get-low-word
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/number-float64-base-normalize
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/number-float64-base-set-high-word
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/number-float64-base-set-low-word
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/number-float64-base-signbit
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/number-float64-base-to-float16
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/number-float64-base-to-float32
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/number-float64-base-to-words
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/number-uint32-base-to-int32
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/object-ctor
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/os-byte-order
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/os-float-word-order
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/process-cwd
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/regexp-extended-length-path
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/regexp-function-name
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/string-base-format-interpolate
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/string-base-format-tokenize
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/string-base-lowercase
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/string-base-replace
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/string-format
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/string-replace
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/symbol-ctor
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/symbol-to-primitive
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/types
+Copyright (c) 2016-2024 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/utils-constructor-name
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/utils-convert-path
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/utils-define-nonenumerable-read-only-property
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/utils-define-property
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/utils-define-read-only-property
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/utils-escape-regexp-string
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/utils-get-prototype-of
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/utils-global
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/utils-library-manifest
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/utils-native-class
+Copyright (c) 2016-2026 The Stdlib Authors.
+
+
+---
+
+Package: @stdlib/utils-type-of
+Copyright (c) 2016-2026 The Stdlib Authors.

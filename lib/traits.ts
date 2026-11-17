@@ -1,3 +1,4 @@
+import Math from './physics-math.cjs';
 import type {Drawing} from './game';
 export type Traits={speed:number;jump:number;grip:number;build:'Speedster'|'All-rounder'|'Tank';body:number;legs:number;overhang:number;neck:number;headRisk:number};
 // Pure shared geometry heuristic, not anatomical recognition. Rasterize to a small

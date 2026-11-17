@@ -1,5 +1,6 @@
 import type {Drawing,Point} from './game';
 import {analyze} from './traits';
+import Math from './physics-math.cjs';
 export type RigKey='body'|'neck'|'head'|'front'|'rear';
 export const RIG_KEYS:RigKey[]=['body','head','neck','front','rear'];
 export type RigMarks=Record<RigKey,Point>;

@@ -44,7 +44,7 @@ export async function act(store:Store,code:string,token:string,action:string,dat
       p.drawing=validateDrawing(data.drawing);p.rig=validateRig(data.rig);p.spec=specFor(p.drawing,p.rig);p.nonce=data.nonce;p.ready=true;p.name=nameOf(data.name);
       if(room.players.length===room.capacity&&room.players.every(x=>x.ready)) {
         const seed=await sha(seedInput(room.secret,room.code,room.round,room.players));
-        if(room.randomness){room.randomness={status:'locked',commitment:seed};}
+        if(room.randomness){room.randomness={status:'locked',commitment:seed,version:VERSION};}
         else {const began=Date.now();room.race=await attachTape({seed,secret:room.secret,startAt:now+4500,duration:DURATION,track:parseInt(seed.slice(2,4),16)%3,round:room.round,players:room.players.map(pubPlayer),commitment:room.commitment,version:VERSION});room.race.startAt=now+(Date.now()-began)+5000;}
       }
     } else if(action==='rematch') {
@@ -108,17 +108,20 @@ export async function progressRandomness(store:Store,code:string,token:string,se
     }else{
       const proof=await service.observe(commitment,state.account!,state.signature!);
       if(proof){
-        const frozen=await sha(seedInput(locked.secret,locked.code,locked.round,locked.players));
+        // Requests saved before this release used v6. Keep their locked seed
+        // format when recovering; a deployment must never purchase a reroll.
+        const version=state.version||'draw-race-v6-comeback-2';
+        const frozen=await sha(seedInput(locked.secret,locked.code,locked.round,locked.players,version));
         if(proof.commitment!==frozen||proof.provider!=='magicblock-vrf'||proof.cluster!=='devnet')throw Error('VRF response does not match this race.');
         const seed=await sha(vrfSeedInput(commitment,proof.randomness));
-        const race=await attachTape({seed,secret:locked.secret,startAt:0,duration:DURATION,track:parseInt(seed.slice(2,4),16)%3,round:locked.round,players:locked.players.map(pubPlayer),commitment:locked.commitment,version:VERSION,vrf:proof});
+        const race=await attachTape({seed,secret:locked.secret,startAt:0,duration:DURATION,track:parseInt(seed.slice(2,4),16)%3,round:locked.round,players:locked.players.map(pubPlayer),commitment:locked.commitment,version,vrf:proof});
         race.startAt=Date.now()+5000;
         await update(r=>{if(!r.race){r.race=race;r.randomness={...r.randomness!,status:'fulfilled',proof,error:undefined,transaction:undefined,leaseUntil:0};}});
       }else{
         const acceptance=await service.requestState(state.account!,state.signature!,state.lastValidBlockHeight!);
         if(acceptance==='unconfirmed')await service.broadcast(state.transaction);
         else if(acceptance==='expired'||acceptance==='failed'){
-          await update(r=>{r.randomness={status:'error',commitment,requestedAt:state.requestedAt,error:acceptance==='expired'?'Transaction expired before acceptance. Retry the same locked race.':'Transaction failed before VRF acceptance. Retry the same locked race.',leaseUntil:0};});
+          await update(r=>{r.randomness={status:'error',commitment,version:state.version,requestedAt:state.requestedAt,error:acceptance==='expired'?'Transaction expired before acceptance. Retry the same locked race.':'Transaction failed before VRF acceptance. Retry the same locked race.',leaseUntil:0};});
         }
       }
     }

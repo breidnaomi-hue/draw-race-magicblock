@@ -1,0 +1,7 @@
+{
+  "package": "matter-js",
+  "version": "0.20.0",
+  "source": "build/matter.js",
+  "upstreamSha256": "016f108075a42e8bb8f75c43cf5b6d9f07b1d88857975ed9d96b0ede921416ce",
+  "modification": "Prepend a module-local Math binding; upstream source is otherwise byte-identical."
+}

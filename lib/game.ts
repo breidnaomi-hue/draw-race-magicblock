@@ -1,13 +1,13 @@
 import {analyze,terrainScore} from './traits';
 import {courseFor} from './course';
-import {simulate,replayFor,poseAt,tapePayload} from './physics';
+import {simulate,replayFor,poseAt,tapePayload,PHYSICS_VERSION} from './physics';
 import type {ReplayTape} from './physics';
 import type {RigMarks,Spec} from './rig';
 import {specFor} from './rig';
 import {COMEBACK_RULESET} from './comeback';
 import {vrfSeedInput,type VrfProof,type RandomnessState} from './vrf';
-export const VERSION = 'draw-race-v6-comeback-2';
-export const SUPPORTED_VERSIONS=[VERSION,'draw-race-v5-matter-rig'];
+export const VERSION = 'draw-race-v7-vrf-deterministic-1';
+export const SUPPORTED_VERSIONS=[VERSION,'draw-race-v6-comeback-2','draw-race-v5-matter-rig'];
 export const DURATION = 90000;
 export const COLORS = ['#b393ee','#f7976e','#93bd9a','#efce62'];
 export type Point = [number, number];
@@ -50,7 +50,7 @@ export async function verifyRace(code:string,race:Race) {
   const expected=proof?await sha(vrfSeedInput(locked,proof.randomness)):locked;
   return SUPPORTED_VERSIONS.includes(race.version)&&race.duration===DURATION&&race.track===parseInt(race.seed.slice(2,4),16)%3&&(race.players.length===2||race.players.length===4)&&await sha(race.secret)===race.commitment&&expected===race.seed&&(!race.tape||await sha(tapePayload(race.tape))===race.tape.hash);
 }
-export async function auditSimulation(race:Race){if(race.version!==VERSION||!race.tape||race.tape.rules?.id!==COMEBACK_RULESET)return false;const specs=race.players.map(p=>specFor(p.drawing,p.rig)),tape=simulate(race.seed,race.players.map(p=>p.drawing),race.players.map(p=>p.rig),race.track,{specs,...(race.example?.variant?{course:race.tape.course}:{})});return await sha(tapePayload(tape))===race.tape.hash;}
+export async function auditSimulation(race:Race){if(!SUPPORTED_VERSIONS.includes(race.version)||!race.tape||race.tape.version!==PHYSICS_VERSION||race.tape.rules?.id!==COMEBACK_RULESET)return false;const specs=race.players.map(p=>specFor(p.drawing,p.rig)),tape=simulate(race.seed,race.players.map(p=>p.drawing),race.players.map(p=>p.rig),race.track,{specs,...(race.example?.variant?{course:race.tape.course}:{})});return await sha(tapePayload(tape))===race.tape.hash;}
 export function validateDrawing(value:unknown):Drawing {
   if(!Array.isArray(value)||value.length<1||value.length>250) throw Error('Draw your horse first (up to 250 strokes).');
   let total=0;

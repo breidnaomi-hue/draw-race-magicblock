@@ -1,10 +1,11 @@
-import Matter from 'matter-js';
+import Matter from '../vendor/matter.cjs';
+import Math from './physics-math.cjs';
 import type {Drawing} from './game';
 import {Spec,RigMarks,specFor,clamp} from './rig';
 import {PhysicsCourse,physicsCourse,weatherAt,groundAt,sectionAt,curveAt} from './physics-course';
 import {BOOSTS,Boost,isBoost,chooseOpportunity,softBand,boostEffect,FROZEN_RULES} from './comeback';
 const {Engine,Bodies,Body,Composite,Constraint,Events}=Matter;
-export const PHYSICS_VERSION='matter-0.20-comeback-2';
+export const PHYSICS_VERSION='matter-0.20-comeback-3-deterministic';
 export const STEP=1000/60,SAMPLE_HZ=10,STRIDE=17;
 export const STATES=['RUN','JUMP','SLIP','CRASH','GET UP','SECOND WIND','RAGE MODE','EXHAUSTION','PANIC','PERFECT LANDING','LUCKY JUMP','ADRENALINE RUSH','PERFECT RHYTHM','LUCKY RECOVERY','COMEBACK SURGE','OVERHEAT','BAD LANDING','SLIPPERY TURN','OBSTACLE CRASH','STUMBLE','BOOST STRIP','FINAL PUSH'] as const;
 export type StateKind=typeof STATES[number];

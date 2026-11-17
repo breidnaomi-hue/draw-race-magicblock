@@ -1,3 +1,4 @@
+import Math from './physics-math.cjs';
 import {clamp} from './rig';
 export const COMEBACK_RULESET='dynamic-comeback-2';
 export const BOOSTS={
@@ -23,4 +24,3 @@ export function chooseOpportunity(c:Situation,roll:number,pick:number):Boost|nul
 }
 export function boostEffect(type:string,elapsed:number,duration:number){if(!isBoost(type))return {speed:1,acceleration:1};const rule=BOOSTS[type],ramp=type==='PERFECT RHYTHM'?clamp(elapsed/1800,0,1):clamp(elapsed/450,0,1),fade=clamp((duration-elapsed)/700,0,1),strength=ramp*fade;return {speed:1+(rule.speed-1)*strength,acceleration:1+(rule.acceleration-1)*strength}}
 export const FROZEN_RULES={id:COMEBACK_RULESET,shapeWeight:.3,variationWeight:.7,maxBand:.16,finalPushAt:65000,maxCombinedSpeed:2.35,boosts:BOOSTS};
-

@@ -10,6 +10,7 @@ export type VrfProof = {
   requestSlot:number; fulfillmentSlot:number; feeLamports:number;
 };
 export type RandomnessState = {
+  version?:string;
   status:'drawing'|'locked'|'requesting'|'pending'|'fulfilled'|'error';
   commitment?:string; signature?:string; account?:string; requestedAt?:number;
   error?:string; proof?:VrfProof;

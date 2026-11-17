@@ -1,4 +1,5 @@
 import {clamp} from './rig';
+import Math from './physics-math.cjs';
 export type WeatherKind='Sunshine'|'Rain'|'Strong wind'|'Fog'|'Snow & ice';
 export type WeatherPhase={at:number;kind:WeatherKind;wet:number;wind:number;visibility:number;ice:number};
 export type ZoneKind='MUD TRAP'|'RISKY SHORTCUT'|'DOUBLE JUMP'|'WET CORNER'|'BOOST STRIP'|'FINAL CHAOS ZONE';
