@@ -1,0 +1,149 @@
+{
+  "site": "https://draw-race-party.breid222.chatgpt.site",
+  "startedAt": "2026-11-17T22:43:28.330Z",
+  "completedAt": "2026-11-17T22:45:35.247Z",
+  "sourceCommit": "a2a7da186ec5f524c52f254c204af307d3318378",
+  "gameVersion": "draw-race-v7-vrf-deterministic-1",
+  "physicsVersion": "matter-0.20-comeback-3-deterministic",
+  "result": "pass",
+  "races": [
+    {
+      "label": "quick-race",
+      "code": "BMBNJ8",
+      "seedVerified": true,
+      "chainVerified": true,
+      "fullPhysicsMatches": true,
+      "peersChecked": 1,
+      "successfulTransactions": 2,
+      "payerDebitLamports": 1769920,
+      "winner": "VRF Artist",
+      "round": 1,
+      "players": 4,
+      "seed": "de50c53b65352812b0c1e891111fa8078ba437567293ff4087fdd8b3328177e0",
+      "proof": {
+        "provider": "magicblock-vrf",
+        "cluster": "devnet",
+        "programId": "Gz9wroDHou467yg7AFmf3pcoPUq92qkoawpXPaF7m3zP",
+        "account": "H3yADWg6KbRXAqdHNbjYbygvmcDdaifBgYqURvcFUjSN",
+        "payer": "CH8xVUgsf5CLXWUce7S61HD8fBcGNDMXgq5mwruMoKhW",
+        "commitment": "ca8aac24060d7308507115d5d49897259c36f88d5b21605c47dc45bd40bb9861",
+        "randomness": "8c32110eeb24a0b50e8a8efab5490c03c3fade82901518cd2ec89963bf0a70c1",
+        "requestSignature": "4UaaHNgg5DsesECXmUmrKJxL59MVhYPCtfHs83bTswcajbQxJaWGi2rhJUYKSjPPpW8u8Ksnvumer5roGSDRzh8n",
+        "fulfillmentSignature": "26T5tsd1WMwLFVEmiwAJcq6BxyWUoc3rBnjGGDEcGeoAUn7sKDvp36Ye1FX8YwsVfoYautFu16wvf4kvHw8mv1r1",
+        "requestSlot": 523423193,
+        "fulfillmentSlot": 523423196,
+        "feeLamports": 500000
+      },
+      "tapeHash": "2a9b6bdbb0aca1fabf80266b3f55de32630ac1d328bfdbeafa2a86d4ee6fe705",
+      "ranking": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "label": "2-players",
+      "code": "P5PY2W",
+      "seedVerified": true,
+      "chainVerified": true,
+      "fullPhysicsMatches": true,
+      "peersChecked": 2,
+      "successfulTransactions": 2,
+      "payerDebitLamports": 1769920,
+      "winner": "Friend 1",
+      "round": 1,
+      "players": 2,
+      "seed": "9d1c48d6cc1cdaf17b9b15a98064e613909b63ca66c9c7bccb399f2e6c528944",
+      "proof": {
+        "provider": "magicblock-vrf",
+        "cluster": "devnet",
+        "programId": "Gz9wroDHou467yg7AFmf3pcoPUq92qkoawpXPaF7m3zP",
+        "account": "FPg4W2eqgaM6zUTs3rDppPbAyPqi6f2o9ooJtTx5D9Ae",
+        "payer": "CH8xVUgsf5CLXWUce7S61HD8fBcGNDMXgq5mwruMoKhW",
+        "commitment": "6a31bf2c4855da78c9e16e05f5d1a58136e3aae7d8edeebe64f2707b268f91bf",
+        "randomness": "44456bdd7ab93199d68bafea8d07560d2db2622c26a3216ccdb91fabb9262215",
+        "requestSignature": "gsRUfer4WFZULuDRCxmrzBwocd5m9MKhCBuv61XKD2UgtGAMWBwb3FW6KRbVWrAZFNcBYicyMQBZyLPy2NHQ8zk",
+        "fulfillmentSignature": "3BM3McmVWyeiSZL7UDu57QxtAG732CDReojSxWfux4LdsAt38FdrUfk7BjCXPLJKYDJJx5BaC1ezrv8gBBXDz2kw",
+        "requestSlot": 523423256,
+        "fulfillmentSlot": 523423259,
+        "feeLamports": 500000
+      },
+      "tapeHash": "9c90284b92fc3138d039f18b433505f7b251faf2e9aa904393ceb69d7771e5b2",
+      "ranking": [
+        1,
+        0
+      ]
+    },
+    {
+      "label": "4-players",
+      "code": "LFA46E",
+      "seedVerified": true,
+      "chainVerified": true,
+      "fullPhysicsMatches": true,
+      "peersChecked": 4,
+      "successfulTransactions": 2,
+      "payerDebitLamports": 1769920,
+      "winner": "Friend 3",
+      "round": 1,
+      "players": 4,
+      "seed": "8af6a2c780a7d5d51bfd3769656aa3ddc3d52b194cf0ff45cc355a6b8b72e6fa",
+      "proof": {
+        "provider": "magicblock-vrf",
+        "cluster": "devnet",
+        "programId": "Gz9wroDHou467yg7AFmf3pcoPUq92qkoawpXPaF7m3zP",
+        "account": "ALiibDMNThpLZ3asDKyTMFv5AmLvceY6bXAFzE6wUM7L",
+        "payer": "CH8xVUgsf5CLXWUce7S61HD8fBcGNDMXgq5mwruMoKhW",
+        "commitment": "8b1118ed1c9c19c086f6f027a9d66063918b212a198c3323c9d14f8bd36567ca",
+        "randomness": "93a8dd8ef7d7a5fe77fa0875f6d555df0757dfcb2dc7e19385aaa79d73e32b5c",
+        "requestSignature": "4HWZvqJhww8X78tJA8cyst4wCZu3F2squxAbSYXmRetEkZPnbp1Wgf52bDoYneXSVhTZFmot61c2ygJqqjU4rcq9",
+        "fulfillmentSignature": "2aeHXDewD9YFmDWPc7WJ5DdApbt9xumnoBzEPsGibLRacuD8Uq4U5oy7qk6K3ncXPcavyFuvbbuxD699GypHbgQc",
+        "requestSlot": 523423314,
+        "fulfillmentSlot": 523423316,
+        "feeLamports": 500000
+      },
+      "tapeHash": "ecae301e91338fa3ed0fdd7a4dfe8b0af97dbb2d73050add550de143a473fd56",
+      "ranking": [
+        3,
+        1,
+        2,
+        0
+      ]
+    },
+    {
+      "label": "rematch",
+      "code": "BMBNJ8",
+      "seedVerified": true,
+      "chainVerified": true,
+      "fullPhysicsMatches": true,
+      "peersChecked": 1,
+      "successfulTransactions": 2,
+      "payerDebitLamports": 1769920,
+      "winner": "Neigh Sayer",
+      "round": 2,
+      "players": 4,
+      "seed": "24eb295d074d92ff5a243118c3062db390ae0a99a553057eb5290fa45417b831",
+      "proof": {
+        "provider": "magicblock-vrf",
+        "cluster": "devnet",
+        "programId": "Gz9wroDHou467yg7AFmf3pcoPUq92qkoawpXPaF7m3zP",
+        "account": "2QLLSzWvc3AnkkMDyMVsWQMmKCVasqKJcGR3jfpGFF5f",
+        "payer": "CH8xVUgsf5CLXWUce7S61HD8fBcGNDMXgq5mwruMoKhW",
+        "commitment": "481a7fbf65299a440515e3cb116532697ce4c6ab04f202467d72b5e90c58fc30",
+        "randomness": "e0a386912a0ceb1b6b495243a01a3dfc7a172b68fce4c9a041dea0adfb8432d1",
+        "requestSignature": "4JVs4Yee78dTGVbxvBirBfU2kehL5Y1npLm95EShueUcuJfWdicDDeu6fAHMhAqmhS4uiaMV2Rp8jdbCPeTHVLeY",
+        "fulfillmentSignature": "32rXWnpwLws6kfyPFZ5S3bRkSvh337h97NrbqEJGRg1ABqNK6HVXg3re3vLvgedgPg6c6bCS3CXtrmyvisBPfoJk",
+        "requestSlot": 523423653,
+        "fulfillmentSlot": 523423656,
+        "feeLamports": 500000
+      },
+      "tapeHash": "d41367ecc1ece8549a9e0f1b67a776f7a5c4bed12cf144f2989a811034094150",
+      "ranking": [
+        1,
+        0,
+        3,
+        2
+      ]
+    }
+  ]
+}

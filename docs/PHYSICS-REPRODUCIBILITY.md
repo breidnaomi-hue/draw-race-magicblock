@@ -35,6 +35,18 @@ This creates real sponsored Devnet races on the public site: Quick Race, two pla
 
 VRF proves the supplied randomness. Independent physics recomputation checks the published rules and recorded result; it does not put physics on-chain or prevent server refusal/aborts. The new production results are recorded separately from the historical counterexample.
 
+## Recorded results
+
+On 2026-11-17 UTC, all four public checks passed: Quick Race `BMBNJ8`, two players `P5PY2W`, four players `LFA46E`, and round 2 of `BMBNJ8` after the actual 90-second clock. Each had one request and one callback, a verified seed/commitment, direct chain verification, and an identical full physics tape when recomputed in Windows Node. The rematch used a distinct seed and request. [Evidence](vrf/reproducibility-evidence.json) records signatures, account addresses, tape hashes and measured sponsor debits.
+
+`public/vrf-reproducible.json` preserves the new public Quick Race. Its full-record regression is part of the 45 passing automated tests. To verify it independently, including the live Devnet account and transaction logs:
+
+```sh
+node --import tsx scripts/verify-vrf-race.ts public/vrf-reproducible.json --strict-physics
+```
+
+The 21 local Node/workerd cases also match completely; [saved corpus](vrf/runtime-corpus.json). These checks cover the tested inputs/environments. New browser/mobile visual QA remains unavailable; the attached clip is a rendered data replay of the actual public race.
+
 ## References
 
 [stdlib's reproducibility explanation](https://github.com/stdlib-js/stdlib/blob/develop/FAQ.md) describes why native JavaScript transcendental approximations can vary by runtime. The pinned implementations and applicable upstream license headers are included in the dependency lockfile and notices.

@@ -72,7 +72,7 @@ The before phase imports the frozen previous engine in tests/baseline/. Both pha
 
 READY locks drawings, rigs, names and nonces. A server secret commitment precedes drawing. After all players lock in, one real MagicBlock VRF request binds those inputs to an authenticated random result. Its bytes derive the original solver seed. No race starts before fulfillment. Receipts link the program, request, callback and immutable account, with direct public-RPC verification. The tape retains its original SHA-256 hash.
 
-Physics remains on the server. VRF verifies randomness, not the full physical computation or server availability. Floating-point runtimes can recompute different trajectories; all players receive the original server record. Legacy study examples are explicitly local replays. Only faucet SOL Devnet is used: no tokens, USDC, stakes, deposits, NFTs or payouts. See docs/MAGICBLOCK.md for measured costs and verification limits.
+Physics remains on the server. VRF verifies randomness, not the full physical computation or server availability. The v7 engine shares pinned math implementations between the solver and verifier so its full recorded result can be independently recomputed. Old native-math tapes retain their original outcomes and can differ across runtimes. All players receive the original server record. See [physics reproduction and regression evidence](docs/PHYSICS-REPRODUCIBILITY.md). Legacy study examples are explicitly local replays. Only faucet SOL Devnet is used: no tokens, USDC, stakes, deposits, NFTs or payouts. See docs/MAGICBLOCK.md for measured costs and verification limits.
 
 Drawing tools, brush colors, erase, undo, preview, invites, reconnect, rematch, local history, PNG export and short clip recording remain available. History holds 12 races on the device. Browser checks use Chromium with mobile viewport emulation; physical phones and Safari are not covered.
 
@@ -89,6 +89,7 @@ See docs/WEATHER-AUDIO.md and docs/weather-audio-validation.json for the checks 
 ## Main files
 
 - lib/physics.ts and lib/physics-course.ts: solver, course and replay.
+- lib/physics-math.cjs and vendor/matter.cjs: private pinned math and the original Matter.js engine.
 - lib/comeback.ts: opportunities, boost rules and bounded assistance.
 - lib/rig.ts and lib/skin.ts: attributes, joints and drawing skin.
 - components/race-surface.tsx and lib/race-camera.ts: rendering, effects and camera.

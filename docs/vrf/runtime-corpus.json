@@ -1,0 +1,243 @@
+{
+  "checkedAt": "2026-11-17T22:37:21.616Z",
+  "environments": [
+    "Node.js v22.18.0 / win32",
+    "local Cloudflare workerd"
+  ],
+  "cases": [
+    {
+      "name": "original-production-counterexample",
+      "seed": "3de3b716d36a929b004e71b54a2bfba4e1eeccae96dfacfce266b01c4a42416f",
+      "lanes": 4,
+      "ranking": [
+        2,
+        1,
+        0,
+        3
+      ],
+      "hash": "1602115da0ccfb662e057b1389983fa80acbbc01eb7e62aa4629f047cfcb0730"
+    },
+    {
+      "name": "corpus-0",
+      "seed": "018956e35a15a7a9aeccfeb04a3314f95518a9dcd5650825c0ac47aee1d8b14f",
+      "lanes": 4,
+      "ranking": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "hash": "760d5643f73e7d0bde026837ecdd7c7d6f11c36eb75475c01c00da8f5a1b85cb"
+    },
+    {
+      "name": "corpus-1",
+      "seed": "5662aad89f9675d2527fadff04843702ddb165bae9443e3f43ab1563f29a356d",
+      "lanes": 2,
+      "ranking": [
+        1,
+        0
+      ],
+      "hash": "72a6c4581b1b3b4a0eaff29458fd2d4061a1b26ca87100430787738c3b3f8ab9"
+    },
+    {
+      "name": "corpus-2",
+      "seed": "0a9d2608b0ea57265815e3c66937d32f3865ebd174765203d23524584252867a",
+      "lanes": 4,
+      "ranking": [
+        0,
+        2,
+        3,
+        1
+      ],
+      "hash": "8bb95d9801920df91c27746864783d962af8771ea2e36b9cfd8c19c878498ca7"
+    },
+    {
+      "name": "corpus-3",
+      "seed": "a8e43056d1f42a01447dfe6cdf1beefe0ce25905df156a33e1831465afa04960",
+      "lanes": 2,
+      "ranking": [
+        0,
+        1
+      ],
+      "hash": "aa4d2dfe6f8f981d3dfcc11e5ae3e83e9ff1af49e92350e25c269031aeb82ef1"
+    },
+    {
+      "name": "corpus-4",
+      "seed": "0122f743402456780476e2b0c76028d3a60769eaab55e8673b08a31430d92c33",
+      "lanes": 4,
+      "ranking": [
+        1,
+        0,
+        2,
+        3
+      ],
+      "hash": "faf2c20ed8bff5d4a08e47f2ccc89c4fa5edc329ffe5e6382cca5420aea4cea4"
+    },
+    {
+      "name": "corpus-5",
+      "seed": "d33298538f304dbf0be02c3621fd698240c8b37e09acb1953ff8449a5da32475",
+      "lanes": 2,
+      "ranking": [
+        0,
+        1
+      ],
+      "hash": "d88b025e74410b85829120d5036d7dab1bd6a9fbb97f97bfbfbd1ceaaa5d8a6c"
+    },
+    {
+      "name": "corpus-6",
+      "seed": "965c39ce6fea22d4bbb66c4399e6967e9edcc1dace99464da8d7bddf3efe3eca",
+      "lanes": 4,
+      "ranking": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "hash": "46b1edd8b329dac190d5f5c7f6a28cb60b60cf1115613e82cdd073929dcb2eb5"
+    },
+    {
+      "name": "corpus-7",
+      "seed": "a89a780fefad59e5f30bb4003dd2c42d79521ce5fdce641e019cce10a31490c3",
+      "lanes": 2,
+      "ranking": [
+        0,
+        1
+      ],
+      "hash": "559216439324ad1dff6f114c0d3dd4ef60af4de9cbf20deaa2ea5ba88dde89d3"
+    },
+    {
+      "name": "corpus-8",
+      "seed": "9637d498f247e0d76add1a13e48096abc9b158891909e418e033e95ea1774b6a",
+      "lanes": 4,
+      "ranking": [
+        1,
+        2,
+        3,
+        0
+      ],
+      "hash": "32f2c499d5c22f119ffd9188dc490b307224a1c783ff4fd78745673208c5870b"
+    },
+    {
+      "name": "corpus-9",
+      "seed": "785c5b6005760e98c22ddf5bb878140905cdcb3b8b2e3d288615ab76ebd9e635",
+      "lanes": 2,
+      "ranking": [
+        0,
+        1
+      ],
+      "hash": "1a014ae3669d3c69b4747c4ce02f312ee322d7a6341727beeed9e2eeb28b1f44"
+    },
+    {
+      "name": "corpus-10",
+      "seed": "b1040c9a0dde818c55b001587cfb3439652ebd9396aef62cf308000b59236c1c",
+      "lanes": 4,
+      "ranking": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "hash": "72e0c418927f2296e0b458c4ebc864fcd358c8448753e89e4cd071ea5c7c902b"
+    },
+    {
+      "name": "corpus-11",
+      "seed": "362a4f259c9f78afa318da172468edf216e3d4fe5bb113e261c7524158cb660a",
+      "lanes": 2,
+      "ranking": [
+        1,
+        0
+      ],
+      "hash": "8e33309f2da0b62bb8c1408bbcfd3381b0406237d52415a2b465a71704700ac5"
+    },
+    {
+      "name": "corpus-12",
+      "seed": "b38e75756576b94f2baa7731adeaa7f03bdf8692bd45e4ea0c2632c68de9d5c3",
+      "lanes": 4,
+      "ranking": [
+        3,
+        1,
+        0,
+        2
+      ],
+      "hash": "104f447b5a33f9dd1e9113fbb1817bed334334e3235b56ec5fb490d236984d95"
+    },
+    {
+      "name": "corpus-13",
+      "seed": "2e16ec58997db3c67a9b0028b1cc0674b4aabc8455295be4d45a6f97341f4d25",
+      "lanes": 2,
+      "ranking": [
+        1,
+        0
+      ],
+      "hash": "be3a48465bd133c3604ab8e119cd7e78704ed4e2c87fac905a1613093c694efb"
+    },
+    {
+      "name": "corpus-14",
+      "seed": "c2a48f9eee55eede7b96f0d0ce54d70a6a21d1e3e0b81519fb8f3652eebb6b6a",
+      "lanes": 4,
+      "ranking": [
+        1,
+        0,
+        3,
+        2
+      ],
+      "hash": "fbda92bf2ed4686230db80d425ad98fda4a9f731115e6a9295b8761899e33432"
+    },
+    {
+      "name": "corpus-15",
+      "seed": "64be8b5155ed82db4dc8b98c5387db5e3b52db39019eefa23dfa3e0eea49770e",
+      "lanes": 2,
+      "ranking": [
+        0,
+        1
+      ],
+      "hash": "c72a61f0d041b49c57f56da0f21f8866138d57e8ba2d7b7d74979c24a8f6e6d7"
+    },
+    {
+      "name": "corpus-16",
+      "seed": "426b44c93b2ce5d78b96c9d1401b683a483a496859b530d86f744102134b48da",
+      "lanes": 4,
+      "ranking": [
+        3,
+        0,
+        2,
+        1
+      ],
+      "hash": "a70b548209c043116c2d5c5fe64fe225336e172723ee8ae94bbb566b57b1cff4"
+    },
+    {
+      "name": "corpus-17",
+      "seed": "ebc70d9d7b4e895764fcadc0e049d1dd058acee7887f95e37de62db6f5e05671",
+      "lanes": 2,
+      "ranking": [
+        0,
+        1
+      ],
+      "hash": "a02df38a048cd379043915a608d6b0018fa46636e3a6074a4108b25643faccfd"
+    },
+    {
+      "name": "corpus-18",
+      "seed": "854c35133f445931c2cc67ce689f9369174fcca9b8e7a0ab795cd67a31e01be8",
+      "lanes": 4,
+      "ranking": [
+        0,
+        1,
+        3,
+        2
+      ],
+      "hash": "cb498a3aeee37026d36e5decbad15c1decf15aa078b562467cc6f6e8f273d578"
+    },
+    {
+      "name": "corpus-19",
+      "seed": "22dde20db2a6ab5c0b86a230d16058a97794550618df4274ffbd1879c0449790",
+      "lanes": 2,
+      "ranking": [
+        0,
+        1
+      ],
+      "hash": "0c1c6c1918a2c3d16930f7b08e8ea8650a72ac55d3ab129792ef6de89f024f77"
+    }
+  ],
+  "fullTapesMatch": true,
+  "globalMathUnchanged": true
+}

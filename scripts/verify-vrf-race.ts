@@ -1,10 +1,12 @@
 import {readFile} from 'node:fs/promises';
 import {verifyRace,auditSimulation} from '../lib/game';
 import {verifyVrfProof} from '../lib/verify-vrf';
+import {PHYSICS_VERSION} from '../lib/physics';
 const args=process.argv.slice(2),file=args.find(arg=>!arg.startsWith('--'))||'public/vrf-demo.json';
 const input=JSON.parse(await readFile(file,'utf8')),race=input.race||input;
 if(!race.vrf)throw Error('This local replay has no MagicBlock VRF');
 const seedMatches=await verifyRace(input.code,race),chainVerified=await verifyVrfProof(race.vrf),physicsMatches=await auditSimulation(race);
-console.log(JSON.stringify({seedMatches,chainVerified,physicsMatches,programId:race.vrf.programId,request:race.vrf.requestSignature,fulfillment:race.vrf.fulfillmentSignature},null,2));
-if(!physicsMatches)console.warn('Physics differs in this runtime. VRF/seed verification is separate; playback uses the original server tape.');
+const physicsEngineSupported=race.tape?.version===PHYSICS_VERSION;
+console.log(JSON.stringify({seedMatches,chainVerified,physicsMatches,physicsEngineSupported,programId:race.vrf.programId,request:race.vrf.requestSignature,fulfillment:race.vrf.fulfillmentSignature},null,2));
+if(!physicsMatches)console.warn(physicsEngineSupported?'Physics recomputation differs from the recorded tape. VRF/seed verification is separate.':'Legacy physics engine: original tape preserved; recomputation with this revision is skipped. VRF/seed verification is separate.');
 if(!seedMatches||!chainVerified||(args.includes('--strict-physics')&&!physicsMatches))process.exitCode=1;

@@ -6,7 +6,7 @@ One @magicblock VRF request per race powers weather, obstacles & boosts on Solan
 
 Play: https://draw-race-party.breid222.chatgpt.site/
 Code: https://github.com/breidnaomi-hue/draw-race-magicblock
-Proof: https://explorer.solana.com/tx/uRbTQFUmcmN48bB6cRUxFE3nyJmSmw9LTvcWC3iB6kB2UnAYkx39g2eLabpSzzkx4Af8SEvZgEMbDCi4VAoG5AL?cluster=devnet
+Proof: https://explorer.solana.com/tx/4UaaHNgg5DsesECXmUmrKJxL59MVhYPCtfHs83bTswcajbQxJaWGi2rhJUYKSjPPpW8u8Ksnvumer5roGSDRzh8n?cluster=devnet
 
 ## Attachment
 

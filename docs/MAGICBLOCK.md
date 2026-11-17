@@ -14,7 +14,7 @@ READY locks drawings, rigs, names and nonces. The original server secret commitm
 
 `raceSeed = SHA256(JSON.stringify(["draw-race-magicblock-vrf-v1", lockedCommitment, randomnessHex]))`
 
-This seed enters the original `attachTape`/`simulate` path: environment, weather, obstacles, seeded attributes, recovery and boost opportunities all consume it. Original physics decides contacts, locomotion and finishes. VRF proves randomness; the full physical simulation remains off-chain. Server refusal/aborts remain possible. Floating-point recomputation can differ across browser runtimes. All players receive the original server tape. Legacy study examples explicitly say they have no VRF.
+This seed enters the existing `attachTape`/`simulate` path: environment, weather, obstacles, seeded attributes, recovery and boost opportunities all consume it. Physics decides contacts, locomotion and finishes. VRF proves randomness; the full physical simulation remains off-chain. Server refusal/aborts remain possible. The v7 revision uses shared pinned math to make its full server tape independently reproducible; old native-math tapes keep their original outcomes. All players receive the original server tape. Legacy study examples explicitly say they have no VRF. See [reproduction details](PHYSICS-REPRODUCIBILITY.md).
 
 ## Accounts and authority
 
@@ -47,14 +47,15 @@ No ER, delegation, tokens, NFTs, USDC, escrow, deposits, payouts, session-key pr
 node --import tsx scripts/verify-vrf-race.ts public/vrf-demo.json
 ```
 
-The verifier reports three separate results. A nonmatching physics recomputation is a runtime limitation, not a failed VRF check. Add `--strict-physics` when identical physics is specifically required.
+The verifier reports seed/commitment, on-chain VRF and full physics checks separately. Use `--strict-physics` to require all three. Legacy engine recordings remain verifiable on-chain, but are not reinterpreted using the new math revision.
 
 ## Evidence and reproduction
 
 - `vrf/deployment.json`: deployment signature, program-data address and ELF hash.
 - `vrf/live-evidence.json`: four real races (solo, 2 players, 4 players, rematch after the actual first 90-second clock). Each has exactly two successful transactions: one request and one oracle callback.
-- `public/vrf-demo.json`: complete first VRF race, drawings, seed and recorded physics.
-- `public/vrf-production.json` and `vrf/production-evidence.json`: a fresh race requested through the published Cloudflare site. Direct chain verification and the seed/drawing commitment both passed. Its recomputed Node physics produced a different winner (`Neigh Sayer`) from Cloudflare's authoritative record (`Public VRF test`), while the generated course matched. Thus full independent physics reproduction is **not achieved**. Every client still plays the same original Cloudflare tape. This pre-existing solver limitation was retained; no whole-race on-chain claim is made.
+- `public/vrf-demo.json` and `public/vrf-reproducible.json`: the new-engine Quick Race requested through the public Cloudflare site, including drawings, seed and complete server physics tape.
+- `vrf/reproducibility-evidence.json`: new public Quick Race, 2/4-player rooms and actual-clock rematch. All seed, direct chain and complete Cloudflare/Windows Node tape checks passed. `vrf/runtime-corpus.json` retains the 21-case local Node/workerd comparison.
+- `public/vrf-production.json` and `vrf/production-evidence.json`: unchanged historical native-math counterexample. Its valid VRF seed produced different physics in Windows Node and Cloudflare. The v7 math revision addresses this for new races; it does not rewrite historical tapes. There is no whole-race on-chain claim.
 - `tests/vrf.test.ts`: concurrent callers, exact-wire recovery, RPC loss, unaccepted expiry, accepted delay, mismatched commitment, cancellation and session authorization.
 - Live simulation rejects a forged callback with a wallet signer and a repeated request. Neither negative transaction was submitted.
 
@@ -71,7 +72,7 @@ The Node backend loads ignored `.dev.vars`. For an independent demo, use your ow
 
 Native consumer source: `programs/draw-race-vrf`. `node scripts/build-vrf.mjs` sends only public source to the official Solana Playground compiler. `scripts/deploy-vrf-devnet.ts` resumes buffer uploads, simulates before sending and compares the executable bytes after deployment. This is a recorded binary comparison, not a formal verified-build attestation or independently audited compiler. The compiler's unused bundled dependencies emit warnings; the resulting consumer compiled and executed on Devnet.
 
-Typecheck, all 41 existing/new tests, and production build passed. Browser automation stopped because Computer Use could not establish Chrome's current URL. New visual/mobile/browser-wallet QA is **not verified**. A user wallet is not required: the disposable sponsor signs the request with test SOL.
+Typecheck, the automated test suite, standalone build and production build passed. The new full-tape public regression and cross-runtime commands are documented in [PHYSICS-REPRODUCIBILITY.md](PHYSICS-REPRODUCIBILITY.md). Browser automation stopped because Computer Use could not establish Chrome's current URL. New visual/mobile/browser-wallet QA is **not verified**. A user wallet is not required: the disposable sponsor signs the request with test SOL.
 
 ## Observed cost
 
