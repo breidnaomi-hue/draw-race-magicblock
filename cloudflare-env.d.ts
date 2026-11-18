@@ -5,5 +5,6 @@ declare namespace Cloudflare {
     SOLANA_RPC_URL?: string;
     VRF_PROGRAM_ID?: string;
     VRF_SPONSOR_SEED?: string;
+    ESCROW_PROGRAM_ID?: string;
   }
 }

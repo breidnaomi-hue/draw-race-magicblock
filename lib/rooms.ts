@@ -3,13 +3,15 @@ import {validateRig,specFor} from './rig';
 import {demoPlayers} from './demo';
 import {vrfSeedInput,VRF_FEE_LAMPORTS} from './vrf';
 import type {VrfService} from './solana-vrf';
+import {publicStake,stakeTermsHash,validateStake,GAME_FEE_BPS,FOUR_PLAYER_LAMPORTS,DUEL_MIN_LAMPORTS,MAX_STAKE_LAMPORTS,type StakeState} from './sol-stakes';
+import {acceptStakes,activeBank,prepareStakeDeposit,progressStakes,submitStakeDeposit,type StakeContext} from './stake-rooms';
 export interface Store {get(code:string):Promise<Room|null>; create(room:Room):Promise<boolean>; save(room:Room,previous:number):Promise<boolean>}
 export class GameError extends Error {constructor(message:string,public status=400){super(message);}}
 const pubPlayer=({token,...p}:Room['players'][number])=>p;
-export const publicRoom=(r:Room,now=Date.now()):PublicRoom=> {const {secret,players,history,randomness,...rest}=r; const visible=randomness?(({transaction,lastValidBlockHeight,leaseUntil,...state})=>state)(randomness):undefined;return {...rest,randomness:visible,players:players.map(pubPlayer),history:history.slice(-3),serverTime:now};};
+export const publicRoom=(r:Room,now=Date.now()):PublicRoom=> {const {secret,players,history,randomness,stake,...rest}=r; const visible=randomness?(({transaction,lastValidBlockHeight,leaseUntil,...state})=>state)(randomness):undefined;return {...rest,stake:stake?publicStake(stake):undefined,randomness:visible,players:players.map(pubPlayer),history:history.slice(-3),serverTime:now};};
 const nameOf=(v:any)=>typeof v==='string'?v.trim().slice(0,18)||'Doodler':'Doodler';
 const checkedToken=(v:string)=>{if(!/^[a-f0-9]{64}$/.test(v)) throw new GameError('Invalid player session',401);return v;};
-export async function createRoom(store:Store,token:string,name:string,capacity:2|4,now=Date.now(),options:{vrf?:boolean;practice?:boolean}={}) {
+export async function createRoom(store:Store,token:string,name:string,capacity:2|4,now=Date.now(),options:{vrf?:boolean;practice?:boolean;stake?:Pick<StakeState,'amountLamports'|'feeBps'|'programId'|'operator'|'treasury'>}={}) {
   checkedToken(token); if(capacity!==2&&capacity!==4)throw new GameError('Choose two or four players.');
   const chars='ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
   for(let attempt=0;attempt<4;attempt++) {
@@ -17,11 +19,12 @@ export async function createRoom(store:Store,token:string,name:string,capacity:2
     const secret=randomHex(),id=randomHex(8);
     const room:Room={code,revision:0,capacity,host:id,created:now,expires:now+86400000,deadline:now+600000,round:1,secret,commitment:await sha(secret),players:[{id,token,name:nameOf(name),drawing:[],ready:false,nonce:'',lastSeen:now,rematch:false}],race:null,history:[]};
     if(options.vrf)room.randomness={status:'drawing'};
+    if(options.stake){if(!options.vrf||options.practice)throw new GameError('SOL stakes require a multiplayer MagicBlock VRF room.');room.stake={...options.stake,mode:'sol-devnet',termsHash:await stakeTermsHash(code,1,capacity,options.stake),status:'drawing',wallets:[],paidMask:0};}
     if(options.practice){room.practice=true;room.capacity=4;room.players.push(...demoPlayers.slice(1).map(p=>({...p,id:randomHex(8),token:randomHex(),nonce:randomHex(),lastSeen:now,rematch:true,bot:true,spec:specFor(p.drawing)})));}
     if(await store.create(room))return {room:publicRoom(room,now),playerId:id};
   } throw new GameError('Could not create a room. Try again.',503);
 }
-export async function act(store:Store,code:string,token:string,action:string,data:any={},now=Date.now()) {
+export async function act(store:Store,code:string,token:string,action:string,data:any={},now=Date.now(),auth?:{wallet:string}) {
   checkedToken(token);
   for(let attempt=0;attempt<8;attempt++) {
     const room=await store.get(code); if(!room||room.expires<now)throw new GameError('Room expired or does not exist.',404);
@@ -36,7 +39,9 @@ export async function act(store:Store,code:string,token:string,action:string,dat
     if(!p)throw new GameError('Player missing.',403);
     const playerId=p.id;
     p.lastSeen=now;
+    if(['reset','rematch','kick','leave'].includes(action)&&activeBank(room.stake))throw new GameError('Finish the payout or refund before changing this room.',409);
     if(action==='ready') {
+      if(room.stake&&(room.stake.status!=='drawing'||p.stakeAccepted!==room.stake.termsHash||!auth?.wallet||p.stakeWallet!==auth.wallet))throw new GameError('Connect your Solana wallet and accept the current stake terms first.',403);
       if(room.race)throw new GameError('A race is already in progress.',409);
       if(now>room.deadline)throw new GameError('Drawing time expired. The host can reset the room.',409);
       if(p.ready)throw new GameError('Already ready. Wait for the other riders.',409);
@@ -54,7 +59,7 @@ export async function act(store:Store,code:string,token:string,action:string,dat
     } else if(action==='reset') {
       if(p.id!==room.host)throw new GameError('Only the host can reset the room.',403);
       if(room.race&&now<room.race.startAt+room.race.duration)throw new GameError('The race must finish first.',409);
-      if(room.randomness?.commitment&&!room.race&&now-(room.randomness.requestedAt||now)<180000)throw new GameError('VRF is still pending. Check again; the host can cancel the round after three minutes.',409);
+      if(room.randomness?.commitment&&!room.race&&room.stake?.status!=='refunded'&&now-(room.randomness.requestedAt||now)<180000)throw new GameError('VRF is still pending. Check again; the host can cancel the round after three minutes.',409);
       await reset(room,now);
     } else if(action==='kick') {
       if(p.id!==room.host||room.race||room.randomness?.commitment)throw new GameError('Only the host can free an offline seat before racing.',403);
@@ -68,7 +73,7 @@ export async function act(store:Store,code:string,token:string,action:string,dat
     if(await store.save(room,previous))return {room:publicRoom(room,now),playerId};
   }throw new GameError('The room is busy. Please try again.',409);
 }
-async function reset(room:Room,now:number){if(room.race)room.history=[...room.history,room.race].slice(-3);room.race=null;room.secret=randomHex();room.commitment=await sha(room.secret);room.round++;room.deadline=now+600000;if(room.randomness)room.randomness={status:'drawing'};room.players.forEach(p=>{p.ready=!!p.bot;p.nonce=p.bot?randomHex():'';p.rematch=!!p.bot;});}
+async function reset(room:Room,now:number){if(room.race)room.history=[...room.history,room.race].slice(-3);room.race=null;room.secret=randomHex();room.commitment=await sha(room.secret);room.round++;room.deadline=now+600000;if(room.randomness)room.randomness={status:'drawing'};if(room.stake){const {amountLamports,feeBps,programId,operator,treasury}=room.stake;const terms={amountLamports,feeBps,programId,operator,treasury};room.stake={...terms,mode:'sol-devnet',termsHash:await stakeTermsHash(room.code,room.round,room.capacity,terms),status:'drawing',wallets:[],paidMask:0};}room.players.forEach(p=>{p.ready=!!p.bot;p.nonce=p.bot?randomHex():'';p.rematch=!!p.bot;p.stakeAccepted=undefined;p.stakeWallet=undefined;});}
 
 export async function progressRandomness(store:Store,code:string,token:string,service:VrfService,now=Date.now()) {
   checkedToken(token);
@@ -78,6 +83,8 @@ export async function progressRandomness(store:Store,code:string,token:string,se
     if(!room||room.expires<now)throw new GameError('Room expired or does not exist.',404);
     if(!room.players.some(p=>p.token===token))throw new GameError('Join this room first.',403);
     if(room.race)return {room:publicRoom(room),playerId:room.players.find(p=>p.token===token)!.id};
+    if(room.stake&&(!['funded','racing'].includes(room.stake.status)||room.stake.paidMask!==(1<<room.capacity)-1))throw new GameError('Every SOL deposit must be confirmed before requesting MagicBlock VRF.',409);
+    if(room.stake&&(!room.stake.settlementDeadline||room.stake.settlementDeadline-now<135000))throw new GameError('Too little settlement time remains. Recover the refund after the bank timeout.',409);
     if(!room.randomness?.commitment||!room.players.every(p=>p.ready))throw new GameError('Lock every horse before requesting VRF.',409);
     if((room.randomness.leaseUntil||0)>now)return {room:publicRoom(room),playerId:room.players.find(p=>p.token===token)!.id};
     const previous=room.revision;
@@ -114,9 +121,9 @@ export async function progressRandomness(store:Store,code:string,token:string,se
         const frozen=await sha(seedInput(locked.secret,locked.code,locked.round,locked.players,version));
         if(proof.commitment!==frozen||proof.provider!=='magicblock-vrf'||proof.cluster!=='devnet')throw Error('VRF response does not match this race.');
         const seed=await sha(vrfSeedInput(commitment,proof.randomness));
-        const race=await attachTape({seed,secret:locked.secret,startAt:0,duration:DURATION,track:parseInt(seed.slice(2,4),16)%3,round:locked.round,players:locked.players.map(pubPlayer),commitment:locked.commitment,version,vrf:proof});
+        const race=await attachTape({seed,secret:locked.secret,startAt:0,duration:DURATION,track:parseInt(seed.slice(2,4),16)%3,round:locked.round,players:locked.players.map(pubPlayer),commitment:locked.commitment,version,vrf:proof,stake:locked.stake?publicStake(locked.stake):undefined});
         race.startAt=Date.now()+5000;
-        await update(r=>{if(!r.race){r.race=race;r.randomness={...r.randomness!,status:'fulfilled',proof,error:undefined,transaction:undefined,leaseUntil:0};}});
+        await update(r=>{if(r.stake&&(!['funded','racing'].includes(r.stake.status)||r.stake.pending||!r.stake.settlementDeadline||r.stake.settlementDeadline-Date.now()<100000))throw new GameError('SOL bank is no longer ready for a complete race. Recover its refund after timeout.',409);if(!r.race){r.race=race;if(r.stake){r.stake.status='racing';r.race.stake=publicStake(r.stake);}r.randomness={...r.randomness!,status:'fulfilled',proof,error:undefined,transaction:undefined,leaseUntil:0};}});
       }else{
         const acceptance=await service.requestState(state.account!,state.signature!,state.lastValidBlockHeight!);
         if(acceptance==='unconfirmed')await service.broadcast(state.transaction);
@@ -132,13 +139,13 @@ export async function progressRandomness(store:Store,code:string,token:string,se
   const room=(await store.get(code))!;
   return {room:publicRoom(room),playerId:room.players.find(p=>p.token===token)!.id};
 }
-export async function api(request:Request,store:Store,transport='poll',vrf?:VrfService) {
+export async function api(request:Request,store:Store,transport='poll',vrf?:VrfService,stakes?:StakeContext) {
   try {
     const url=new URL(request.url),path=url.pathname;
-    if(path==='/api/config')return response({transport,stakeEnabled:false,version:VERSION,vrf:{enabled:!!vrf,configured:!!vrf?.configured,programId:vrf?.programId||null,cluster:'devnet',feeLamports:VRF_FEE_LAMPORTS,sponsored:true}});
+    if(path==='/api/config')return response({transport,stakeEnabled:!!stakes?.service.configured,stakes:{programId:stakes?.service.programId||null,cluster:'devnet',feeBps:GAME_FEE_BPS,fourPlayerLamports:FOUR_PLAYER_LAMPORTS.toString(),duelMinimumLamports:DUEL_MIN_LAMPORTS.toString(),maximumLamports:MAX_STAKE_LAMPORTS.toString()},version:VERSION,vrf:{enabled:!!vrf,configured:!!vrf?.configured,programId:vrf?.programId||null,cluster:'devnet',feeLamports:VRF_FEE_LAMPORTS,sponsored:true}});
     const token=checkedToken(request.headers.get('authorization')?.replace(/^Bearer /,'')||'');
     if(request.method==='POST'&&Number(request.headers.get('content-length')||0)>650000)throw new GameError('Drawing too large.',413);
-    if(path==='/api/rooms'&&request.method==='POST') {const data=await body(request);return response(await createRoom(store,token,data.name,data.capacity,Date.now(),{vrf:!!vrf,practice:data.practice===true}),201);}
+    if(path==='/api/rooms'&&request.method==='POST') {const data=await body(request);let stake;if(data.stake){if(!stakes?.service.configured||!vrf?.configured)throw new GameError('SOL Devnet stakes are unavailable.',503);if(data.practice||![2,4].includes(data.capacity))throw new GameError('Choose a two- or four-player multiplayer room.');await stakes.verifiedWallet(token);const operator=await stakes.service.operator();stake={amountLamports:validateStake(data.capacity,data.amountSol).toString(),feeBps:GAME_FEE_BPS,programId:stakes.service.programId,operator,treasury:operator};}return response(await createRoom(store,token,data.name,data.capacity,Date.now(),{vrf:!!vrf,practice:data.practice===true,stake}),201);}
     const match=path.match(/^\/api\/rooms\/([A-Z2-9]{6})(?:\/([a-z]+))?$/);
     if(!match)throw new GameError('Not found',404);
     const [,code,action]=match;
@@ -147,7 +154,18 @@ export async function api(request:Request,store:Store,transport='poll',vrf?:VrfS
       const p=room.players.find(p=>p.token===token);if(!p)throw new GameError('Join this room first.',403);
       const result=publicRoom(room);if(result.race&&url.searchParams.get('known')===result.race.seed)result.race={...result.race,tape:undefined};result.history=result.history.map(r=>({...r,tape:undefined}));return response({room:result,playerId:p.id});
     }
-    if(request.method==='POST'&&action){if(action==='randomness'){if(!vrf)throw new GameError('MagicBlock VRF is not configured.',503);return response(await progressRandomness(store,code,token,vrf));}return response(await act(store,code,token,action,await body(request)));}
+    if(request.method==='POST'&&action){
+      if(action.startsWith('stake')){
+        if(!stakes?.service.configured)throw new GameError('SOL Devnet stakes are unavailable.',503);
+        const data=await body(request);let room:Room,transaction:string|undefined;
+        if(action==='stakeprogress'||action==='stakerefund')room=await progressStakes(store,code,token,stakes.service,Date.now(),action==='stakerefund');
+        else{const wallet=await stakes.verifiedWallet(token);if(action==='stakeaccept')room=await acceptStakes(store,code,token,wallet,data.termsHash);else if(action==='stakeprepare'){const prepared=await prepareStakeDeposit(store,code,token,wallet,stakes.service);room=prepared.room;transaction=prepared.transaction;}else if(action==='stakesubmit')room=await submitStakeDeposit(store,code,token,wallet,data.transaction,stakes.service);else throw new GameError('Unknown stake action.');}
+        return response({room:publicRoom(room),playerId:room.players.find(p=>p.token===token)!.id,transaction});
+      }
+      if(action==='randomness'){if(!vrf)throw new GameError('MagicBlock VRF is not configured.',503);return response(await progressRandomness(store,code,token,vrf));}
+      const current=action==='ready'?await store.get(code):null;if(current?.stake&&!stakes)throw new GameError('SOL Devnet stakes are unavailable.',503);const auth=current?.stake?{wallet:await stakes!.verifiedWallet(token)}:undefined;
+      return response(await act(store,code,token,action,await body(request),Date.now(),auth));
+    }
     throw new GameError('Method not allowed',405);
   }catch(e){return response({error:e instanceof Error?e.message:'Unexpected error'},e instanceof GameError?e.status:400);}
 }

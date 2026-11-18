@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {getAddressDecoder} from '@solana/kit';
-import {isProfileWallet,linkSolanaWallet,walletError,type ProfileWallet,type ProfileRequest} from '../lib/solana-wallet';
+import {isProfileWallet,linkSolanaWallet,signDevnetDeposit,walletError,type ProfileWallet,type ProfileRequest} from '../lib/solana-wallet';
 import {PlayerProfiles,profileApi} from '../lib/player-profile';
 import {SqliteProfileDatabase} from '../server/profile-database';
 const token='d'.repeat(64),origin='https://draw-race.example';
@@ -40,5 +40,22 @@ test('modified sign-message bytes and unsupported wallets are rejected',async()=
   await assert.rejects(linkSolanaWallet(changed,s.request),/wallet_message_changed/);
   assert.ok(!s.calls.includes('/api/profile/wallet/verify'));assert.equal((await s.profiles.read(token)).points,0);
   assert.equal(isProfileWallet({...s.wallet,chains:['eip155:1']}),false);
+ }finally{s.database.close();}
+});
+test('deposit approval explicitly uses Devnet, requires the enrolled account, and never sends via wallet',async()=>{
+ const s=await setup();try{
+  const received:any[]=[],account={...s.wallet.accounts[0],features:['solana:signMessage','solana:signTransaction'] as const};
+  const wallet:ProfileWallet={...s.wallet,accounts:[account],features:{...s.wallet.features,'solana:signTransaction':{version:'1.0.0',supportedTransactionVersions:[0],signTransaction:async(...inputs)=>{received.push(...inputs);return [{signedTransaction:new Uint8Array([9,8,7])}];}}}};
+  assert.equal(await signDevnetDeposit(wallet,account.address,'AQID'),'CQgH');assert.equal(received.length,1);assert.equal(received[0].chain,'solana:devnet');assert.equal(received[0].account,account);assert.deepEqual(Array.from(received[0].transaction),[1,2,3]);
+  await assert.rejects(signDevnetDeposit(null,account.address,'AQID'),/Reconnect/);
+  await assert.rejects(signDevnetDeposit({...wallet,accounts:[{...account,chains:['solana:mainnet']}]},account.address,'AQID'),/Devnet/);
+  await assert.rejects(signDevnetDeposit(wallet,'another account','AQID'),/Devnet/);assert.equal(received.length,1);
+ }finally{s.database.close();}
+});
+test('declining a deposit propagates a retryable wallet error without a second signature request',async()=>{
+ const s=await setup();try{
+  let calls=0;const account={...s.wallet.accounts[0],features:['solana:signMessage','solana:signTransaction'] as const};
+  const wallet:ProfileWallet={...s.wallet,accounts:[account],features:{...s.wallet.features,'solana:signTransaction':{version:'1.0.0',supportedTransactionVersions:[0],signTransaction:async()=>{calls++;throw Object.assign(Error('User rejected'),{code:4001});}}}};
+  await assert.rejects(signDevnetDeposit(wallet,account.address,'AQID'),/rejected/);assert.equal(calls,1);
  }finally{s.database.close();}
 });

@@ -21,6 +21,7 @@ export class PlayerProfiles {
   return {id:session?'wallet:'+session.wallet:guest,guest,tokenHash,wallet:session?.wallet||null};
  }
  private async ensure(id:string,name='Doodler'){await this.db.run('INSERT OR IGNORE INTO drp_profiles(id,name,created_at) VALUES(?,?,?)',[id,name,this.now()]);}
+ async verifiedWallet(token:string){const owner=await this.identity(token);if(!owner.wallet)throw new ProfileError('Connect and verify your Solana wallet first.',401);return owner.wallet;}
  async read(token:string):Promise<PlayerProfile>{
   const owner=await this.identity(token);await this.ensure(owner.id);
   const [[person],[raw],awards,pending,recent]=await Promise.all([

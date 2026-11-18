@@ -1,0 +1,65 @@
+{
+  "cluster": "devnet",
+  "programId": "9aT2ra9HdSrVLv7gBmCaZbW3DGu22XDCfXS3CEQAeCux",
+  "operator": "Ds5R5y3zCMEph98G4456JSnypVyFdGU4yPjjFryU3Szb",
+  "startedAt": "2026-11-18T22:29:17.952Z",
+  "checks": [
+    {
+      "label": "Prefunded counter and bank initialize successfully",
+      "passed": true,
+      "type": "confirmed Devnet transaction"
+    },
+    {
+      "label": "Unrelated caller cannot refund a full bank before timeout",
+      "passed": true,
+      "type": "Devnet simulation rejection"
+    },
+    {
+      "label": "Payout cannot redirect the frozen treasury",
+      "passed": true,
+      "type": "Devnet simulation rejection"
+    },
+    {
+      "label": "Payout cannot redirect the frozen winner wallet",
+      "passed": true,
+      "type": "Devnet simulation rejection"
+    },
+    {
+      "label": "A bank cannot be created after its VRF result is known",
+      "passed": true,
+      "type": "Devnet simulation rejection"
+    },
+    {
+      "label": "Even after 90 seconds a bank without fulfilled VRF cannot pay",
+      "passed": true,
+      "type": "Devnet simulation rejection"
+    },
+    {
+      "label": "A fulfilled VRF receipt from a different race cannot pay this bank",
+      "passed": true,
+      "type": "Devnet simulation rejection"
+    },
+    {
+      "label": "After timeout an unrelated signer refunds all players their exact stakes with zero game fee",
+      "passed": true,
+      "type": "confirmed Devnet transaction balance inspection"
+    },
+    {
+      "label": "Closed bank address cannot be reopened with its old nonce",
+      "passed": true,
+      "type": "Devnet simulation rejection"
+    },
+    {
+      "label": "Closed bank cannot refund a second time",
+      "passed": true,
+      "type": "Devnet simulation rejection"
+    }
+  ],
+  "prefunding": "2msFZBQGTUagkFk7SyuaXVbmgiZPXtvWCtVQNHXRNywwTbWbbUKxowZrVdkJYY3cR5kQqvTTEtYJ3v6oaGFNtVHt",
+  "bank": "9RUHrvMbM4QErYiP2DfYuV4VAgMoUFJ9jJVGR2xZ5TvE",
+  "initSignature": "jq5bs7T2uH1uwDhyUg9iKLGTa8kE8xJbMeSYaaEQVdZYZWttJaQwdHhFkCWYsZALMofY3FxgbNEtj7CGt2sipzU",
+  "deadline": "2026-11-18T22:32:37.000Z",
+  "refundSignature": "XSah5h28CtCpe1AXDvbEjQUcVUgcJKexMLAwB4FgEdKoarwmbkc7JxXNqHjQrs7135pGVC2CaevxHNKmW3Hhnkz",
+  "refundExplorer": "https://explorer.solana.com/tx/XSah5h28CtCpe1AXDvbEjQUcVUgcJKexMLAwB4FgEdKoarwmbkc7JxXNqHjQrs7135pGVC2CaevxHNKmW3Hhnkz?cluster=devnet",
+  "completedAt": "2026-11-18T22:32:47.896Z"
+}

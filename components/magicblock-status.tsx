@@ -8,11 +8,12 @@ import {useGameLanguage} from './game-language';
 export default function MagicBlockStatus({room,race,retry,cancel,now=Date.now()}:{room:PublicRoom|null;race:Race|null;retry?:()=>void;cancel?:()=>void;now?:number}) {
  const {tx}=useGameLanguage(),[check,setCheck]=useState(''),[checking,setChecking]=useState(false);
  const state=room?.randomness,proof=race?.vrf;
- const pending=state&&state.status!=='drawing'&&state.status!=='fulfilled';
+ const waitingDeposits=!!room?.stake&&!['funded','racing','settling','settled'].includes(room.stake.status);
+ const pending=state&&state.status!=='drawing'&&state.status!=='fulfilled'&&!waitingDeposits;
  const legacy=!!race&&!proof;
  return <section className={'magicblock-status'+(pending?' vrf-pending':'')} aria-label="MagicBlock VRF · Solana Devnet">
    <div className="vrf-title"><ShieldCheck size={19}/><strong>{legacy?tx('Local replay','Локальный повтор'):'MagicBlock VRF'}</strong><span className="devnet-badge">{legacy?tx('NO VRF','БЕЗ VRF'):'SOLANA DEVNET'}</span></div>
-   <p>{proof?tx('Confirmed randomness drives this race’s weather, obstacles and boosts.','Подтверждённая случайность управляет погодой, препятствиями и бонусами этой гонки.'):pending?tx('Horses locked. Waiting for MagicBlock’s verifiable randomness…','Лошади зафиксированы. Ждём проверяемую случайность MagicBlock…'):legacy?tx('This saved example uses the original local seed.','Этот сохранённый пример использует исходный локальный seed.'):tx('One VRF request per race. Test SOL sponsored by the demo. No wallet needed.','Один VRF-запрос на гонку. Тестовые SOL оплачивает демо. Кошелёк не нужен.')}</p>
+   <p>{proof?tx('Confirmed randomness drives this race’s weather, obstacles and boosts.','Подтверждённая случайность управляет погодой, препятствиями и бонусами этой гонки.'):waitingDeposits?tx('One MagicBlock VRF request starts only after all test SOL deposits are confirmed.','Один запрос MagicBlock VRF запускается только после подтверждения всех взносов тестовыми SOL.','所有测试 SOL 存款确认后才会发起一次 MagicBlock VRF 请求。'):pending?tx('Horses locked. Waiting for MagicBlock’s verifiable randomness…','Лошади зафиксированы. Ждём проверяемую случайность MagicBlock…'):legacy?tx('This saved example uses the original local seed.','Этот сохранённый пример использует исходный локальный seed.'):tx('One VRF request per race. Free races need no wallet; optional test SOL stakes use Devnet.','Один VRF-запрос на гонку. Бесплатные гонки без кошелька; ставки тестовыми SOL работают в Devnet.','每场比赛请求一次 VRF。免费模式无需钱包；可选测试 SOL 下注使用 Devnet。')}</p>
    <div className="vrf-links">
      {!legacy&&<a href={explorer(proof?.programId||DRAW_RACE_VRF_PROGRAM)} target="_blank" rel="noreferrer">{tx('Program','Программа')} <ExternalLink size={13}/></a>}
      {!race&&!pending&&<a href="/?vrf=demo">{tx('Watch a recorded VRF race','Повтор настоящей VRF-гонки')}</a>}

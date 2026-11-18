@@ -4,7 +4,7 @@ The language picker now includes **简体中文** (Simplified Chinese) alongside
 
 ## Wallet connection
 
-The header wallet button opens the player profile. Available Solana wallets are discovered through Wallet Standard; the player chooses one and approves connection plus a human-readable message signature. The client only calls `standard:connect`, `solana:signMessage`, account-change events and optional disconnect. It does not request transaction signing, send funds, read balances or use a Mainnet RPC.
+The header wallet button opens the player profile. Available Solana wallets are discovered through Wallet Standard; the player chooses one and approves connection plus a human-readable message signature. Profile login calls `standard:connect`, `solana:signMessage`, account-change events and optional disconnect. It never transfers funds. Optional test SOL stakes separately call `solana:signTransaction` on Devnet only after the player explicitly approves a deposit; see [SOL stakes](SOL-STAKES.md). No Mainnet RPC is used.
 
 The server verifies an Ed25519 signature against a single-use, five-minute challenge bound to the site origin, account and existing player session. A verified profile session lasts seven days. Reloading retains the verified profile; reconnecting on another device restores the same wallet progress. Account changes invalidate the app's linked session. Rejected or expired requests can be retried.
 

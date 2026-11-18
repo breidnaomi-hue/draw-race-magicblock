@@ -27,7 +27,7 @@ This seed enters the existing `attachTape`/`simulate` path: environment, weather
 | VRF `Vrf1RNUjXmQGjmQrQLvJHs9SNkvDJEsRVFPkfSQUwGz` | MagicBlock VRF | Existing Devnet program |
 | Queue `Cuj97ggrhhidhbu39TijNVqE74xvKJ69gDervRUXAxGh` | MagicBlock VRF | Existing base-layer queue |
 
-No ER, delegation, tokens, NFTs, USDC, escrow, deposits, payouts, session-key product or monetization was added. No Mainnet endpoint is used. The server checks the full Devnet genesis hash before signing, sending and accepting RPC state.
+The VRF integration adds no ER, delegation, tokens, NFTs, USDC or session-key product. A later optional native SOL escrow extension supports test deposits, 5% pool fees, payouts and timeout refunds; see [SOL stakes](SOL-STAKES.md). No Mainnet endpoint is used. The server checks the full Devnet genesis hash before signing, sending and accepting RPC state.
 
 ## Recovery and verification
 
@@ -37,7 +37,7 @@ No ER, delegation, tokens, NFTs, USDC, escrow, deposits, payouts, session-key pr
 - Save exact signed wire bytes, signature, account and blockhash lifetime before broadcast. A connection error resends the same transaction/signature, without a new VRF charge.
 - Request success never starts a race. Check account owner, discriminator, commitment, status, slots and the callback transaction first.
 - An accepted request never automatically buys another outcome. Rebuild only a failed/expired transaction after reconciliation finds no receipt. The program independently rejects repeat receipt creation.
-- A delayed oracle remains pending. After three minutes the host may explicitly cancel the round; the next round has a different commitment/account, so old callbacks cannot fulfill it.
+- A delayed oracle remains pending. In free rooms, after three minutes the host may explicitly cancel the round; the next round has a different commitment/account, so old callbacks cannot fulfill it.
 - Every callback requires the scoped VRF signer, the pending commitment and a later slot. A duplicate cannot overwrite fulfilled bytes. The insecure legacy global identity is not trusted.
 - Public responses omit wire/lease recovery data. Sponsor keys stay in ignored local files and the hosting secret store, never in browser variables or Git.
 
@@ -72,7 +72,7 @@ The Node backend loads ignored `.dev.vars`. For an independent demo, use your ow
 
 Native consumer source: `programs/draw-race-vrf`. `node scripts/build-vrf.mjs` sends only public source to the official Solana Playground compiler. `scripts/deploy-vrf-devnet.ts` resumes buffer uploads, simulates before sending and compares the executable bytes after deployment. This is a recorded binary comparison, not a formal verified-build attestation or independently audited compiler. The compiler's unused bundled dependencies emit warnings; the resulting consumer compiled and executed on Devnet.
 
-Typecheck, the automated test suite, standalone build and production build passed. The new full-tape public regression and cross-runtime commands are documented in [PHYSICS-REPRODUCIBILITY.md](PHYSICS-REPRODUCIBILITY.md). Browser automation stopped because Computer Use could not establish Chrome's current URL. New visual/mobile/browser-wallet QA is **not verified**. A user wallet is not required: the disposable sponsor signs the request with test SOL.
+Typecheck, the automated test suite, standalone build and production build passed. The new full-tape public regression and cross-runtime commands are documented in [PHYSICS-REPRODUCIBILITY.md](PHYSICS-REPRODUCIBILITY.md). Browser automation stopped because Computer Use could not establish Chrome's current URL. New visual/mobile/browser-wallet QA is **not verified**. Free races require no user wallet: the disposable sponsor signs the VRF request with test SOL. Optional stakes require explicit participant wallet approvals.
 
 ## Observed cost
 
@@ -86,7 +86,7 @@ Every measured Devnet race debited **1,769,920 lamports (0.00176992 test SOL)**:
 
 The oracle pays its callback transaction. An immutable account per race adds rent beyond the VRF fee. This minimal program has no close instruction, so that rent remains locked. **3–4 US cents is not a fixed or measured total.** A dollar equivalent depends on SOL's price; total cost includes rent. All observed funds were free Devnet tokens. No Mainnet use, real-money purchase or paid subscription occurred. Program deployment also locks Devnet rent; its transaction is recorded.
 
-The remaining sponsor test balance supports roughly 1,100 races at the measured cost. RPC/faucet limits, oracle outages and Devnet ledger resets/retention can interrupt the demo.
+Sponsor balance changes with tests and escrow deployment; it can be checked directly in Devnet. RPC/faucet limits, oracle outages and Devnet ledger resets/retention can interrupt the demo.
 
 ## Hosting
 

@@ -1,0 +1,14 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+const dir=new URL('../programs/draw-race-sol-escrow/',import.meta.url),out=new URL('../outputs/escrow/',import.meta.url);
+await mkdir(out,{recursive:true});const source=await readFile(new URL('src/lib.rs',dir),'utf8');
+const prior=await readFile(new URL('build.json',out),'utf8').then(JSON.parse).catch(()=>({}));
+const response=await fetch('https://api.solpg.io/build',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({files:[['/src/lib.rs',source]],uuid:prior.uuid||null})});
+if(!response.ok)throw Error('Official Solana Playground compiler: '+response.status+' '+(await response.text()).slice(0,1000));
+const result=await response.json(),uuid=result.uuid||prior.uuid;
+await writeFile(new URL('build.json',out),JSON.stringify({...result,uuid,sourceSha256:createHash('sha256').update(source).digest('hex')},null,2));
+console.log(result.stderr);
+if(!uuid||/error:|error\[/.test(result.stderr))throw Error('Escrow compilation failed');
+const binary=await fetch('https://api.solpg.io/deploy/'+uuid);if(!binary.ok)throw Error('ELF download failed');const bytes=new Uint8Array(await binary.arrayBuffer());
+if(bytes[0]!==127||bytes[1]!==69||bytes[2]!==76||bytes[3]!==70)throw Error('Compiler did not return ELF');
+await writeFile(new URL('draw_race_sol_escrow.so',out),bytes);console.log(JSON.stringify({bytes:bytes.length,sha256:createHash('sha256').update(bytes).digest('hex')}));

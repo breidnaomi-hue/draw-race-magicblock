@@ -1,7 +1,7 @@
 'use client';
 import {useCallback,useEffect,useRef,useState} from 'react';
 import {getWallets} from '@wallet-standard/app';
-import {isProfileWallet,linkSolanaWallet,walletError,type ProfileWallet,type ProfileRequest} from '../lib/solana-wallet';
+import {isProfileWallet,linkSolanaWallet,signDevnetDeposit,walletError,type ProfileWallet,type ProfileRequest} from '../lib/solana-wallet';
 import type {PlayerProfile} from '../lib/achievements';
 import type {PublicRoom} from '../lib/game';
 
@@ -55,6 +55,10 @@ export function usePlayerProfile(token:string|undefined){
   try{const result=await request<{profile:PlayerProfile}>('/api/profile/race',{code:room.code,seed:race.seed});if(mounted.current&&started===generation.current){setProfile(result.profile);setError('');}return true;}
   catch(e){registrations.current.delete(key);if(mounted.current)setError(walletError(e));return false;}
  },[request,token]);
- return {profile,loading,busy,error,wallets,selected,refresh,connect,disconnect,rename,registerRace,clearError:()=>setError('')};
+ const signDeposit=useCallback(async(transaction:string,wallet:string)=>{
+  if(profile?.walletAddress!==wallet)throw Error('Reconnect the Solana wallet enrolled in this race.');
+  setBusy(true);setError('');try{return await signDevnetDeposit(selected,wallet,transaction);}catch(e){setError(walletError(e));throw e;}finally{setBusy(false);}
+ },[selected,profile?.walletAddress]);
+ return {profile,loading,busy,error,wallets,selected,refresh,connect,disconnect,rename,registerRace,signDeposit,clearError:()=>setError('')};
 }
 export type PlayerProfileControl=ReturnType<typeof usePlayerProfile>;

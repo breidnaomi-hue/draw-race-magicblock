@@ -4,7 +4,7 @@ Draw a horse and race with two or four friends, or practice against three doodle
 
 ## MagicBlock VRF
 
-One real scoped MagicBlock VRF request per race on Solana Devnet. Its returned bytes drive the existing weather, obstacles, boosts and physics seed. Quick Race and multiplayer rooms use the same path. A sponsor covers test fees; no user wallet or real money is required.
+One real scoped MagicBlock VRF request per race on Solana Devnet. Its returned bytes drive the existing weather, obstacles, boosts and physics seed. Quick Race and multiplayer rooms use the same path. A sponsor covers the VRF test fees. Free races need no wallet. Optional native SOL stakes use Devnet faucet tokens only.
 
 [Integration, proofs, costs and reproduction](docs/MAGICBLOCK.md) · [Recorded VRF race](https://draw-race-party.breid222.chatgpt.site/?vrf=demo) · [GitHub](https://github.com/breidnaomi-hue/draw-race-magicblock)
 
@@ -12,7 +12,11 @@ Configure the server variables in `.env.example` in ignored `.dev.vars` or hosti
 
 ## Player profile and languages
 
-EN, RU and 简体中文 are available from the header and settings. Player profiles now show server-saved race points, ten achievements and progress toward locked awards. Guests can play and earn points; connecting a Solana wallet with a free message signature saves their progress across devices. The wallet is optional for racing. See [profile rules, storage and verification](docs/PROFILES.md).
+EN, RU and 简体中文 are available from the header and settings. Player profiles now show server-saved race points, ten achievements and progress toward locked awards. Guests can play and earn points; connecting a Solana wallet with a free message signature saves their progress across devices. The wallet is optional for free racing and required for test SOL stakes. See [profile rules, storage and verification](docs/PROFILES.md).
+
+## Optional SOL stakes
+
+Duels let the host choose 0.02–1 test SOL per player. Four-player rooms use a fixed 0.014 test SOL per player (roughly $1 when configured, without a live price feed). Players accept the same terms and approve each deposit in their wallets. The winner receives 95% of the pool and the game keeps 5%; refunds return full deposits without a game fee. The server attests physics; MagicBlock VRF proves randomness. [Contract, costs, recovery and real transaction evidence](docs/SOL-STAKES.md) · [Recorded SOL payout demo](https://draw-race-party.breid222.chatgpt.site/?stakes=demo).
 
 ## Run locally
 
@@ -78,9 +82,9 @@ The before phase imports the frozen previous engine in tests/baseline/. Both pha
 
 READY locks drawings, rigs, names and nonces. A server secret commitment precedes drawing. After all players lock in, one real MagicBlock VRF request binds those inputs to an authenticated random result. Its bytes derive the original solver seed. No race starts before fulfillment. Receipts link the program, request, callback and immutable account, with direct public-RPC verification. The tape retains its original SHA-256 hash.
 
-Physics remains on the server. VRF verifies randomness, not the full physical computation or server availability. The v7 engine shares pinned math implementations between the solver and verifier so its full recorded result can be independently recomputed. Old native-math tapes retain their original outcomes and can differ across runtimes. All players receive the original server record. See [physics reproduction and regression evidence](docs/PHYSICS-REPRODUCIBILITY.md). Legacy study examples are explicitly local replays. Only faucet SOL Devnet is used: no tokens, USDC, stakes, deposits, NFTs or payouts. See docs/MAGICBLOCK.md for measured costs and verification limits.
+Physics remains on the server. VRF verifies randomness, not the full physical computation or server availability. The v7 engine shares pinned math implementations between the solver and verifier so its full recorded result can be independently recomputed. Old native-math tapes retain their original outcomes and can differ across runtimes. All players receive the original server record. See [physics reproduction and regression evidence](docs/PHYSICS-REPRODUCIBILITY.md). Legacy study examples are explicitly local replays. Only faucet SOL Devnet is used. Optional native SOL escrow supports test deposits, fixed-fee payouts and timeout refunds; no SPL tokens, USDC, NFTs or Mainnet are used. See docs/MAGICBLOCK.md for measured costs and verification limits.
 
-Drawing tools, brush colors, erase, undo, preview, invites, reconnect, rematch, local history, PNG export and short clip recording remain available. History holds 12 races on the device. Browser checks use Chromium with mobile viewport emulation; physical phones and Safari are not covered.
+Drawing tools, brush colors, erase, undo, preview, invites, reconnect, rematch, local history, PNG export and short clip recording remain available. History holds 12 races on the device. Historical browser checks used Chromium with mobile viewport emulation. New stake screens and actual Phantom/Solflare prompts are not browser-verified: browser automation is disabled in Work settings. Production HTTP, server rendering and real-chain tests provide separate checks.
 
 ## Weather readability and music
 

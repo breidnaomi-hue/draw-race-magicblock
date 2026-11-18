@@ -1,13 +1,23 @@
 import type {Wallet} from '@wallet-standard/base';
 import type {StandardConnectFeature,StandardDisconnectFeature,StandardEventsFeature} from '@wallet-standard/features';
-import type {SolanaSignMessageFeature} from '@solana/wallet-standard-features';
+import type {SolanaSignMessageFeature,SolanaSignTransactionFeature} from '@solana/wallet-standard-features';
 import {getAddressDecoder} from '@solana/kit';
 import type {PlayerProfile} from './achievements';
-export type ProfileWallet=Wallet&{features:StandardConnectFeature&StandardEventsFeature&SolanaSignMessageFeature&Partial<StandardDisconnectFeature>};
+export type ProfileWallet=Wallet&{features:StandardConnectFeature&StandardEventsFeature&SolanaSignMessageFeature&Partial<StandardDisconnectFeature&SolanaSignTransactionFeature>};
 export function isProfileWallet(wallet:Wallet):wallet is ProfileWallet{
  return wallet.chains.some(chain=>chain.startsWith('solana:'))&&['standard:connect','standard:events','solana:signMessage'].every(feature=>feature in wallet.features);
 }
 export type ProfileRequest=<T>(path:string,body?:unknown)=>Promise<T>;
+export async function signDevnetDeposit(wallet:ProfileWallet|null,walletAddress:string,transaction:string){
+ if(!wallet)throw Error('Reconnect your enrolled wallet before approving the deposit.');
+ const feature=wallet.features['solana:signTransaction'];
+ const account=wallet.accounts.find(a=>a.address===walletAddress&&a.chains.includes('solana:devnet')&&a.features.includes('solana:signTransaction'));
+ if(!feature?.supportedTransactionVersions.includes(0)||!account)throw Error('Enable Solana Devnet in a wallet that supports signing v0 transactions.');
+ const bytes=Uint8Array.from(atob(transaction),c=>c.charCodeAt(0));
+ const [signed]=await feature.signTransaction({account,chain:'solana:devnet',transaction:bytes,options:{preflightCommitment:'confirmed'}});
+ if(!signed||signed.signedTransaction.length>1600)throw Error('Wallet did not return a valid signed deposit.');
+ return btoa(String.fromCharCode(...signed.signedTransaction));
+}
 export async function linkSolanaWallet(wallet:ProfileWallet,request:ProfileRequest){
  const {accounts}=await wallet.features['standard:connect'].connect();
  const account=accounts.find(a=>a.chains.some(chain=>chain.startsWith('solana:'))&&a.features.includes('solana:signMessage'));
