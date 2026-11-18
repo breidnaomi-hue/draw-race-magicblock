@@ -1,12 +1,17 @@
 import {createServer} from 'node:http';
 import {readFile,stat} from 'node:fs/promises';
-import {resolve,extname,sep} from 'node:path';
+import {resolve,extname,sep,dirname} from 'node:path';
+import {mkdirSync} from 'node:fs';
 import {WebSocketServer,WebSocket} from 'ws';
 import {FileStore} from './file-store';
 import {api} from '../lib/rooms';
 import {MagicBlockVrf} from '../lib/solana-vrf';
+import {PlayerProfiles,profileApi} from '../lib/player-profile';
+import {SqliteProfileDatabase} from './profile-database';
 const vrf=new MagicBlockVrf({VRF_PROGRAM_ID:process.env.VRF_PROGRAM_ID,VRF_SPONSOR_SEED:process.env.VRF_SPONSOR_SEED,SOLANA_RPC_URL:process.env.SOLANA_RPC_URL});
 const store=new FileStore(resolve(process.env.ROOM_DATA||'room-data'));
+const profilePath=resolve(process.env.PROFILE_DATA||'.sites-runtime/profiles.sqlite');mkdirSync(dirname(profilePath),{recursive:true});
+const profiles=new PlayerProfiles(new SqliteProfileDatabase(profilePath));
 const root=resolve('standalone-dist'),port=Number(process.env.PORT||8788),rate=new Map<string,{count:number;until:number}>();
 const server=createServer(async(req,res)=>{
   try{
@@ -17,7 +22,7 @@ const server=createServer(async(req,res)=>{
       const chunks:Buffer[]=[];let length=0;for await(const chunk of req){length+=chunk.length;if(length>650000){res.writeHead(413);res.end('Drawing too large');return}chunks.push(Buffer.from(chunk))}
       const headers=new Headers();for(const [k,v] of Object.entries(req.headers))if(v)headers.set(k,Array.isArray(v)?v.join(','):v);
       const request=new Request(`http://${host}${req.url}`,{method:req.method,headers,...(chunks.length?{body:Buffer.concat(chunks)}:{})});
-      const response=await api(request,store,'websocket',vrf);res.writeHead(response.status,Object.fromEntries(response.headers));res.end(Buffer.from(await response.arrayBuffer()));
+      const response=path.startsWith('/api/profile')?await profileApi(request,profiles,store):await api(request,store,'websocket',vrf);res.writeHead(response.status,Object.fromEntries(response.headers));res.end(Buffer.from(await response.arrayBuffer()));
       const match=path.match(/\/api\/rooms\/([A-Z2-9]{6})\//);if(req.method==='POST'&&response.ok&&match)broadcast(match[1]);return;
     }
     let file=resolve(root,'.'+decodeURIComponent(path));if(file!==root&&!file.startsWith(root+sep)){res.writeHead(403);res.end();return}

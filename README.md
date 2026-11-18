@@ -10,6 +10,10 @@ One real scoped MagicBlock VRF request per race on Solana Devnet. Its returned b
 
 Configure the server variables in `.env.example` in ignored `.dev.vars` or hosting secrets. Never publish a sponsor seed.
 
+## Player profile and languages
+
+EN, RU and 简体中文 are available from the header and settings. Player profiles now show server-saved race points, ten achievements and progress toward locked awards. Guests can play and earn points; connecting a Solana wallet with a free message signature saves their progress across devices. The wallet is optional for racing. See [profile rules, storage and verification](docs/PROFILES.md).
+
 ## Run locally
 
 Node.js 22.18 or newer:

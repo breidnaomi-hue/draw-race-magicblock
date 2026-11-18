@@ -1,12 +1,12 @@
 'use client';
 import {createContext,useContext,useEffect,useState} from 'react';
-type Lang='en'|'ru';
-const Context=createContext({lang:'en' as Lang,setLang:(_l:Lang)=>{},tx:(en:string,_ru:string)=>en});
-export function GameLanguage({children}:{children:React.ReactNode}){
- const [lang,setLanguage]=useState<Lang>('en');
- useEffect(()=>{try{if(localStorage.getItem('dr-language')==='ru')setLanguage('ru')}catch{}},[]);
- useEffect(()=>{document.documentElement.lang=lang},[lang]);
+import {languageOf,translate,type Lang,type Translator} from '../lib/i18n';
+const Context=createContext<{lang:Lang;setLang:(l:Lang)=>void;tx:Translator}>({lang:'en',setLang:()=>{},tx:en=>en});
+export function GameLanguage({children,initialLanguage='en'}:{children:React.ReactNode;initialLanguage?:Lang}){
+ const [lang,setLanguage]=useState<Lang>(initialLanguage);
+ useEffect(()=>{try{const saved=localStorage.getItem('dr-language');if(saved)setLanguage(languageOf(saved))}catch{}},[]);
+ useEffect(()=>{document.documentElement.lang=lang==='zh'?'zh-CN':lang},[lang]);
  const setLang=(l:Lang)=>{setLanguage(l);try{localStorage.setItem('dr-language',l)}catch{}};
- return <Context.Provider value={{lang,setLang,tx:(en,ru)=>lang==='ru'?ru:en}}>{children}</Context.Provider>;
+ return <Context.Provider value={{lang,setLang,tx:(en,ru,zh)=>translate(lang,en,ru,zh)}}>{children}</Context.Provider>;
 }
 export const useGameLanguage=()=>useContext(Context);
