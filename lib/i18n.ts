@@ -67,7 +67,8 @@ export const ZH:Record<string,string>={
  'A 5.6-point lead at 45s survives the chase.':'45 秒时领先 5.6 个百分点，并成功守住优势。','The winner was 24.4 points behind at 61s.':'最终冠军在 61 秒时还落后 24.4 个百分点。','18 lead changes after the opening five seconds.':'开场五秒后，共有 18 次领先交替。','At 32.1s the leader hits a barrier. Removing only that barrier changes the winner.':'32.1 秒时领先者撞上障碍。仅移除这一障碍，冠军就会改变。',
  'STRAIGHT':'直道','BEND':'弯道','CLIMB':'上坡','DESCENT':'下坡','RIDGE':'山脊','OPENING':'起跑段','FLAT':'平地','90s':'90 秒',
  'Draw your horse first (up to 250 strokes).':'请先画你的小马，最多 250 笔。','Drawing is empty or too detailed.':'画作为空或细节过多。','Draw your horse first.':'请先画你的小马。','Room expired or does not exist.':'房间已过期或不存在。','Join this room first.':'请先加入此房间。','Room is full.':'房间已满。','Invalid room code.':'房间码无效。','Invalid name.':'昵称无效。','Invalid drawing':'画作无效','Invalid drawing coordinates':'画作坐标无效',
- 'Paper Paddock':'纸上马厩','Ink in Motion':'墨迹飞奔','Last Stretch':'最后冲刺','Doodle Victory':'涂鸦胜利'
+ 'Paper Paddock':'纸上马厩','Ink in Motion':'墨迹飞奔','Last Stretch':'最后冲刺','Doodle Victory':'涂鸦胜利',
+ 'Leader ahead':'领先优势','Final push':'最终冲刺','Final metres':'最后冲线','Maximum deficit':'最大落后差距','First third':'赛程前三分之一','Before contact':'碰撞之前','After contact':'碰撞之后'
 };
 export const translate:((lang:Lang,...args:Parameters<Translator>)=>string)=(lang,en,ru,zh)=>{
  if(lang==='ru')return ru??en;

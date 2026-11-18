@@ -42,6 +42,16 @@ npm run build
 
 Tests use real SQLite queries and Ed25519 signatures, including challenge replay/expiry/domain/session checks, concurrent claims, guest merges, concurrent linking/registration, duplicate achievement prevention, Wallet Standard cancellation/message integrity, Chinese catalog coverage, and profile HTML rendering. Mock wallet tests exercise the same connect/sign-message interface without a browser extension. No new VRF program deployment or change to physics/race rules is required.
 
+All 63 tests, TypeScript, standalone and production builds passed. The live check can be reproduced with:
+
+```sh
+node --import tsx scripts/check-profile-live.ts
+```
+
+This creates a real sponsored Devnet race and waits for its 90-second finish. It generates an unfunded test key in memory for message authentication; no private key or bearer token is written to evidence. It spends test SOL on one VRF request.
+
+The [production evidence](profile-live-evidence.json) records room `H4YAE4`: 0 points while pending, 425 after the race and its finish/win/comeback achievements, 450 after wallet verification. A second independently authenticated session restored the same profile. Repeated registration did not add points, an already-used challenge was rejected, a spectator could not register the race, and disconnect/reconnect preserved wallet progress. Seed, direct chain verification and full physics recomputation also passed. [VRF request in Explorer](https://explorer.solana.com/tx/43Gzir4TxsFCEunYasKe3tM3t7YbEVGyVsiED8GWaWwACSztzft5kGoTLf8uxXv9pJ27iBK4hmdjFqDNcmzHpmdy?cluster=devnet).
+
 Browser/extension/mobile visual QA remains unavailable while local browser use is disabled in Work settings. Production API evidence is recorded separately after deployment. Existing hosting/database usage limits still apply; no paid service, domain or subscription was added.
 
 Primary implementation references: [Wallet Standard discovery](https://github.com/wallet-standard/wallet-standard/blob/master/packages/core/app/src/wallets.ts), [standard connect](https://github.com/wallet-standard/wallet-standard/blob/master/packages/core/features/src/connect.ts), [Solana message signing](https://github.com/anza-xyz/wallet-standard/blob/master/packages/core/features/src/signMessage.ts), [Cloudflare Ed25519 support](https://developers.cloudflare.com/workers/runtime-apis/web-crypto/), [D1 atomic batches](https://developers.cloudflare.com/d1/worker-api/d1-database/#batch).

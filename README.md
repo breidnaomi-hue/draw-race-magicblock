@@ -105,7 +105,7 @@ See docs/WEATHER-AUDIO.md and docs/weather-audio-validation.json for the checks 
 
 ## Party interface redesign
 
-The cream/plum/coral identity uses shared buttons, cards, tooltips, progress bars and modals. Home, participant cards, editor, racing HUD and podium are separate components. EN/RU is available in the header; some detailed legacy receipt/help text remains English. Sound and reduced decorative motion persist on the device. Native fullscreen has an expanded-layout fallback. Replay highlights seek actual tape events; they never alter outcomes.
+The cream/plum/coral identity uses shared buttons, cards, tooltips, progress bars and modals. Home, participant cards, editor, racing HUD and podium are separate components. EN/RU/简体中文 are available in the header and settings. Sound and reduced decorative motion persist on the device. Native fullscreen has an expanded-layout fallback. Replay highlights seek actual tape events; they never alter outcomes.
 
 The editor supports pointer input, erase, brush width, undo/redo and optional joint adjustment. On narrow screens the tools move above the canvas. The racing HUD keeps positions, time, weather, energy and active boosts around the field, with an optional whole-herd camera. Results support highlights, rematch, local history, sharing and PNG export. Stakes remain disabled.
 

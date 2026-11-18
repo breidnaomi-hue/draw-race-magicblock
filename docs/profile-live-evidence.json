@@ -1,0 +1,52 @@
+{
+  "site": "https://draw-race-party.breid222.chatgpt.site",
+  "startedAt": "2026-11-18T02:42:59.907Z",
+  "completedAt": "2026-11-18T02:45:04.138Z",
+  "result": "pass",
+  "method": "Production HTTP API and Ed25519 signatures from a generated, unfunded test key. No browser extension, private key export or wallet transaction signing.",
+  "wallet": "82n6jro3pj9oGB4tzcAKGgWbQRwbPeQVwZg6VFkXJ2My",
+  "room": "H4YAE4",
+  "request": "43Gzir4TxsFCEunYasKe3tM3t7YbEVGyVsiED8GWaWwACSztzft5kGoTLf8uxXv9pJ27iBK4hmdjFqDNcmzHpmdy",
+  "callback": "BHWskGjhNddCyqGECWeuP9sfyxQ97XRpzP6iuAVid37BWUkSGvbT4og8CUmEe2cXDTQxM5CXHBdGVNo884VtofV",
+  "receipt": "5VscLMkjZimWZDgXWuH1NMR3B2ieAPE8wWKHW9jPLNR8",
+  "seed": "6359ffa6b2b796b80b05ed4f3cf6978f5eac8b3226c95fbc6161c038257acfd5",
+  "tapeHash": "2193ac3faf37125c0e78ddb30a2d6d31822bca6d13df9b5ad22f44d38e75d004",
+  "seedVerified": true,
+  "chainVerified": true,
+  "fullPhysicsMatches": true,
+  "profile": {
+    "name": "中文骑手",
+    "place": 1,
+    "pendingPoints": 0,
+    "guestRacePoints": 75,
+    "guestTotal": 425,
+    "walletTotal": 450,
+    "awards": [
+      {
+        "id": "comeback",
+        "points": 200,
+        "unlockedAt": 1794969900396
+      },
+      {
+        "id": "first-finish",
+        "points": 50,
+        "unlockedAt": 1794969900396
+      },
+      {
+        "id": "first-win",
+        "points": 100,
+        "unlockedAt": 1794969900396
+      },
+      {
+        "id": "wallet-linked",
+        "points": 25,
+        "unlockedAt": 1794969904952
+      }
+    ],
+    "duplicateGrants": false,
+    "secondDeviceRestored": true,
+    "challengeReplayRejected": true,
+    "spectatorGrantRejected": true,
+    "reconnectPreserved": true
+  }
+}
