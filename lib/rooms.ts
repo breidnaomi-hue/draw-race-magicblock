@@ -160,7 +160,7 @@ export async function api(request:Request,store:Store,transport='poll',vrf?:VrfS
         const data=await body(request);let room:Room,transaction:string|undefined;
         if(action==='stakeprogress'||action==='stakerefund')room=await progressStakes(store,code,token,stakes.service,Date.now(),action==='stakerefund');
         else{const wallet=await stakes.verifiedWallet(token);if(action==='stakeaccept')room=await acceptStakes(store,code,token,wallet,data.termsHash);else if(action==='stakeprepare'){const prepared=await prepareStakeDeposit(store,code,token,wallet,stakes.service);room=prepared.room;transaction=prepared.transaction;}else if(action==='stakesubmit')room=await submitStakeDeposit(store,code,token,wallet,data.transaction,stakes.service);else throw new GameError('Unknown stake action.');}
-        return response({room:publicRoom(room),playerId:room.players.find(p=>p.token===token)!.id,transaction});
+        const result=publicRoom(room);if(result.race&&url.searchParams.get('known')===result.race.seed)result.race={...result.race,tape:undefined};return response({room:result,playerId:room.players.find(p=>p.token===token)!.id,transaction});
       }
       if(action==='randomness'){if(!vrf)throw new GameError('MagicBlock VRF is not configured.',503);return response(await progressRandomness(store,code,token,vrf));}
       const current=action==='ready'?await store.get(code):null;if(current?.stake&&!stakes)throw new GameError('SOL Devnet stakes are unavailable.',503);const auth=current?.stake?{wallet:await stakes!.verifiedWallet(token)}:undefined;

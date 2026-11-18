@@ -1,0 +1,37 @@
+{
+  "site": "https://draw-race-party.breid222.chatgpt.site",
+  "checkedAt": "2026-11-18T22:47:56.684Z",
+  "siteVersion": 14,
+  "browser": "Chrome desktop through Computer Use extension",
+  "checks": {
+    "duelStakeSetup": true,
+    "duelAmountChangedFrom002To003": true,
+    "poolAt003": "0.06 SOL",
+    "feeAt003": "0.003 SOL",
+    "prizeAt003": "0.057 SOL",
+    "chineseFourPlayerSetup": true,
+    "fixedFourPlayerAmount": "0.014 SOL",
+    "fourPlayerFee": "0.0028 SOL",
+    "fourPlayerPrize": "0.0532 SOL",
+    "guestStakeCreationDisabled": true,
+    "originalDrawingPreserved": true,
+    "originalHorsePreviewRendered": true,
+    "freeQuickRaceCompleted": true,
+    "browserDirectVrfVerification": true,
+    "browserPhysicsRecomputed": true,
+    "guestRacePoints": 75,
+    "guestTotalAfterAchievements": 425
+  },
+  "freeRace": {
+    "code": "92NBAR",
+    "seed": "70509e7f48dd8d1b7324a15062f0f92d122fb5202cee0f1e78783663ba8327ac",
+    "tapeHash": "3eb0068aabd2d9644bef95436301c2d7d0bd5cd189316f0169e5f7b3b47af2e2",
+    "requestSignature": "4Q1FmiHACjBFLfLeQok2WNJhhYuDVN7hVsbSLFge42pTdH3HBCyLWTEXEKQjKwZ5kwxRVAHJ5znBtYvqcMQZKhMr",
+    "fulfillmentSignature": "3NSY8eth4xDPmgqTN4gKAvphPtjhqgU8D61u7UDNB5QxpzeupLdYwEXmERp8SqTkY5qg8Xo3Ghqm9MaxwwuF8ys"
+  },
+  "limits": [
+    "Actual wallet extension connection/signing prompts not exercised; generated test keys covered real authentication/deposits through production API.",
+    "Physical phones and Safari not checked."
+  ],
+  "console": "Observed extension-provider conflicts belong to Chrome wallet extensions; no DRAW RACE application error observed during this flow."
+}

@@ -89,3 +89,17 @@ test('partial funding refund prevents round reset until confirmed, then clears t
  await assert.rejects(act(s.db,s.code,s.tokens[0],'reset'),/refund/);await progressStakes(s.db,s.code,s.tokens[0],s.chain,Date.now()+15000);assert.equal((await s.db.get(s.code))!.stake!.status,'refunded');
  await act(s.db,s.code,s.tokens[0],'reset');assert.equal((await s.db.get(s.code))!.stake!.status,'drawing');
 });
+test('an existing bank is recovered even if the request status service reports expiry',async()=>{
+ const s=await setup();await lock(s);await progressStakes(s.db,s.code,s.tokens[0],s.chain);
+ s.chain.bankState!.paidMask=1;(s.chain.state as EscrowService['state'])=async()=> 'expired';
+ await progressStakes(s.db,s.code,s.tokens[0],s.chain,Date.now()+10000);
+ const r=(await s.db.get(s.code))!;assert.ok(r.stake!.bank);assert.equal(r.stake!.paidMask,1);assert.equal(r.stake!.initSignature,'init-signature');assert.equal(s.chain.prepares,1);
+});
+test('a late request cannot replace the bank transaction owned by a newer lease',async()=>{
+ const s=await setup();await lock(s);let release!:()=>void,entered!:()=>void;
+ const gate=new Promise<void>(r=>{release=r}),started=new Promise<void>(r=>{entered=r}),prepare=s.chain.prepareInit.bind(s.chain);
+ s.chain.prepareInit=async(...args)=>{const prepared=await prepare(...args),sequence=s.chain.prepares;if(sequence===1){entered();await gate;}return {...prepared,signature:'init-signature-'+sequence};};
+ const first=progressStakes(s.db,s.code,s.tokens[0],s.chain);await started;
+ await progressStakes(s.db,s.code,s.tokens[1],s.chain,Date.now()+61000);release();
+ await assert.rejects(first,/another request/);const r=(await s.db.get(s.code))!;assert.equal(r.stake!.pending!.signature,'init-signature-2');assert.equal(s.chain.sends.length,1);
+});

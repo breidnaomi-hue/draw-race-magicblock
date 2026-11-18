@@ -1,0 +1,34 @@
+{
+  "cluster": "devnet",
+  "recordedAt": "2026-11-18T22:47:56.267Z",
+  "room": "HLUS7G",
+  "round": 2,
+  "stakeLamports": "20000000",
+  "poolLamports": "40000000",
+  "gameFeeLamports": "2000000",
+  "winnerReceivesLamports": "38000000",
+  "bankRentLamports": 2275840,
+  "receiptRentLamports": 1264920,
+  "items": [
+    {
+      "kind": "bankInitialization",
+      "signature": "4N1CroqzgUEY8KqXAdDegrZi5ni8sived5FEhHxeEMnvYmPg3cTXcMXpkNYythKauXZ7rg82BH5y89qjHDGoCDQo",
+      "networkFeeLamports": 5000,
+      "operatorBalanceChangeLamports": -2280840
+    },
+    {
+      "kind": "magicblockRequest",
+      "signature": "24raJeAqsDNarJdaQMR7pQiTWGErwDDu6rgcZBDDbgihn7LjJD99en1DUUTNUYgT9KnxsV39xPpfii126jT6rAaL",
+      "networkFeeLamports": 5000,
+      "operatorBalanceChangeLamports": -1769920
+    },
+    {
+      "kind": "settlement",
+      "signature": "552MRcnKLctX51h8xzijrLCEraqPofm7Wup1B12S4RaksatMvhFkdQW23kuj3uVEnFCGXUyULoBjowiGktdEJuVd",
+      "networkFeeLamports": 5000,
+      "operatorBalanceChangeLamports": 4270840
+    }
+  ],
+  "operatorNetLamports": 220080,
+  "note": "Excludes one-time deployment, persistent counter rent, player-paid deposit fees and failed/cancelled attempts. Free Devnet tokens only."
+}
